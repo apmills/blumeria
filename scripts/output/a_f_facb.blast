@@ -1,0 +1,54 @@
+# TBLASTX 2.6.0+
+# Query: ANID_00689 | Aspergillus nidulans FGSC A4 acetate regulatory DNA binding protein FacB (2819 nt)
+# Database: ../db/a_f_genes.fasta
+# Fields: subject id, evalue
+# 48 hits found
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	0.0
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	1.53e-155
+Afu1g13510	3.25e-88
+Afu1g13510	3.25e-88
+Afu1g13510	3.25e-88
+Afu1g13510	3.25e-88
+Afu1g13510	3.25e-88
+Afu1g13510	3.25e-88
+Afu1g13510	3.25e-88
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	5.83e-74
+Afu1g13510	6.93e-37
+Afu1g13510	6.93e-37
+Afu1g13510	6.93e-37
+Afu1g13510	6.93e-37
+Afu1g13510	6.93e-37
+Afu1g13510	6.93e-37
+Afu1g13510	4.67e-33
+Afu1g13510	4.67e-33
+Afu1g13510	4.67e-33
+Afu1g13510	4.67e-33
+# BLAST processed 1 queries

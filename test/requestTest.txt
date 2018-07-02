@@ -1,0 +1,11 @@
+#Batch CD-search tool	NIH/NLM/NCBI
+#cdsid	QM3-qcdsearch-F1C260CD9331277-3450E2F834ED4D47
+#datatype	hitsConcise Results
+#status	3	msg	Job is still running
+
+QM3-qcdsearch-F1C260CD9331277-3450E2F834ED4D47
+#Batch CD-search tool	NIH/NLM/NCBI
+#cdsid	QM3-qcdsearch-F1C260CD9331277-3450E2F834ED4D47
+#datatype	hitsConcise Results
+#status	3	msg	Job is still running
+
