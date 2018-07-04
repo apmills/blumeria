@@ -4,7 +4,7 @@
 # Freely distributed under the GNU General Public License (GPLv3).
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # query HMM file:                  output/query.hmm
-# target sequence database:        ../db/blumeria/b_g_pep.fa
+# target sequence database:        ../db/blumeria/latest/Bgt_genome_v2_1.fa
 # output directed to file:         output/hmmer.txt
 # per-seq hits tabular output:     output/hmmertbl.tsv
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -12,237 +12,28 @@
 Query:       aligned  [M=1204]
 Scores for complete sequences (score includes all domains):
    --- full sequence ---   --- best 1 domain ---    -#dom-
-    E-value  score  bias    E-value  score  bias    exp  N  Sequence          Description
-    ------- ------ -----    ------- ------ -----   ---- --  --------          -----------
-          0 1711.7   0.0          0 1710.7   0.0    1.4  1  BLGH_04724-mRNA-1  pep supercontig:EF2:scaffold_12:1748027:17
-   1.2e-117  392.6   3.2   1.4e-116  389.1   3.2    2.2  1  BLGH_00664-mRNA-1  pep supercontig:EF2:scaffold_16:8302801:83
-   2.2e-107  358.6   0.0      8e-88  293.8   0.0    2.5  3  BLGH_05087-mRNA-1  pep supercontig:EF2:scaffold_14:911605:916
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
 
 
 Domain annotation for each sequence (and alignments):
->> BLGH_04724-mRNA-1  pep supercontig:EF2:scaffold_12:1748027:1751949:-1 gene:BLGH_04724 transcript:BLGH_04724-mRNA-1 ge
-   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
- ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 ! 1710.7   0.0         0         0       6    1203 ..       5    1201 .]       2    1201 .] 0.94
 
-  Alignments for each domain:
-  == domain 1  score: 1710.7 bits;  conditional E-value: 0
-            aligned    6 kptgqartadfrtlrReklFrnPPkDksafPaLqeavqPhiesFnaLfegdgdggllnlglkdiGekvilDgkelnsedeisnsgslknk 95  
-                         ++t +a+t++f+tlrRe+lFrnPPkD++a+P L++a++Ph+esFnaLf g+g   l+++gl diG+kv+lDg+++++         +knk
-  BLGH_04724-mRNA-1    5 SSTPTAWTHEFDTLRRESLFRNPPKDHTAYPELKAAIAPHVESFNALFGGQG---LIAQGLLDIGTKVYLDGDDRAT-------WVGKNK 84  
-                         56889********************************************995...*********************9.......899*** PP
-
-            aligned   96 LsvrvkevslekpmvpdtnkfsakeRkiyPsesReRlvsYRGklllkleysvnnGeekeevRdlGqlPvmlkvsrvhlnklslyelvqhk 185 
-                          ++++k+v +ek+++p++nkfs+k+R+i+P+e+ReR+ +YRG++++k++y++n+ ++ e+vRdlGq+P+ml++ r+hl++ ++++lv++k
-  BLGH_04724-mRNA-1   85 FQISIKQVYIEKSTLPSSNKFSTKNRDILPAECRERHCTYRGRMSAKFQYQINEEDPIEFVRDLGQIPLMLMSARCHLETNTPAQLVRNK 174 
-                         ****************************************************************************************** PP
-
-            aligned  186 eesdeiggkfivngieklirmlivqrrnhpmaiirpsfanrgasyshygiqirsvrpdqtsqtnvlhylndgqvtfrfswrkneylvpvv 275 
-                         ees+e+gg+f vngieklir liv+rrn pmai rpsf  rg +ys+ygi irsvrpdqtsq nvlhyl dg++tfrfswrkneyl+pv+
-  BLGH_04724-mRNA-1  175 EESEELGGYFLVNGIEKLIRLLIVNRRNFPMAIERPSFEGRGPEYSKYGIVIRSVRPDQTSQSNVLHYLHDGNITFRFSWRKNEYLIPVM 264 
-                         ****************************************************************************************** PP
-
-            aligned  276 milkalchtsdreifdgiig..n..dvkdsfltdrlelllrgfkkryphlqnrtqvlqylgdkfrvvfqaspdqsdlevgqevldrivlv 361 
-                         m+lk+l  t+dreif+g+ g  n     ++fltdr+elllr ++     l+ ++q   ylg+kfr v+      +++e g e l +ivlv
-  BLGH_04724-mRNA-1  265 MLLKSLLETNDREIFEGLSGisNtkGAVNTFLTDRIELLLRTYQSYN--LHTKSQTRAYLGEKFRAVLGVPDSMTNFECGTEFLRKIVLV 352 
-                         *****************9873231134579*************8765..556677789**********9999999*************** PP
-
-            aligned  362 hlg.....kdgsqdkfrmllfmirklyslvagecspdnpdatqhqevllggflygmilkekideylqni.iaqvrmdinrgmainfkd.. 443 
-                         hlg     +    dkf mllfm rkly+lv gec+ dnpda   qe+llgg+lygmi+ke++++ ++    + vr  i + m   f    
-  BLGH_04724-mRNA-1  353 HLGcvnvtEKQDADKFNMLLFMARKLYALVQGECAVDNPDAVSNQEILLGGYLYGMIIKERLEDLINIQyRTVVRDYIRKSMDHSFTSsa 442 
-                         **943332234569************************************************9876533135677789999999887533 PP
-
-            aligned  444 ..krymsrvlmrvnenigskmqyflstgnlvsqsgldlqqvsgytvvaekinfyrfishfrmvhrgsffaqlktttvrkllpeswgflcp 531 
-                           k + s++l r ne +g  ++yf+stgnlvs +gldlqqvsg+tvvaekinf rfishfrmvhrgsffaqlktttvrkllpeswgflcp
-  BLGH_04724-mRNA-1  443 frKDFPSKILQRSNELVGPALEYFMSTGNLVSPTGLDLQQVSGFTVVAEKINFLRFISHFRMVHRGSFFAQLKTTTVRKLLPESWGFLCP 532 
-                         337789************************************************************************************ PP
-
-            aligned  532 vhtpdgspcgllnhfahkcristqqsdvsripsilyslgvapashtfaagpslccvqidgkiigwvsheqgkiiadtlrywkvegktpgl 621 
-                         vhtpdgspcgllnh+ah+cri t+  d s +p ++  +g++ ++   ++    ++vq+dg+i+gw + +q +iiadtlrywkveg+  g+
-  BLGH_04724-mRNA-1  533 VHTPDGSPCGLLNHLAHRCRILTNPVDTSTLPKLVMDFGITSTAS--SSTDESVAVQLDGRILGWCTPKQARIIADTLRYWKVEGN-HGV 619 
-                         ***************************************986554..45556679******************************7.69* PP
-
-            aligned  622 pidleigyvppstrgqypglylfgghsrmlrpvrylpldkedivgpfeqvymniavtpqeiqnnvhthveftptnilsilanltpfsdfn 711 
-                         p +leigy+p s  g+ypg+y+    srm+rpv+ylpl+ked vgp eq +m iav  +ei     +hvef ptnilsilan+tpfsdfn
-  BLGH_04724-mRNA-1  620 PKELEIGYIPNSRGGEYPGIYMTSTTSRMIRPVKYLPLEKEDYVGPHEQPFMSIAVDEEEIVSGETSHVEFNPTNILSILANMTPFSDFN 709 
-                         ****************************************************************************************** PP
-
-            aligned  712 qsprnmyqcqmgkqtmgtpgvalchrsdnklyrlqtgqtpivkanlyddygmdnfpngfnavvavisytgydmddamiinksadergfgy 801 
-                         qsprnmyqcqmgkq+mgtpg a+ +r+dnk yrl tgqtpi ++ l++ yg+dnfpng+navvavisytgydmddamiinksa ergfgy
-  BLGH_04724-mRNA-1  710 QSPRNMYQCQMGKQSMGTPGTAIRYRTDNKAYRLLTGQTPIARSPLHNAYGFDNFPNGMNAVVAVISYTGYDMDDAMIINKSAHERGFGY 799 
-                         ****************************************************************************************** PP
-
-            aligned  802 gtmyktekvdlalnrnrgdpitqh.fgfgn.dewpkewlekldedglpyigtyveegdpicayfddtlnk..........tkiktyhsse 879 
-                         gt+ykt+k++l  ++n+    t++ fgf    +   + l ++dedglp+ig  +++gd ica+f  t+++          t+ + y+ se
-  BLGH_04724-mRNA-1  800 GTIYKTKKIELEEKKNKSSKKTKKlFGFAPgSDIKADVLSQIDEDGLPHIGREIKQGDKICAWFTVTMDEsgqlvnrdgiTHFEKYKDSE 889 
-                         *****************998886549**8614567799**************************988753222222244467789***** PP
-
-            aligned  880 payieevnligdesnkfqelqtvsikyrirrtpqigdkfssrhgqkgvcsrkwptidmpfsetgiqpdiiinphafpsrmtigmfvesla 969 
-                          ayieev ligde n ++  q +s+k r+ r+p igdkfssrhgqkgv s+kwptid+pf+e+g+qpd+iinphafpsrmtigmf+esla
-  BLGH_04724-mRNA-1  890 DAYIEEVRLIGDE-NGVEPAQVISVKLRVPRSPLIGDKFSSRHGQKGVLSQKWPTIDLPFTESGMQPDVIINPHAFPSRMTIGMFIESLA 978 
-                         ************9.77999*********************************************************************** PP
-
-            aligned  970 gkagalhgiaqdstpwifneddtpadyfgeqlakagynyhgnepmysgatgeelradiyvgvvyyqrlrhmvndkfqvrstgpvnsltmq 1059
-                         gk+galhg+aqdstp+ f e++t +dyfg ql kagynyhgnepmysg tgeel+adiy+gvvyyqrlrhmvndkfqvr+tgpv  +t q
-  BLGH_04724-mRNA-1  979 GKSGALHGLAQDSTPFKFSEENTASDYFGHQLMKAGYNYHGNEPMYSGITGEELHADIYIGVVYYQRLRHMVNDKFQVRTTGPVTQMTGQ 1068
-                         ****************************************************************************************** PP
-
-            aligned 1060 pvkgrkrhggirvgemerdalighgtsfllqdrllnssdytqasvcrecgsilttqqsvp....rigsistvccrrcsmrfedakklltk 1145
-                         p+kgrk+ ggirvgemerd+l+ hgt+fllqdrl+n sdy ++ +cr+cg+ ++tq sv     r      v crrc+ r e        
-  BLGH_04724-mRNA-1 1069 PIKGRKKGGGIRVGEMERDSLLAHGTAFLLQDRLFNCSDYKRCWICRNCGTFISTQPSVSllshRTKGTGKVRCRRCAHRSEGW------ 1152
-                         **********************************************************97333355567789*****9997753...... PP
-
-            aligned 1146 sedgekifiddsqiwedgqgnkfvggnetttvaipfvlkyldselsamgirlrynvep 1203
-                                   +s+ wedg+g+k+vgg++tt va+p vl+yld el+amgi+l ynv p
-  BLGH_04724-mRNA-1 1153 ---------TESETWEDGDGQKWVGGDDTTIVAVPGVLRYLDVELAAMGIKLTYNVSP 1201
-                         .........35789******************************************87 PP
-
->> BLGH_00664-mRNA-1  pep supercontig:EF2:scaffold_16:8302801:8307042:1 gene:BLGH_00664 transcript:BLGH_00664-mRNA-1 gen
-   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
- ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  389.1   3.2  5.8e-120  1.4e-116     121    1110 ..     157    1156 ..      82    1168 .. 0.80
-
-  Alignments for each domain:
-  == domain 1  score: 389.1 bits;  conditional E-value: 5.8e-120
-            aligned  121 RkiyPsesReRlvsYRGklllkleysvnnGeekeevRd..lGqlPvmlkvsrvhlnklslyelvqhkeesdeiggkfivngieklirmli 208 
-                          +i P e+R R ++Y   +++ ++y    G  + + R   +G lP+ml++s++ l+  +  e+   +e + + gg+fivng ek+i  + 
-  BLGH_00664-mRNA-1  157 NEITPNECRLRDMTYAAPIRVDVKYL--RGKSMVFRRGvpIGRLPIMLRSSKCRLAGKNDRETAYMNECALDPGGYFIVNGTEKVILVQE 244 
-                         589**********************7..6888877775338*********************************************9998 PP
-
-            aligned  209 vqrrnhpmaiirpsfanrgasyshygiqirsvrpdqtsqtnvlhylndgqvtfrfswrkneylvpvvmilkalchtsdreifdgiigndv 298 
-                            +n       p++   +as         s   +++s+  v+  ++ +   ++ +    +  +p+v+ lkal   sd+e++  + g d 
-  BLGH_00664-mRNA-1  245 QLSKNRVIVETDPKKGIVSASV-------TSSTHERKSKSYVILKKERI--YLQHN--ILQEPIPIVIALKALGVQSDHEMLLLVAGTD- 322 
-                         8888888888888776655554.......45567888888887666555..33333..3344689*****************9999975. PP
-
-            aligned  299 kdsfltdrlelllrgfkkryphlqnrtqvlqylgdkfrvvfq.....aspdqsdlevgqevldrivlvhlgkdgsqd..kfrmllfmirk 381 
-                           s   d + + +    k    +  + q l+ylg++++   +     a p +s++    + l  i++ h+   g +   k   + fm+r+
-  BLGH_00664-mRNA-1  323 --STYQDEFAVNFEESSKVG--VFSQHQALEYLGNRVKQGSRqkqqgAMPRRSQISDAIDALANIIITHVPVHGLDFrpKALYVCFMVRR 408 
-                         ..666777776666655544..556679999**99986532112224789********************999976511556678***** PP
-
-            aligned  382 lyslvagecspdnpdatqhqevllggflygmilkekideylqniiaqvrmdinrgmainfkdkrymsrvlmr.vnenigskmqyflstgn 470 
-                         +   +      d+ d    + + l g l  +++++      +   ++++m+i++ +    +  ++ +   ++   + i   m   +stgn
-  BLGH_00664-mRNA-1  409 ILMAMQDPKLVDDRDYVGNKRLELAGQLLALLFEDLF----KRFNSDLKMNIDKVLKKPNRTMQFDAYTHLQsGGNTITQGMSRAISTGN 494 
-                         *9999999999***************99999876544....4455667777777777666666666655555056679999********* PP
-
-            aligned  471 lvsqsgldlqqvsgytvvaekinfyrfishfrmvhrgs.ff.aqlktttvrkllpeswgflcpvhtpdgspcgllnhfahkcristqqsd 558 
-                            +  + ++  +g t v  ++    +is + m+ r s  f    k +  r l p  +g+lcp  tp+g  cgl++ +a   +i+t + d
-  BLGH_00664-mRNA-1  495 WTVKR-FKME-RAGVTHVLSRLS---YISALGMMTRISsQFeKTRKVSGPRALQPSQFGMLCPSDTPEGEACGLVKNLALMTHITTYD-D 578 
-                         97664.4444.468888877765...789999988854245145678889**********************************9875.6 PP
-
-            aligned  559 vsripsilyslg...vapashtfaagpslccvqidgkiigwvsheqgkiiadtlrywkvegktp...glpidleigyvppst...rgqyp 639 
-                            i  +++ lg   +   s          +v i+g  i      q k    ++r ++  g+      + i+     v  +t   r   p
-  BLGH_00664-mRNA-1  579 EEPIKKLIFVLGaedIVSMSGKEIYEKGAYVVFINGTPIALTR--QPKSFFISFRKFRRTGRISefvSIFINHHTNAVHIATdegRICRP 666 
-                         677888888887222445555555666778899****999875..555555578888888887521145677777777766531144456 PP
-
-            aligned  640 glylfgghs....rmlrpvrylpldkediv..gpfeqvym......niavtpqeiqnnvhthveftptnilsilanltpfsdfnqsprnm 717 
-                          + +   +s    r l+ +r   ++ +d +  g +e v +      nia+   e+++n  th+e+ p  il  +a l p+   nqsprn 
-  BLGH_00664-mRNA-1  667 LIVVENQQSkvsrRHLQALRQGTMEFDDFLykGLVEYVDVneendsNIALYETEVNEN-TTHLEIEPFTILGAVAGLIPYPHHNQSPRNT 755 
-                         6666666652222456778887777777643355555543222222899999999777.69***************************** PP
-
-            aligned  718 yqcqmgkqtmgtpgvalchrsdnklyrlqtgqtpivkanlyddygmdnfpngfnavvavisytgydmddamiinksadergfgygtmykt 807 
-                         yqc mgkq++g+       r d  ly +   + p+vk+   +    d++p g na vav+sy+gyd++da+++nk++ +rgfg   +++ 
-  BLGH_00664-mRNA-1  756 YQCAMGKQAIGAIAYNQFSRIDTLLYLMVYPHQPMVKTRTIELIKYDKLPAGQNATVAVMSYSGYDIEDALVLNKASCDRGFGRCQVFRK 845 
-                         ****************************************************************************************** PP
-
-            aligned  808 ekvdlalnrnrgdpitqhfgfgndewpkewlek...ldedglpyigtyveegd.......picayfddtlnktkiktyhssepay.ieev 886 
-                            +l    nr +       + ++++p + + k   l  +g+   g  ve g+       p+ +         +i+ y+ +  +y + + 
-  BLGH_00664-mRNA-1  846 HSTQLRKYPNRAEDRLGDREM-DEKFPDQPIAKhaiLGHEGVAMPGEKVESGQvflnkqvPLNTSSTGIGSDHRINDYKPAPMSYrLPDF 934 
-                         ******999998765544443.345666655553338999**********9982222222222333333345567777766666645677 PP
-
-            aligned  887 nligdesnkfqelqtvsikyrir..rtpqigdkfssrhgqkgvcsrkwptidmpfsetgiqpdiiinphafpsrmtigmfveslagkaga 974 
-                           i        e +++ ik + r  r p++gdkfssrhgqkgv+       dmpf+++gi pdii+nph fpsrmt+g ++e l+gkag 
-  BLGH_00664-mRNA-1  935 SYIDKVMVSQTETDAMVIKVQTRqtRRPELGDKFSSRHGQKGVVGIIVNQEDMPFADSGICPDIIMNPHGFPSRMTVGKMLELLSGKAGV 1024
-                         7777776666777777777655522779************************************************************** PP
-
-            aligned  975 lhgiaqdstpwifneddtpadyfgeqlakagynyhgnepmysgatgeelradiyvgvvyyqrlrhmvndkfqvrstgpvnsltmqpvkgr 1064
-                         l g  +  t +      +  d +g  l k g+ y g++ + sg tge l a i+ g +yyq+l+hmv+dk++ rs gp   lt qp +gr
-  BLGH_00664-mRNA-1 1025 LNGSLEYGTAFG----GSNVDDMGAILVKHGFSYSGKDFVTSGITGESLPAYIFFGPIYYQKLKHMVQDKMHSRSRGPRAILTRQPTEGR 1110
-                         ***999998764....456778999***************************************************************** PP
-
-            aligned 1065 krhggirvgemerdalighgtsfllqdrllnssdytqasvcrecgs 1110
-                          r gg+r+gemerd+li +g+s ll +rl+ ssd  +  +c  cg 
-  BLGH_00664-mRNA-1 1111 SRDGGLRLGEMERDCLIAYGASQLLLERLMISSDRHEVEICEVCGL 1156
-                         ********************************************95 PP
-
->> BLGH_05087-mRNA-1  pep supercontig:EF2:scaffold_14:911605:916015:1 gene:BLGH_05087 transcript:BLGH_05087-mRNA-1 gene_
-   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
- ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 ?   -2.8   0.0      0.12   2.8e+02      90     144 ..      78     129 ..      62     133 .. 0.79
-   2 !   61.8   0.0   3.8e-21     9e-18     159     553 ..     187     570 ..     174     581 .. 0.79
-   3 !  293.8   0.0   3.4e-91     8e-88     685    1112 ..     770    1204 ..     757    1248 .. 0.88
-
-  Alignments for each domain:
-  == domain 1  score: -2.8 bits;  conditional E-value: 0.12
-            aligned  90 gslknkLsvrvkevslekpmvpdtnkfsakeRkiyPsesReRlvsYRGklllkle 144
-                        +    + +++   v l +p++ ++  +   +  ++P e+R R  +Y   l l++ 
-  BLGH_05087-mRNA-1  78 PIALRRYEIKFGTVLLSRPAMTEGDGS---TQVMLPQEARLRNLTYSSPLYLEMT 129
-                        555567788999999999999999944...5789************999988876 PP
-
-  == domain 2  score: 61.8 bits;  conditional E-value: 3.8e-21
-            aligned 159 lGqlPvmlkvsrvhlnklslyelvqhkeesdeiggkfivngieklirmlivqrrnhpmaiirpsfanrgasyshygiqirsvrpdqtsqtnv 250
-                        +G+lP+mlk++ + l++l ++el   +e + + gg+fi+ng ek++  +    r    a i   f +   s++ y  +irs   + ++++  
-  BLGH_05087-mRNA-1 187 IGKLPIMLKSKYCILKDLDEDELYAWNECPYDQGGYFIINGSEKVLIAQ---ER--SAANIVQVFKKPPPSPTPYIAEIRSALEKGSRLISS 273
-                        7*******************************************98766...33..456666778888899999*9*****98877665544 PP
-
-            aligned 251 ....lhylndgqv.tfrfswrkn.eyl...vpvvmilkalchtsdreifdgiigndvkdsfltdrlelllrgfkkryphlqnrtqvlqylgd 333
-                            l  + dgq   f  + +    y+   +p+ ++++a+   sd +i++ i   d      t+ le+l   +++ +  +q+r   l+y+g 
-  BLGH_05087-mRNA-1 274 mtikLFAKGDGQRgGFGQTIKSTlPYVrtdIPIAVVFRAFGVVSDEDILNHIC-YDR---TDTQMLEMLKPCIEEAF-VIQDREVALDYIGK 360
-                        1101445677775234444333213442227999***************9875.444...45788999888887776.69***********9 PP
-
-            aligned 334 kfrvvfqaspdqsdlevgqevldrivlvhlg.kdgsqd.kfrmllfmirklyslvagecspdnpdatqhqevllggflygmilkekideylq 423
-                        +          +  ++  +e++++ +l h+  k+gs+  k  +l +m++k+     g    d+ d   ++ + l g l   +        ++
-  BLGH_05087-mRNA-1 361 RGSST--NLTRERRVKNAREIMQKELLPHISqKEGSETrKAFFLGYMVHKMLQCALGRRETDDRDHFGKKRLDLAGPLLAKL--------FR 442
-                        76654..44556678899***********9648999872455677*************************999999886654........45 PP
-
-            aligned 424 niiaqvrmdinrgmainfkdkrymsrvlmrvnenigskmqyflstgnlvsqsgldlqqvsgytvvaekinfyrfishfrmvhrgsffaqlkt 515
-                        n+  ++  d+ + +   ++++r ++  l      + + ++y l+tgn   q        +g + v ++  f   +sh+r      +  + k 
-  BLGH_05087-mRNA-1 443 NLFKRLTGDVYKYLQRCVENNREFNLALGVKSTTLTNGLKYSLATGNWGDQKKA-ASSTAGVSQVLNRYTFASTLSHLRRTN-TPIGRDGKI 532
-                        67777777777777778888899999998889999************9888754.345566666666666666666766554.346678899 PP
-
-            aligned 516 ttvrkllpeswgflcpvhtpdgspcgllnhfahkcris 553
-                        +  r+l    wg++cp  tp+g  cgl++ +a  c ++
-  BLGH_05087-mRNA-1 533 AKPRQLHNTHWGLVCPAETPEGQACGLVKNLALMCYVT 570
-                        9*********************************9886 PP
-
-  == domain 3  score: 293.8 bits;  conditional E-value: 3.4e-91
-            aligned  685 nvhthveftptnilsilanltpfsdfnqsprnmyqcqmgkqtmgtpgvalchrsdnklyrlqtgqtpivkanlyddygmdnfpngfnavv 774 
-                            th e+ p+ il i a + pf d nqsprn yq  mgkq+mg     + +r d     l   q p+  +   +   + ++p g na+v
-  BLGH_05087-mRNA-1  770 HRWTHCEIHPSMILGICASIIPFPDHNQSPRNTYQSAMGKQAMGFFLTNFDQRMDTMANILYYPQKPLATTRSMEFLKFRELPAGQNAIV 859 
-                         5579************************************************************************************** PP
-
-            aligned  775 avisytgydmddamiinksadergfgygtmykte.kvdlalnrnrgdpitqhfgfgndewpkewlekldedglpyigtyveegd...... 857 
-                         a+  y+gy+ +d++i+n+s+ +rg+    +y++    +  +  n  +   + f     +  +   +kldedg+   g  v   d      
-  BLGH_05087-mRNA-1  860 AIACYSGYNQEDSVIMNQSSIDRGLFRSLFYRAYtDQEKRIGINAIECFEKPFRSDTLKLKHGTYDKLDEDGIVAPGVRVSGEDiiigkt 949 
-                         *************************999999975145667888889999999999999999999*********99998887666222222 PP
-
-            aligned  858 .picayfddtlnktkiktyh.ssepayieevnligde...snkfqelqtvsikyrirrtpqigdkfssrhgqkgvcsrkwptidmpfset 942 
-                          pi+   ++  ++tk +  + +s p    e   i d+   + + + l+ v ++ r  + pqigdkf+srhgqkg     +   dmpf+  
-  BLGH_05087-mRNA-1  950 aPIAPDAEELGQRTKAHVKRdASTPLRSTEN-GIVDQvliTTNGEGLRFVKVRMRTTKIPQIGDKFASRHGQKGTIGITYRQEDMPFTCQ 1038
-                         2555566666778888766515566655554.44444122455678999***************************************** PP
-
-            aligned  943 giqpdiiinphafpsrmtigmfveslagkagalhgiaqdstpwifneddtpadyfgeqlakagynyhgnepmysgatgeelradiyvgvv 1032
-                         gi pd+iinpha+psrmti  ++e    k  +l+g+  d+tp+     +   d + + l   gy+ +g e my g tg +l a++++g  
-  BLGH_05087-mRNA-1 1039 GIVPDLIINPHAIPSRMTIAHLIECQLSKVSTLRGLEGDATPFT----EVTVDSVSKLLRDHGYQSRGFEIMYHGHTGRKLVAQVFLGPT 1124
-                         ******************************************85....56788899999******************************* PP
-
-            aligned 1033 yyqrlrhmvndkfqvrstgpvnsltmqpvkgrkrhggirvgemerdalighgtsfllqdrllnssdytqasvcrecgsil 1112
-                         yyqrlrhmv+dk++ r+ gpv+ lt qpv+gr r gg+r gemerd++i hg++ +l++rl++ sd  +  +c  cg + 
-  BLGH_05087-mRNA-1 1125 YYQRLRHMVDDKIHARARGPVQILTRQPVEGRARDGGLRFGEMERDCMISHGAAAFLKERLFEVSDAFRVHICDICGLMT 1204
-                         ****************************************************************************9653 PP
-
+   [No targets detected that satisfy reporting thresholds]
 
 
 Internal pipeline statistics summary:
 -------------------------------------
 Query model(s):                              1  (1204 nodes)
-Target sequences:                         7118  (3371025 residues searched)
-Passed MSV filter:                       179  (0.0251475); expected 142.4 (0.02)
-Passed bias filter:                      138  (0.0193875); expected 142.4 (0.02)
-Passed Vit filter:                        12  (0.00168587); expected 7.1 (0.001)
-Passed Fwd filter:                         3  (0.000421467); expected 0.1 (1e-05)
-Initial search space (Z):               7118  [actual number of targets]
-Domain search space  (domZ):               3  [number of targets reported over threshold]
-# CPU time: 0.51u 0.05s 00:00:00.56 Elapsed: 00:00:00.21
-# Mc/sec: 19327.21
+Target sequences:                          251  (160563118 residues searched)
+Passed MSV filter:                         0  (0); expected 5.0 (0.02)
+Passed bias filter:                        0  (0); expected 5.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                251  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 19.62u 0.21s 00:00:19.83 Elapsed: 00:00:06.84
+# Mc/sec: 28262.86
 //
 [ok]

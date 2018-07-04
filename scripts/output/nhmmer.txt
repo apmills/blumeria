@@ -1,0 +1,541 @@
+# nhmmer :: search a DNA model or alignment against a DNA database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query file:                      output/query.hmm
+# target sequence database:        ../db/blumeria/latest/Bgt_genome_v2_1.fa
+# output directed to file:         output/nhmmer.txt
+# hits tabular output:             output/hmmertbl.tsv
+# number of worker threads:        4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       aligned  [M=3820]
+Scores for complete hits:
+    E-value  score  bias  Sequence                  start     end  Description
+    ------- ------ -----  --------                  -----   -----  -----------
+          0 2457.5  62.3  Bgt_ctg-10000_consensus 7551389 7555048  
+      3e-67  228.2   9.1  Bgt_ctg-156_consensus    360692  361973  
+    1.1e-56  193.2  10.8  Bgt_ctg-555_consensus    293127  294452  
+  ------ inclusion threshold ------
+      0.028   12.6   0.3  Bgt_ctg-555_consensus    292428  292510  
+      0.039   12.2   3.4  Bgt_ctg-156_consensus    359122  359226  
+       0.14   10.4   3.5  Bgt_ctg-156_consensus    360194  360339  
+        6.5    4.8   2.5  Bgt_ctg-555_consensus    291440  291493  
+
+
+Annotation for each hit  (and alignments):
+>> Bgt_ctg-10000_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ ! 2457.5  62.3         0        10      3705 ..   7551389   7555048 ..   7551380   7555089 ..  19663785    0.97
+
+  Alignment:
+  score: 2457.5 bits
+                  aligned      10 gcgaccatggctcccgctgcg...acaagtaccaattgggctgtcgagttcgacacggttcggcgggagaagcttttc 84     
+                                  +cg  catg+ctcccgc+ c+   ac+   ac++ ttgg c +++ga ttcga+ac  t cggcg ga a  ct tt 
+  Bgt_ctg-10000_consensus 7551389 TCGGTCATGCCTCCCGCGTCTtcaACCCCAACGGCTTGGACACATGAATTCGATACATTACGGCGAGAAAGTCTGTTT 7551466
+                                  555666777788877766655111555566677889****************************************** PP
+
+                  aligned      85 cgagaccccccgaaggaccacaccgcatatcctgccctcgcggctgctgtcgatccccatatcgagtctttcaatgcc 162    
+                                  cga+a cc cc aaggacca ac gc+tatcc g  ctc + gctgc+ t+g++ccccat t ga tc tt aatgc 
+  Bgt_ctg-10000_consensus 7551467 CGAAATCCGCCCAAGGACCATACGGCCTATCCAGAACTCAAAGCTGCCATTGCCCCCCATGTTGAATCATTTAATGCA 7551544
+                                  ****************************************************************************** PP
+
+                  aligned     163 cttttcggggacgatggcatgattgaccacggtctgatggatattggcaccaagacgttcctggacggagatgagagc 240    
+                                  ctttt gg g c a gg +tgattg+ ca gg ctg+t ga at gg ac aag   t +ct ga+gg+gatga+ag 
+  Bgt_ctg-10000_consensus 7551545 CTTTTTGGAGGCCAAGGGTTGATTGCGCAGGGACTGTTAGACATAGGAACAAAGGTTTATCTTGATGGCGATGATAGA 7551622
+                                  ****************************************************************************** PP
+
+                  aligned     241 ttaggaccgccgggaaggaataggctcaccgttcgcatcaaggaagtcttcttggaaaagtctatggttcctccaacc 318    
+                                  ++   a  g   gg+a+ aata+ +t     t  gcat aa  aagtct + t gaaaa tc a+g t+cc  c a  
+  Bgt_ctg-10000_consensus 7551623 GCTACATGGGTAGGCAAAAATAAATTTCAAATAAGCATTAAACAAGTCTATATTGAAAAATCAACGTTGCCATCGAGT 7551700
+                                  ****************************************************************************** PP
+
+                  aligned     319 aacaaattttctgccaagaaccgagaaatcttcccggcagagtgcagagaacgacatgttacatacaggggaaagctg 396    
+                                  aa aa ttttc +c aagaa  gaga+at+ t ccggcaga+tg agagaacg cat  tac ta +g ggaa   tg
+  Bgt_ctg-10000_consensus 7551701 AATAAGTTTTCAACAAAGAATAGAGATATTCTTCCGGCAGAATGTAGAGAACGTCATTGTACTTATCGAGGAAGAATG 7551778
+                                  ****************************************************************************** PP
+
+                  aligned     397 tcggcgagctttgagtatcggatcaacaatggcgacccgaaggagtttgtcagagatcttggccagatgcccatcatg 474    
+                                   + gc a  ttt agtatc gatcaac+a g  ga cc a  gagtttgt+ag gat t gg+cagat cc  tcatg
+  Bgt_ctg-10000_consensus 7551779 AGTGCCAAATTTCAGTATCAGATCAACGAAGAAGATCCAATTGAGTTTGTTAGGGATTTGGGGCAGATACCACTCATG 7551856
+                                  ****************************************************************************** PP
+
+                  aligned     475 ttcaaggtaagaggtttaactaatttcattcgatgtctaacagtttagttttatattaatacagtcaaacaggtgcca 552    
+                                   t a+ggta+ga   t  a t                 +a a   t++ t + +a ta+ta+agtc a +a++tg ca
+  Bgt_ctg-10000_consensus 7551857 CTAATGGTATGAAAATCTATTTT--------------GTAGATGATTTGTACTGACTATTATAGTCTACTAAATGTCA 7551920
+                                  ********998764332222111..............223444455556667778889999***************** PP
+
+                  aligned     553 ccttgaaaacaactcgcctgcgcagcttgtgcagagcaaggaggagtccgaggagctgggaggctacttcatcgtcaa 630    
+                                  +cttgaaa  aac c cctgc+ca  t+gtgc  a+ aaggaggagtc ga+gagct gg gg tactt+ t gt aa
+  Bgt_ctg-10000_consensus 7551921 TCTTGAAACAAACACTCCTGCCCAATTGGTGCGAAATAAGGAGGAGTCGGAAGAGCTTGGTGGATACTTTTTAGTAAA 7551998
+                                  ****************************************************************************** PP
+
+                  aligned     631 tggtatcgagaagctcatccgtatgctggttgtcaaccggaggaatttcccgatggccatcgtccgtcccactttcaa 708    
+                                  +gg at gagaag t at+cg++t ct  t gt aaccg +g+aattt cc atggc at+g  cg+cc +ctttc a
+  Bgt_ctg-10000_consensus 7551999 CGGGATAGAGAAGTTGATTCGCCTTCTAATAGTAAACCGCCGAAATTTTCCAATGGCGATTGAGCGACCATCTTTCGA 7552076
+                                  ****************************************************************************** PP
+
+                  aligned     709 gagcagaggcccagcatacacccaattcggtatcctaatgcgatcagtacgccctgaccagacttctcagaccaacgt 786    
+                                   +g agagg cc+g ata  c  aat+cgg at  t at cg tcagt cgccc ga+ca+acttc ca+a caa+gt
+  Bgt_ctg-10000_consensus 7552077 AGGAAGAGGACCCGAATATTCAAAATACGGCATAGTCATACGTTCAGTTCGCCCAGATCAAACTTCACAAAGCAATGT 7552154
+                                  ****************************************************************************** PP
+
+                  aligned     787 tctccactacctcaacgatggaaatgtcaccttccgtttctcgtggcggaagaacgagtacctggtccccgtcatgat 864    
+                                    t cacta+ct  a+gatggaaat t+ac tt  g tt tc tggcggaa aa+ga ta ctg+t ccc t atgat
+  Bgt_ctg-10000_consensus 7552155 ATTGCACTATCTTCATGATGGAAATATTACATTTAGATTTTCATGGCGGAAAAATGAATATCTGATACCCTTAATGAT 7552232
+                                  ****************************************************************************** PP
+
+                  aligned     865 gatcatgaaggctttggtggagacaaacgaccgagaaatcttcgagggacttgtcggcactcctgggtccaagggagt 942    
+                                  g t +t aa  c++t  t ga ac aa gac+gagaaat tt+ga+ggact    gg ac  ctg   ccaa gg g+
+  Bgt_ctg-10000_consensus 7552233 GCTACTCAAATCGCTTCTTGAAACTAATGACAGAGAAATATTTGAAGGACTCTCTGGAACCTCTGAAACCAAAGGTGC 7552310
+                                  ****************************************************************************** PP
+
+                  aligned     943 cgacaacacattcttgactgaccgtgtcgaactgctgctacgtacatacaaggcctacggcctttacagcaagaccaa 1020   
+                                      aa ac ttctt ac ga+cg  t ga++t +tgct cg ac+tac ag c+ta   cctt+a+a+ aaga c+a
+  Bgt_ctg-10000_consensus 7552311 TTTAAATACGTTCTTAACAGATCGGATAGAGTTATTGCTTCGAACTTACCAGTCATATAACCTTCATACAAAGAACCA 7552388
+                                  ****************************************************************************** PP
+
+                  aligned    1021 gactcgagcatacctgggcgagaagttcagggtcgttctcggtgtcccggacaccatgtccaactacgatgtcggtac 1098   
+                                  gac  gagc+ta ct ggcga+aa tt ag g+ gt ct gg gt cc ga a catg c aact  ga   +ggtac
+  Bgt_ctg-10000_consensus 7552389 GACAAGAGCGTATCTAGGCGAAAAATTTAGAGCAGTACTAGGAGTTCCTGATAGCATGACAAACTTTGAATGTGGTAC 7552466
+                                  ****************************************************************************** PP
+
+                  aligned    1099 ggagttcctccgcaagattgtccttgtccatctcggtaaccaggacgtcaccgagcagcaagatgatgacaagttcaa 1176   
+                                   ga+tt+ct cg aagattgt cttgt ca+ t+gg++ c   +a+gt accgag a ca+ga+g+tgacaa+tt+aa
+  Bgt_ctg-10000_consensus 7552467 TGAATTTCTTCGGAAGATTGTGCTTGTTCACTTGGGCTGCGTCAATGTTACCGAGAAACAGGACGCTGACAAATTTAA 7552544
+                                  ****************************************************************************** PP
+
+                  aligned    1177 gatgctccttttcatgatcaggaagctgtacgccctcgttgctggtgactgtgctgtcgacaaccctgatgcggtcca 1254   
+                                   atgct+ t ttcatg + ag aa ct ta+gc++t+gt+   gg ga tgtgctgt+ga aa+cc gatgc gt ++
+  Bgt_ctg-10000_consensus 7552545 CATGCTTTTATTCATGGCAAGAAAACTTTATGCTTTGGTCCAGGGAGATTGTGCTGTTGATAATCCAGATGCTGTATC 7552622
+                                  ****************************************************************************** PP
+
+                  aligned    1255 gaatcaggagattttgctgggtggttttctctacggcatgatcatcaaggagaggctggaggagtgggtgagcgcttt 1332   
+                                   aatca gagatt+t ct+gg gg+t tct tacgg atgatcat aagga ag+ct+ga ga t+  t a   +t  
+  Bgt_ctg-10000_consensus 7552623 TAATCAAGAGATTCTCCTCGGGGGATATCTATACGGGATGATCATTAAGGAAAGACTCGAAGACTTAATAAATCTTCA 7552700
+                                  *********************************************************************999999999 PP
+
+                  aligned    1333 tttgcgggcggccctgagagattattttaggcgaaaccctggggacaatttcacgtctccagctttcgtaaaagactt 1410   
+                                   t  cg +c g++ t ag ga+tat t+ag + +a++   g   a ++ttt+ac+tct c gc tt++ +aaagactt
+  Bgt_ctg-10000_consensus 7552701 GTATCGAACAGTGGTCAGGGACTATATCAGAAAGAGTATGGATCATTCTTTTACTTCTTCTGCCTTTCGGAAAGACTT 7552778
+                                  9999*********************************9999999********************************** PP
+
+                  aligned    1411 cccggtcaagattttcagaaggacaaacgagaacattggtggtgctctggagtacttcttgtctaccggtaaccttgt 1488   
+                                   cc+   aa atttt + aag+ caaa+gag+ cat+gg   tgctct ga ta+tt  tgtc accgg aacct gt
+  Bgt_ctg-10000_consensus 7552779 TCCCTCGAAAATTTTACAAAGATCAAATGAGCTCATCGGACCTGCTCTTGAATATTTTATGTCGACCGGAAACCTAGT 7552856
+                                  ****************************************************************************** PP
+
+                  aligned    1489 cagtccaacgggtctggatttgcagcaaacgtccggtttcacggtcgttgcggaaaagattaacttcttgcgattcat 1566   
+                                  +ag+cc+ac gg ct gat+t ca+caa++ tc+gg+ttcacggt gttgc+gaaaa attaacttctt cgatt at
+  Bgt_ctg-10000_consensus 7552857 GAGCCCTACTGGACTTGATCTTCAACAAGTCTCTGGCTTCACGGTAGTTGCCGAAAAAATTAACTTCTTACGATTTAT 7552934
+                                  ****************************************************************************** PP
+
+                  aligned    1567 cagtcacttccgcatggttcacagaggtagtttcttcgcccagctcaagacgactactgtccgtaagcttctgccaga 1644   
+                                   agtca+ttc g atggt cacagagg ag+ttcttcgc ca+ct aagac actac gt+cgtaa ct ct cc ga
+  Bgt_ctg-10000_consensus 7552935 TAGTCATTTCAGGATGGTACACAGAGGAAGCTTCTTCGCACAACTAAAGACAACTACAGTTCGTAAACTCCTACCTGA 7553012
+                                  ****************************************************************************** PP
+
+                  aligned    1645 gagttggggttttctgtgccctgttcacactcctgatggatctccttgcggtctgctcaaccatctggctcacaagtg 1722   
+                                  gag+tgggg ttt tgtgccctgt ca actcc gatgg+ ++ccttg+gg+ct+ctcaa+catct gctca    tg
+  Bgt_ctg-10000_consensus 7553013 GAGCTGGGGATTTTTGTGCCCTGTACATACTCCAGATGGTAGCCCTTGTGGGCTTCTCAATCATCTAGCTCATCGCTG 7553090
+                                  ****************************************************************************** PP
+
+                  aligned    1723 catgatcatcacggacgctgtggacgtctctgctataccaaggctggtttttgagctcggtgttgttaacacttcgtc 1800   
+                                  ca  at++t ac  a  ct t ga+ + tc gc +t ccaa+ ct gt  t ga  t+gg  tt   a++ac +c+tc
+  Bgt_ctg-10000_consensus 7553091 CAGAATTCTTACTAATCCTATTGATACGTCCGCGTTGCCAAAACTAGTCATGGAATTTGGAATTACAAGTACAGCCTC 7553168
+                                  ****************************************************************************** PP
+
+                  aligned    1801 agctgccactgacgagagcgttgttgttcagctggatggcaggatcgtcggatggtgctcacccaagcaatcccgtgt 1878   
+                                    c +c ac+ga gagag+gt g+tgt cag+t gatgg  g at  t+ggatggtgc cacccaagcaa+c+cgtgt
+  Bgt_ctg-10000_consensus 7553169 TTCCTCTACCGATGAGAGTGTCGCTGTACAGTTAGATGGACGAATACTGGGATGGTGCACACCCAAGCAAGCTCGTGT 7553246
+                                  ****************************************************************************** PP
+
+                  aligned    1879 cattgccgatactctccgttactggaaggtcgaaggcacacacggcgttcctctagaattggagattggctatgtccc 1956   
+                                   attgc gatac  t cg ta tggaaggt+gaagg a  ca+gg+gt cct  aga++t ga attgg+ta+ t+cc
+  Bgt_ctg-10000_consensus 7553247 AATTGCAGATACATTACGATATTGGAAGGTTGAAGGAAATCATGGTGTCCCTAAAGAGCTAGAAATTGGGTACATTCC 7553324
+                                  ****************************************************************************** PP
+
+                  aligned    1957 taattcaaacggtggtcattaccctggtatctacatgtcctctcagcccgctagaatggtcagacctgtcaagtacct 2034   
+                                   aattc+a  gg ggt a ta cc ggtatcta+atg c tc  ++ cc c++gaatg tc+g cc+gt aa+tac t
+  Bgt_ctg-10000_consensus 7553325 AAATTCCAGAGGGGGTGAGTATCCAGGTATCTATATGACATCAACAACCTCCCGAATGATCCGGCCCGTTAAATACTT 7553402
+                                  ****************************************************************************** PP
+
+                  aligned    2035 acctctcgagaaggaagactttgtcggtcctcttgagcagccttttatgtcgattgcctgcacggagcaagagatcgt 2112   
+                                  acc ctcga aa gaaga+t+tgt gg cc c+tga cagcc tt+atgtc+at gc + c   ga  a+ga at gt
+  Bgt_ctg-10000_consensus 7553403 ACCACTCGAAAAAGAAGATTATGTTGGGCCGCATGAACAGCCGTTCATGTCTATAGCTGTCGATGAAGAGGAAATAGT 7553480
+                                  ****************************************************************************** PP
+
+                  aligned    2113 ctccggggagtccacccacgtcgagttcgatcctactaacatcctctccatcctcgccaacatgactcccttctccga 2190   
+                                   tc gg ga  c+ c ca gt ga tt  atcc ac aa+at ctctc at ct+gc aa atgac cc ttctccga
+  Bgt_ctg-10000_consensus 7553481 ATCAGGAGAAACTTCACATGTAGAATTTAATCCGACAAATATTCTCTCTATACTTGCTAATATGACGCCATTCTCCGA 7553558
+                                  ****************************************************************************** PP
+
+                  aligned    2191 cttcaaccagtcgccccgtaacatgtaccagtgtcagatgggtaagcaaactatgggtacaccaggaacagccatcgg 2268   
+                                  +ttcaa cagtc cc cg+aa atgta+cagtgtcagatggg aa+caa+ctatggg acacc+ggaac+gc atc+g
+  Bgt_ctg-10000_consensus 7553559 TTTCAATCAGTCACCGCGAAATATGTATCAGTGTCAGATGGGAAAACAATCTATGGGAACACCTGGAACGGCGATCCG 7553636
+                                  ****************************************************************************** PP
+
+                  aligned    2269 ttaccgaacggacaacaagatgtaccgtctccaaaccggtcagacgcctattgtccgcgcaccgctgcacaacgctta 2346   
+                                   tac gaac ga+aacaag+++ta  g ct c  ac gg cagac cctat+g  cg+ cacc  tgca aacgc+ta
+  Bgt_ctg-10000_consensus 7553637 ATACAGAACCGATAACAAGGCTTATAGGCTTCTGACTGGACAGACACCTATCGCTCGATCACCTTTGCATAACGCGTA 7553714
+                                  ****************************************************************************** PP
+
+                  aligned    2347 cggttttgacaacttccccaacggcatgaacgccgtcgttgccgtcatttcatacactggttacgacatggacgacgc 2424   
+                                  cgg tt+ga aactt cc aa gg atgaacgc gt gt gc+gtcat+tc tacactgg ta ga atggacga gc
+  Bgt_ctg-10000_consensus 7553715 CGGATTCGATAACTTTCCAAATGGTATGAACGCTGTAGTAGCTGTCATCTCGTACACTGGCTATGATATGGACGATGC 7553792
+                                  ****************************************************************************** PP
+
+                  aligned    2425 catgattatcaacaagtcggcgcacgagcgaggcttcggtcacggaacaatctacaagaccaagaagtacactctcga 2502   
+                                  +atgat atcaacaagtc gc cacga cg gg tt+gg +a+gg ac atcta aa ac aa aa  + +  +t ga
+  Bgt_ctg-10000_consensus 7553793 TATGATAATCAACAAGTCAGCTCACGAACGGGGGTTTGGATATGGCACTATCTATAAAACAAAAAAAATTGAATTAGA 7553870
+                                  ****************************************************************************** PP
+
+                  aligned    2503 ggatgaggacagaacacggtcggcaaagaatatcaacaagctgtttggcttcgctcccggcggaaccgtccgggcgga 2580   
+                                  gga  a  a   +a     tc + +aa+aa a caa aa ct+tttgg+ttcgc cc ggc   +  +t ++ggcgga
+  Bgt_ctg-10000_consensus 7553871 GGAGAAAAA---GAACAAATCAAGCAAAAAGACCAAAAAACTCTTTGGTTTCGCACCAGGCTCTGAAATAAAGGCGGA 7553945
+                                  999877654...3444578999999***************************************************** PP
+
+                  aligned    2581 gtggcgtgctacgctcgacgaggacggtttccctcgcatcggtcgcatggtccaggagggtgatttcattgccgcgtg 2658   
+                                  +  gc    +    t+ga+ga ga+ggt+t cctc cat gg cg   g tc ag aggg gat  +att +cgc tg
+  Bgt_ctg-10000_consensus 7553946 CGTGCTAAGCCAAATTGATGAAGATGGTCTTCCTCACATAGGACGGGAGATCAAGCAGGGAGATAAGATTTGCGCCTG 7554023
+                                  99999998889999**************************************************************** PP
+
+                  aligned    2659 gcacactgtttcggcggatgagaatggctaatacgtcaaccgtgacggcctcactcacttcgagaagtacaaggactc 2736   
+                                  g a+ac+gt  c  +ggatga ++ ggc+a t+ gt aa  g ga+gg  t actca tt+gagaa ta aa ga tc
+  Bgt_ctg-10000_consensus 7554024 GTATACCGTGACTATGGATGAATCGGGCCATTTGGTGAATAGGGATGGAATTACTCATTTTGAGAAATATAAAGATTC 7554101
+                                  ****************************************************************************** PP
+
+                  aligned    2737 tgaaaaggcattcgtcgaggaagtccgctttattggcgccgagaacggtaccgagcccttgcaggctgtctccgtcaa 2814   
+                                   ga +a+gc t ++tcga gaagt cg  t+attggcg+ ga aacgg a+ gagccc  gcagg  +t+tc+gt aa
+  Bgt_ctg-10000_consensus 7554102 CGAGGACGCTTATATCGAAGAAGTGCGTCTGATTGGCGATGAAAACGGAATAGAGCCCGCGCAGGTGATTTCTGTTAA 7554179
+                                  ****************************************************************************** PP
+
+                  aligned    2815 gttccgcattcctcgttctccagtcattggtgacaagttctcgtctcgtcacggtcagaagggtgtctgttcgcaaaa 2892   
+                                   tt cg+ ttcc+cg+tc cc+ t attggtgacaa tt+tc tct g ca gg+cagaa ggtgt++ ttc caaaa
+  Bgt_ctg-10000_consensus 7554180 ATTTCGTGTTCCCCGATCGCCTCTTATTGGTGACAAATTTTCCTCTAGGCATGGACAGAAAGGTGTTCTTTCTCAAAA 7554257
+                                  ****************************************************************************** PP
+
+                  aligned    2893 gtggcctgcggtcgacatgcccttctcggagaccggtatccagcctgatgtcatcatcaaccctcacgctttcccttc 2970   
+                                   tggcc+gc +t gac t cc ttc cggaga++gg at ca cctga+gt at at aaccc ca gc ttccc tc
+  Bgt_ctg-10000_consensus 7554258 ATGGCCCGCAATAGACCTTCCATTCACGGAGAGTGGGATACAACCTGACGTTATAATTAACCCACATGCATTCCCCTC 7554335
+                                  ****************************************************************************** PP
+
+                  aligned    2971 tcgtatgactattggcatgtttgtcgagtcgctggccggaaaggctggagctctgcacggtcttgctcaagactccac 3048   
+                                   cgtatgactat+gg+atgttt t gagtc ct gccggaaa+ c ggagctct cacgg +t gc+caagac ++ac
+  Bgt_ctg-10000_consensus 7554336 ACGTATGACTATCGGTATGTTTATTGAGTCACTCGCCGGAAAATCGGGAGCTCTACACGGATTAGCGCAAGACAGTAC 7554413
+                                  ****************************************************************************** PP
+
+                  aligned    3049 ccccttcaagttcgacgaggaaaacacggcgggcgattacttcggccatcagctgatgaaggctggctacaactacta 3126   
+                                  ccc tt aa+ttc  +gagga aacac gc  g+gattactt+gg ca+cagct+atgaaggctgg ta aactac+a
+  Bgt_ctg-10000_consensus 7554414 CCCGTTTAAATTCAGTGAGGAGAACACTGCTAGTGATTACTTTGGACACCAGCTCATGAAGGCTGGATATAACTACCA 7554491
+                                  ****************************************************************************** PP
+
+                  aligned    3127 cggcaacgagcccctgtactctggtatcaccggcgaggagttcgacgccgatatctacattggcgtggtctactacca 3204   
+                                  cgg aacgagcc++tgta+tc+gg atcaccggcga gagtt +acgccgatat tacattgg gt+gtcta+tacca
+  Bgt_ctg-10000_consensus 7554492 CGGAAACGAGCCTATGTATTCGGGGATCACCGGCGAAGAGTTACACGCCGATATTTACATTGGAGTTGTCTATTACCA 7554569
+                                  ****************************************************************************** PP
+
+                  aligned    3205 gcgtctgcgtcacatggttaacgacaagttccaagtccgaaccactggtcccgtcgtacatctgactggtcaacccat 3282   
+                                   cg ctgcg ca atggt aa ga+aa tt caagt+cgaac ac gg cccgt +++ca++tgactggtca+cc at
+  Bgt_ctg-10000_consensus 7554570 ACGGCTGCGGCATATGGTAAATGATAAATTTCAAGTGCGAACAACGGGACCCGTAACCCAGATGACTGGTCAGCCTAT 7554647
+                                  ****************************************************************************** PP
+
+                  aligned    3283 caagggtcgtaagaagggtggtggtatccgtgtcggagagatggagcgtgattctctgttcgctcacggtactgcgtt 3360   
+                                  caaggg +g+aagaa ggtggtggtat cgtgt gg ga atgga cg+ga+tc ct++t gctca ggtac gc+tt
+  Bgt_ctg-10000_consensus 7554648 CAAGGGAAGAAAGAAAGGTGGTGGTATTCGTGTGGGCGAAATGGAACGCGACTCGCTCCTTGCTCATGGTACCGCTTT 7554725
+                                  ****************************************************************************** PP
+
+                  aligned    3361 cctctttcaggaccgtctgctgaactgctcggattacacgaggtcgtggatctgccgggagtgcggcaccttcctgtc 3438   
+                                  cct +ttca gaccg ct  t aa tg+tc+gatta a g+g t+ tggat tg     a tg+gg ac tt  t+tc
+  Bgt_ctg-10000_consensus 7554726 CCTTCTTCAAGACCGGCTATTTAATTGTTCTGATTATAAGCGCTGTTGGATTTGTAAAAATTGTGGAACATTTATTTC 7554803
+                                  ****************************************************************************** PP
+
+                  aligned    3439 cacgcagcctaccgtgtcgtcatttgtcggcaagaggaagggcatgggcgcggttaggtgcaggaattgcgcgatgag 3516   
+                                   ac cagcc a  gt+tcg+cattt +c    + a +aaggg a+ gg   ggttag tg  g  + tgcgc     g
+  Bgt_ctg-10000_consensus 7554804 TACTCAGCCGAGTGTTTCGCCATTTTCCCATCGAACCAAGGGAACTGGAAAGGTTAGATGTCGCCGATGCGCTCATCG 7554881
+                                  **************************99999999999**************************999999999988888 PP
+
+                  aligned    3517 gctgcggaggtgtgggggatgttgatttcgagtagtttggaggagaggtttgggaggatggaaagggtaagcggtggg 3594   
+                                  g +          g gggatg           +   + g+  + ga + ttggga+gatgga+a+gg++a ++gtggg
+  Bgt_ctg-10000_consensus 7554882 GTC---------AGAGGGATG-----------G--ACAGAGTCCGAAACTTGGGAAGATGGAGACGGGCAAAAGTGGG 7554937
+                                  876.........122222221...........1..12223335688999***************************** PP
+
+                  aligned    3595 ttggtggtgagaacaccaccgtcgttgctgtgccgggtgtgctgaagtacttggatgtggagctggcggctatgggta 3672   
+                                  ttgg ggtga +a+ac ac  t+gt gctgtgcc gg gtg+t a+ tac+t ga+gt gagctggc gc atgggta
+  Bgt_ctg-10000_consensus 7554938 TTGGGGGTGATGATACGACAATTGTCGCTGTGCCAGGGGTGTTAAGATACCTTGACGTAGAGCTGGCAGCCATGGGTA 7555015
+                                  ****************************************************************************** PP
+
+                  aligned    3673 tcaagctgaagtacagggttgataattaggatg 3705   
+                                  tcaagct a  taca++gt  +t++tt++g   
+  Bgt_ctg-10000_consensus 7555016 TCAAGCTTACATACAATGTGAGTCCTTGAGTGT 7555048
+                                  ******************998888888773221 PP
+
+>> Bgt_ctg-156_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ !  228.2   9.1     3e-67      2087      3383 ..    360692    361973 ..    360671    361994 ..    464116    0.74
+
+  Alignment:
+  score: 228.2 bits
+                aligned   2087 attgcctgcacggagcaagagatcgtctccggggagtccacccacgtcgagttcgatcctactaacatcctctccatcctcg 2168  
+                               attgc   c+  gag + ga at      cg   a  c+ac+ca  t ga  t ga cct   a +atc t       +t+g
+  Bgt_ctg-156_consensus 360692 ATTGCTCTCTATGAGACTGAAATAAA---CGAAAATACTACTCATTTAGAAATTGAACCTTTCACTATCTTAGGGGCTGTTG 360770
+                               67777777777777777777766544...45567778889999999999999999999987777777776666666666777 PP
+
+                aligned   2169 ccaacatgactcccttctccgacttcaaccagtcgccccgtaacatgtaccagtgtcagatgggtaagcaaactatgggtac 2250  
+                               c     t a  cc t c cc ac  +aaccagtc cc cg+aa a  tacca+tgt   atggg+aagcaa ctat gg  c
+  Bgt_ctg-156_consensus 360771 CAGGTCTAATACCATACCCCCACCATAACCAGTCCCCTCGAAATACCTACCAATGTGCCATGGGCAAGCAAGCTATTGGCGC 360852
+                               7777778888999999**************************************************************9766 PP
+
+                aligned   2251 accaggaacagccatcgg..ttaccgaacggacaacaagatgtaccgtctc...caaaccggtcagacgcctattgtc.... 2323  
+                                  +g a      atc g  tt  cg+a  ga+a     +t+tacc   t     a  c   tca   gcc at gt     
+  Bgt_ctg-156_consensus 360853 TATTGCATAT--AATCAGttTTCTCGTATTGATACTTTACTTTACCTCATGgtcTATCC---TCATCAGCCGATGGTAaaga 360929
+                               5555443222..22222211344678888888876555555555543322111011111...22222345555555531111 PP
+
+                aligned   2324 ..cgcgcaccgctgcacaacgcttacggttttgacaacttccccaacggcatgaacgccgtcgttgccgtcatttcatacac 2403  
+                                 cg+ c      gc  a c ++ta      tga aa  t cc    gg   gaa gc    gt gc+gt+at tcatac c
+  Bgt_ctg-156_consensus 360930 ctCGAACTATTGAGCTTATCAAGTA------TGATAAGCTGCCGGCTGGTCAGAATGCTACAGTAGCTGTTATGTCATACTC 361005
+                               1122222222222233445555655......5799*********************************************** PP
+
+                aligned   2404 tggttacgacatggacgacgccatgattatcaacaagtcggcgcacgagcgaggcttcggtcac.............ggaac 2472  
+                               tgg tacgacat ga ga gc  t  t++t aa aa  c +c    ga cg gg tt+ggtc c             ggaa+
+  Bgt_ctg-156_consensus 361006 TGGATACGACATTGAAGATGCGCTTGTCCTGAATAAAGCTTCCTGTGACCGTGGGTTTGGTCGCtgccaagtatttcGGAAG 361087
+                               ************************************************************9876111111111111144444 PP
+
+                aligned   2473 aatctacaagaccaagaagtacactctcgaggatgaggac.agaacac......ggtcggcaaagaatatcaacaa...gct 2544  
+                               +at  a             ++ca+t+   a+ga  a   c + a c+c      g tcg+c ++ +  atc+++aa   g+t
+  Bgt_ctg-156_consensus 361088 CATTCA------------ACTCAGTT---ACGAAAATACCcTAACCGCgcagagGATCGACTCG-GTGATCGTGAAatgGAT 361153
+                               443322............11222222...22222222222022222222223323444444333.23445555544111222 PP
+
+                aligned   2545 gtttggcttcgctcccggcggaaccgtccgggcggagtggcgtgctacgctcgacgaggacggtttccctcgcatcggtcgc 2626  
+                               g    g+tt    cc g+c  a c +t      +g     c +gc a++ct g   a ga gg  tc ct     cggt+  
+  Bgt_ctg-156_consensus 361154 GAAAAGTTT----CCAGACCAACCTAT------TGCTAAACACGCAATCCTGGGACACGAGGGAGTCGCTATGCCCGGTGAG 361225
+                               222234444....34444444444433......2345566889999999***9999********999999999999****** PP
+
+                aligned   2627 atggtccaggagggtgatttcattgccgcgtggc............acactgtttcggcggatg...agaatggctaatacg 2693  
+                               a  gtc a    ggt a +tc tt  c      c            a+ac   +tc  c g t     g++tg+c+a     
+  Bgt_ctg-156_consensus 361226 AAAGTCGAATCTGGTCAAGTCTTTCTCAATAAACaagtacctctaaATACATCCTCAACAGGTAtagGGTCTGACCATAGAA 361307
+                               *******999999999888876654332111111000000011111222222222222222221112334444444444444 PP
+
+                aligned   2694 tcaaccgtgacggcctcactcacttcgagaagtacaaggactctgaaaaggcattcgtcgaggaagtccgctttattggcgc 2775  
+                               t aa + t ac   c   c+c c    +ga+ tac       c ga  ++ c+t c+tcga  aagt       at+g + c
+  Bgt_ctg-156_consensus 361308 TAAATGATTACAAGCCAGCGCCC---ATGAGTTACCGTCTACCAGATTTCTCCTACATCGATAAAGTA------ATGGTTTC 361380
+                               55544444333322222222211...123333333332333467788888899999999999998764......56666677 PP
+
+                aligned   2776 cgagaacggtaccgagcccttgcaggctgtctccgtcaagttccgcattc......ctcgttctccagtcattggtgacaag 2851  
+                                 aga+cg  ac ga          gc +t+  ++tcaag t c  a  c      c cgt   cc+g   t gg gacaag
+  Bgt_ctg-156_consensus 361381 TCAGACCGAGACTGA---------TGCAATGGTTATCAAGGTACAGACACgccagaCGCGTCGACCTGAACTAGGCGACAAG 361453
+                               777777776666665.........5677788888888888777766655533333377899999****************** PP
+
+                aligned   2852 ttctcgtctcgtcacggtcagaagggtgtctgttcgcaaaagtgg...cctgcggtcgacatgcccttctcggagaccggta 2930  
+                               tt+tc+tctcgtcacgg+ca+aa gg gt  gtt gca aa tg    cc    g  ga+atgcc ttctc+ga +c gg a
+  Bgt_ctg-156_consensus 361454 TTTTCTTCTCGTCACGGACAAAAAGGAGTA-GTTGGCATAATTGTaaaCCA--AGAAGATATGCCTTTCTCCGACTCAGGAA 361532
+                               ****************************96.57889999888875221333..46679************************ PP
+
+                aligned   2931 tccagcctgatgtcatcatcaaccctcacgctttcccttctcgtatgactattggcatgtttgtcgagtcgctggccggaaa 3012  
+                               tc   cctgat t at at aa+cctcacg tttcccttctcg atgact ttgg a   t+ t ga    ct  ccggaaa
+  Bgt_ctg-156_consensus 361533 TCTGCCCTGATATTATAATGAATCCTCACGGTTTCCCTTCTCGAATGACTGTTGGAAAAATGCTTGAACTTCTTTCCGGAAA 361614
+                               ********************************************************************************** PP
+
+                aligned   3013 ggctggagctctgcacggtcttgctcaagactccacccccttcaag..tt.cgacgaggaaaacacggcgggcgattacttc 3091  
+                               +gctgg+g t+t  a+gg   t+ t a+ a+ ++ac+ c tt   +  tt c acg                 gat a+ t 
+  Bgt_ctg-156_consensus 361615 AGCTGGTGTTTTAAATGGGAGTCTTGAGTATGGTACTGCGTTTGGAggTTcCAACGT---------------AGATGATATG 361681
+                               ******************99999999999********99887432111221233444...............4444444555 PP
+
+                aligned   3092 ggccatcagctgatgaaggctggctacaactactacggcaacgagcccctgtactctggtatcaccggcgaggagttcgacg 3173  
+                               ggc      ct+ t aa    ggct    +tact  gg aa ga   + t   +tc ggtat+ac gg ga    tt ++ g
+  Bgt_ctg-156_consensus 361682 GGCGCAATTCTCGTCAAACACGGCTTTTCTTACTCTGGAAAAGACTTTGTTACTTCAGGTATTACTGGAGAATCTTTACCAG 361763
+                               554433333445555555556888889999***********99988777777899*************************** PP
+
+                aligned   3174 ccgatatctacattggcgtggtctactaccagcgtctgcgtcacatggttaacgacaagttccaagtccgaaccactggtcc 3255  
+                               c  a+at t+  ttgg   g tcta+tacca     tg   ca atggtt a ga+aag t ca   ccg  c    gg+cc
+  Bgt_ctg-156_consensus 361764 CATACATATTTTTTGGGCCGATCTATTACCAAAAGTTGAAGCATATGGTTCAGGATAAGATGCATTCCCGCTCGCGAGGCCC 361845
+                               *************************************************************************9999***** PP
+
+                aligned   3256 cgtcgtacatctgactggtcaacccatcaagggtcgtaagaagggtggtggtatccgtgtcggagagatggagcgtgattct 3337  
+                                   g+    ct+ac  g+caacc a c aggg cg  +  + g tggtggt tccg  t gg+ga atgga cg+ga+t t
+  Bgt_ctg-156_consensus 361846 ACGAGCTATCCTCACACGCCAACCAACCGAGGGACGCTCTCGCGATGGTGGTCTCCGCCTTGGTGAAATGGAACGCGACTGT 361927
+                               999999999999********************************************************************** PP
+
+                aligned   3338 ctgttcgctcacggtactgcgttcctctttcaggaccgtctgctga 3383  
+                                tg tcgc  a gg++ct      ct++ttc  ga  g +t  tga
+  Bgt_ctg-156_consensus 361928 TTGATCGCATATGGAGCTAGCCAGCTGCTTCTAGAAAGGTTAATGA 361973
+                               *****************99888899999999999999999988776 PP
+
+>> Bgt_ctg-555_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ !  193.2  10.8   1.1e-56      2134      3428 ..    293127    294452 ..    293107    294472 ..    396492    0.73
+
+  Alignment:
+  score: 193.2 bits
+                aligned   2134 cgagttcgatcctactaacatcctctccatcctcgccaacatgactcccttctccgacttcaacca................ 2199  
+                                ga  t  atcc a  a  at ct    at   +gc a cat a tcccttc c ga+  +aacca                
+  Bgt_ctg-555_consensus 293127 TGAAATTCATCCCAGCATGATTCTAGGGATATGTGCAAGCATTATTCCCTTCCCAGATCATAACCAagtacgtatgccataa 293208
+                               4555555556666666666777777777777777777777777777777777777777777776642222222222222222 PP
+
+                aligned   2200 ..............................gtcgccccgtaacatgtaccagtgtcagatgggtaagcaaactatgggtaca 2251  
+                                                             gtc+cc cgtaa a  ta+ca+t     atggg+aagca+ c+atggg    
+  Bgt_ctg-555_consensus 293209 attttctgactttgtcgctcacaaacagtaGTCTCCTCGTAATACATATCAATCGGCAATGGGCAAGCAGGCCATGGGATTT 293290
+                               2222222222222222222222222222227999******************988888********************9998 PP
+
+                aligned   2252 ccaggaacagccatcggttaccgaacggacaacaagatgtaccgtctccaaaccggtcagacgcctattgtccgcgcaccgc 2333  
+                                    aaca  + t+g ++a  gaa gga+a ca g++  a   tctc a      tcaga  cc  t g       ac  c
+  Bgt_ctg-555_consensus 293291 TTCCTAACAAATTTTGACCAAAGAATGGATACCATGGCAAATATTCTCTATTATCCTCAGAAACCATTGGCA-----ACAAC 293367
+                               88888999999*************************999999888888887777779999999998776543.....33333 PP
+
+                aligned   2334 tgcacaacgcttacgg...........ttttgacaacttccccaacggcatgaacgccgtcgttgccgtcatttcatacact 2404  
+                               t+ a        a+gg           tt  ga a ct c c    ggc   aa gc  t+gt gc+ t   +t +tac c 
+  Bgt_ctg-555_consensus 293368 TCGATC-----AATGGaattccttaaaTTCAGAGAGCTGC-CTGCTGGCCAAAATGCTATTGTAGCTATAGCCTGCTACTCC 293443
+                               333321.....23444111111111113445666666655.55568899999****************************** PP
+
+                aligned   2405 ggttacgacatggacgacgccatgattatcaacaagtcggcgcacgagcgaggcttcggtcacggaacaatctacaagac.. 2484  
+                               gg ta  a    ga ga  cc tgat at aac a              g+ g  t+g tc +gg+  + t  a aag c  
+  Bgt_ctg-555_consensus 293444 GGGTATAATCAAGAGGATTCCGTGATAATGAACCAA------------AGCAGTATTGATCGTGGTCTC-TTCAGAAGTCtg 293512
+                               *******99999******************998554............334444555555555554222.222333333200 PP
+
+                aligned   2485 ......caagaagtacactctcgaggatgaggacagaacac..ggtcggcaaagaatatcaacaagctgtttggcttcgctc 2558  
+                                     c ag +  +  +  tc+ag a  ++g  +++ ca      c++   ag +t t++a+aagc +tt+ g t  g t 
+  Bgt_ctg-555_consensus 293513 ttctatCGAGCTTATACGGATCAAGAAAAGCGTATCGGCATaaATGCCATTGAGTGTTTTGAGAAGCCCTTCCGATCTGATA 293594
+                               0000002233333333333333333333333222222222222455677777888899999*********999998887666 PP
+
+                aligned   2559 ccggcggaaccgtccgggcggagtggcgtgctacgctcgacgaggacggtttccctcgcatcggtcgcatggtccaggaggg 2640  
+                               c+   + a    t ++   +g+      +g+ta  ct+ga+ga ga+gg  tc        cgg++     gt    g +g 
+  Bgt_ctg-555_consensus 293595 CTCTAAAA---CTGAAACATGGTACCTACGATAAACTTGATGAAGATGGAATCGTCGCTCCCGGCGTACGAGTATCCGGTGA 293673
+                               55433332...333344444555666788999*****************876532222223344444444444333344444 PP
+
+                aligned   2641 tgatttcattgccgcg....tggcacactgtttcggcggatg......agaatggct............aatacgtcaaccg 2700  
+                                gat t att  +g +      gcac c  t+ c+ c gatg      a   +gg +            + +acgt aa  g
+  Bgt_ctg-555_consensus 293674 AGATATAATTATTGGAaaaaCAGCAC-CAATCGCCCCTGATGctgaggAACTCGGTCagcgaactaaggCTCACGTTAAAAG 293754
+                               55566666655544220111222322.11222222333333311111122222222211111111111146789******** PP
+
+                aligned   2701 tgacggcctcactcacttcgagaagtacaaggactctgaaaaggcattcgtcgaggaagtccgctttattggcgcc.gagaa 2781  
+                                ga+g c   actc c t+g gaagtac        tga aa+g   tcgt ga+ aagt     t a +  c++  gagaa
+  Bgt_ctg-555_consensus 293755 AGATGCCTCGACTC-CATTGCGAAGTAC--------TGAGAACGGTATCGTTGACCAAGTTTTAATAACGACCAATgGAGAA 293827
+                               ************98.5567889999985........677778899999********99997655554433222222133344 PP
+
+                aligned   2782 cggtaccgagcccttgcaggctgtctccgtcaagttccgcat.......tcctcgttctccagtcattggtgacaagttctc 2856  
+                                g + ccga                t cgtcaa  t cg at        cc  g+t  cc+   attggtgacaa ttc c
+  Bgt_ctg-555_consensus 293828 GGTCTCCGA----------------TTCGTCAAAGTACGAATgagaacaACCAAGATA-CCTCAGATTGGTGACAAATTCGC 293892
+                               333333333................456788888888888874443333478888775.5566679**************** PP
+
+                aligned   2857 gtctcgtcacggtcagaagggtgtctgttcgcaaaagt.....ggcctgcggtcgacatgcccttctcggagaccggtatcc 2933  
+                               +tctcg ca ggtca+aaggg    ++ tcg aa +       ggc     g  ga+atgcc tt+ c       gg at+ 
+  Bgt_ctg-555_consensus 293893 TTCTCGGCATGGTCAAAAGGGA--ACTATCGGAATTACttataGGCAA---GAAGATATGCCATTTACATGCCAAGGAATTG 293969
+                               *******************985..445566555433211222255554...4569*************9888889******* PP
+
+                aligned   2934 agcctgatgtcatcatcaaccctcacgctttcccttctcgtatgactattggcatgtttgtcgagtcgctggccggaaaggc 3015  
+                                 cc+gat t at+at aaccc cacgc  tccc tc cgtatgactattg+c+  tt+ t ga t  c      g aa+g 
+  Bgt_ctg-555_consensus 293970 TTCCCGATTTAATTATTAACCCACACGCAATCCCATCCCGTATGACTATTGCCCATTTGATAGAATGTCAACTGAGTAAAGT 294051
+                               ***************************************************************9875444333345566555 PP
+
+                aligned   3016 tggagctctgcacggtcttgctcaagactccacccccttcaagttcgacgaggaaaacacggcgggcgattacttcggccat 3097  
+                                    c+ct c +ggtct g    agac ccac cc tt a           gaa  +a   cgg cga+t   tc    a 
+  Bgt_ctg-555_consensus 294052 GTCGACCCTACGTGGTCTAGAAGGAGACGCCACGCCTTTTAC------A---GAAGTTA---CGGTCGACTCAGTCTCGAAA 294121
+                               44455999****************************987542......2...3444455...55677787766665555666 PP
+
+                aligned   3098 cagctgatgaaggctggctacaactactacggcaacgagcccctgtactctggtatcaccggcgaggagttcgacgccgata 3179  
+                               c  ct ++  a   tgg+tac a t  +  gg   +gag   +tgtac  tgg   cac ggc    ag t g  gc  a  
+  Bgt_ctg-555_consensus 294122 CTTCTACGCGATCATGGGTACCAATCACGTGGATTTGAGATAATGTACCATGGACACACAGGCCGAAAGCTTGTTGCACAAG 294203
+                               7777777777777789****988887788899999*********************************************** PP
+
+                aligned   3180 tctacattggcgtggtctactaccagcgtctgcgtcacatggttaacgacaagttccaagtccgaaccactggtcccgtcgt 3261  
+                               tct+  t gg       ta+taccagcgt tgcg ca atggtt acga+aa  tcca g  cg+ cca  gg+cc gt   
+  Bgt_ctg-555_consensus 294204 TCTTTCTAGGACCCACATATTACCAGCGTTTGCGGCATATGGTTGACGATAAAATCCACGCACGTGCCAGAGGCCCAGTACA 294285
+                               ********************************************************************************** PP
+
+                aligned   3262 acatctgactggtcaacccatcaagggtcgtaagaagggtggtggtatccgtgtcggagagatggagcgtgattctctgttc 3343  
+                               +  tct ac  g caacc +t  a ggtcgt++ a+ g tggtggt t cg  tcggaga atgga cg+gatt + tg t 
+  Bgt_ctg-555_consensus 294286 GATTCTAACACGGCAACCTGTGGAAGGTCGTGCCAGAGATGGTGGTCTGCGGTTCGGAGAAATGGAACGCGATTGCATGATT 294367
+                               ********************************************************************************** PP
+
+                aligned   3344 gctcacggtactgcgttcctctttcaggaccgtctgctgaactgctcggattacacgaggtcgtggatctgccgggagtgcg 3425  
+                                ctca ggt+c gc    +tctt+ agga cg +t  t+ a   +tc gat + +  ag + +   atctgc  +   tg+g
+  Bgt_ctg-555_consensus 294368 TCTCATGGTGCAGCAGCATTCTTGAAGGAGCGATTATTCGAGGTTTCCGATGCTTTTAGAGTCCACATCTGCGATATTTGTG 294449
+                               ***************9999**********************999*******9999999999999999*****9999999999 PP
+
+                aligned   3426 gca 3428  
+                               g +
+  Bgt_ctg-555_consensus 294450 GAT 294452
+                               865 PP
+
+>> Bgt_ctg-555_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ ?   12.6   0.3     0.028      1648      1730 ..    292428    292510 ..    292408    292530 ..    396492    0.92
+
+  Alignment:
+  score: 12.6 bits
+                aligned   1648 ttggggttttctgtgccctgttcacactcctgatggatctccttgcggtctgctcaaccatctggctcacaagtgcatgatc 1729  
+                               ttgggg+ t+ t+tg+cc g   a actcc ga gg+    cttg+gg ct  t aa  a ct gc c ca gtgc +  tc
+  Bgt_ctg-555_consensus 292428 TTGGGGCCTCGTTTGTCCAGCAGAGACTCCGGAGGGTCAGGCTTGTGGACTAGTGAAGAACCTAGCACTCATGTGCTATGTC 292509
+                               69**************************************************************************998776 PP
+
+                aligned   1730 a 1730  
+                               a
+  Bgt_ctg-555_consensus 292510 A 292510
+                               5 PP
+
+>> Bgt_ctg-156_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ ?   12.2   3.4     0.039       545       649 ..    359122    359226 ..    359092    359246 ..    464116    0.70
+
+  Alignment:
+  score: 12.2 bits
+                aligned    545 aggtgccaccttg....aaaacaactcgcctgcgcagcttgtgcagagcaaggaggagtccgaggagctgggaggctacttc 622   
+                               a++tgcc +cttg    aaaa a   c+ c    cagc t t    a  aa g g    c   gga c gggagg tactt+
+  Bgt_ctg-156_consensus 359122 AAATGCCGTCTTGcaggAAAAAATGACCGCGAAACAGCGTATATGAATGAATGTG----CATTGGATCCGGGAGGGTACTTT 359199
+                               5567777777653211144444444555555555555544444433333333333....33347999*************** PP
+
+                aligned    623 atcgtcaatggtatcgagaagctcatc 649   
+                               atcgtcaatgg+a cga+aa  t+at+
+  Bgt_ctg-156_consensus 359200 ATCGTCAATGGCACCGAAAAAGTTATT 359226
+                               *********************999986 PP
+
+>> Bgt_ctg-156_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ ?   10.4   3.5      0.14      1652      1800 ..    360194    360339 ..    360176    360359 ..    464116    0.86
+
+  Alignment:
+  score: 10.4 bits
+                aligned   1652 ggttttctgtgccctgttcacactcctgatggatctccttgcggtctgctcaaccatctggctcacaagtgcatgatcatca 1733  
+                               gg+ t ct+tg+cc   t acac+cctga gga+   c tg+ggtct+ t aa  a  t gc+c  a g    + at+a+ a
+  Bgt_ctg-156_consensus 360194 GGCATGCTTTGTCCATCTGACACGCCTGAAGGAGAAGCCTGTGGTCTTGTAAAAAACTTAGCCCTTATGACACATATTACTA 360275
+                               5677889999****99999*******************************************9998888778888999**** PP
+
+                aligned   1734 cggacgctgtggacgtctctgctataccaaggctggtttttgagctcggtgttgttaacacttcgtc 1800  
+                               c  acg tg  ga g + ct   at   +a+  tg tttttg  ct+gg+g  g  +aca ++  tc
+  Bgt_ctg-156_consensus 360276 CATACGATGATGAAGAACCT---ATCAAGAAATTGATTTTTGTTCTTGGCGCAGAAGACATCGTTTC 360339
+                               *******9999999876554...44555677889999999999999999999988888877766665 PP
+
+>> Bgt_ctg-555_consensus  
+    score  bias    Evalue   hmmfrom    hmm to     alifrom    ali to      envfrom    env to       sq len      acc
+   ------ ----- ---------   -------   -------    --------- ---------    --------- ---------    ---------    ----
+ ?    4.8   2.5       6.5       591       644 ..    291440    291493 ..    291421    291508 ..    396492    0.83
+
+  Alignment:
+  score: 4.8 bits
+                aligned    591 aggaggagtccgaggagctgggaggctacttcatcgtcaatggtatcgagaagc 644   
+                               a gag    c+ a ga c  ggaggctacttcatc tcaatgg a cga+aa  
+  Bgt_ctg-555_consensus 291440 ATGAGTGTCCTTACGATCAAGGAGGCTACTTCATCATCAATGGAAGCGAAAAAG 291493
+                               45555555567788999999*****************************99865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (3820 nodes)
+Target sequences:                          251  (321126236 residues searched)
+Residues passing SSV filter:           7771578  (0.0242); expected (0.02)
+Residues passing bias filter:          7771578  (0.0242); expected (0.02)
+Residues passing Vit filter:            294635  (0.000918); expected (0.003)
+Residues passing Fwd filter:             32422  (0.000101); expected (3e-05)
+Total number of hits:                        7  (2.07e-05)
+# CPU time: 167.58u 0.46s 00:02:48.04 Elapsed: 00:00:42.34
+# Mc/sec: 28972.66
+//
+[ok]

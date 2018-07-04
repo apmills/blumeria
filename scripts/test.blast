@@ -1,0 +1,3165 @@
+TBLASTX 2.6.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: a_n_genes.fasta
+           10,560 sequences; 18,035,147 total letters
+
+
+
+Query= Afu4g03960 | Aspergillus fumigatus C6 transcription factor (Ctf1A),
+putative (3158 nt)
+
+Length=3158
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value  N
+
+ANID_07050  | Aspergillus nidulans FGSC A4 cutinase transcription...  449     0.0    12
+ANID_01425  | Aspergillus nidulans FGSC A4 conserved hypothetical...  70.3    6e-31  6 
+ANID_06762  | Aspergillus nidulans FGSC A4 conserved hypothetical...  48.3    1e-28  7 
+ANID_04035  | Aspergillus nidulans FGSC A4 acetamidase regulatory...  45.5    1e-20  6 
+ANID_10331  | Aspergillus nidulans FGSC A4 predicted protein (224...  60.2    1e-20  4 
+ANID_03863  | Aspergillus nidulans FGSC A4 conserved hypothetical...  63.8    4e-19  5 
+ANID_09117  | Aspergillus nidulans FGSC A4 C6 transcription facto...  56.5    4e-16  4 
+ANID_10789  | Aspergillus nidulans FGSC A4 conserved hypothetical...  39.6    1e-15  4 
+ANID_01077  | Aspergillus nidulans FGSC A4 conserved hypothetical...  50.1    1e-15  4 
+ANID_08590  | Aspergillus nidulans FGSC A4 conserved hypothetical...  42.3    7e-07  2 
+ANID_04001  | Aspergillus nidulans FGSC A4 conserved hypothetical...  40.5    1e-05  3 
+ANID_07507  | Aspergillus nidulans FGSC A4 C6 transcription facto...  49.2    2e-05  1 
+ANID_04972  | Aspergillus nidulans FGSC A4 C6 transcription facto...  44.1    2e-05  2 
+ANID_00026  | Aspergillus nidulans FGSC A4 conserved hypothetical...  48.3    2e-05  2 
+ANID_10976  | Aspergillus nidulans FGSC A4 conserved hypothetical...  47.8    5e-05  1 
+ANID_02667  | Aspergillus nidulans FGSC A4 C6 transcription facto...  47.8    5e-05  1 
+ANID_08930  | Aspergillus nidulans FGSC A4 conserved hypothetical...  46.4    1e-04  2 
+ANID_11683  | Aspergillus nidulans FGSC A4 conserved hypothetical...  45.5    2e-04  1 
+ANID_07379  | Aspergillus nidulans FGSC A4 conserved hypothetical...  44.6    4e-04  1 
+ANID_02677  | Aspergillus nidulans FGSC A4 conserved hypothetical...  43.7    5e-04  2 
+ANID_05651  | Aspergillus nidulans FGSC A4 conserved hypothetical...  44.1    6e-04  1 
+ANID_00891  | Aspergillus nidulans FGSC A4 purine utilization pos...  36.3    0.001  2 
+ANID_07189  | Aspergillus nidulans FGSC A4 C6 transcription facto...  42.3    0.002  1 
+ANID_04821  | Aspergillus nidulans FGSC A4 conserved hypothetical...  40.0    0.002  2 
+ANID_03269  | Aspergillus nidulans FGSC A4 fungal specific transc...  41.8    0.003  1 
+ANID_08441  | Aspergillus nidulans FGSC A4 conserved hypothetical...  40.9    0.005  1 
+ANID_00742  | Aspergillus nidulans FGSC A4 conserved hypothetical...  37.3    0.007  2 
+ANID_12296  | Aspergillus nidulans FGSC A4 conserved hypothetical...  37.3    0.009  2 
+ANID_04366  | Aspergillus nidulans FGSC A4 conserved hypothetical...  40.0    0.010  1 
+ANID_07332  | Aspergillus nidulans FGSC A4 C6 zinc finger domain-...  39.6    0.014  1 
+ANID_06396  | Aspergillus nidulans FGSC A4 fungal specific transc...  39.6    0.014  1 
+ANID_02944  | Aspergillus nidulans FGSC A4 C6 transcription facto...  37.3    0.015  2 
+ANID_07118  | Aspergillus nidulans FGSC A4 conserved hypothetical...  38.2    0.036  1 
+ANID_00853  | Aspergillus nidulans FGSC A4 conserved hypothetical...  38.2    0.036  1 
+ANID_12314  | Aspergillus nidulans FGSC A4 C6 transcription facto...  37.3    0.067  1 
+ANID_06814  | Aspergillus nidulans FGSC A4 fungal specific transc...  37.3    0.067  1 
+ANID_00096  | Aspergillus nidulans FGSC A4 C2H2 transcription fac...  37.3    0.067  1 
+ANID_08447  | Aspergillus nidulans FGSC A4 conserved hypothetical...  36.3    0.13   1 
+ANID_07061  | Aspergillus nidulans FGSC A4 conserved hypothetical...  36.3    0.13   1 
+ANID_05299  | Aspergillus nidulans FGSC A4 conserved hypothetical...  36.3    0.13   1 
+ANID_12154  | Aspergillus nidulans FGSC A4 conserved hypothetical...  29.5    0.14   2 
+ANID_07919  | Aspergillus nidulans FGSC A4 fungal specific transc...  27.6    0.32   2 
+ANID_08116  | Aspergillus nidulans FGSC A4 conserved hypothetical...  35.0    0.33   1 
+ANID_08128  | Aspergillus nidulans FGSC A4 conserved hypothetical...  28.1    0.33   2 
+ANID_12398  | Aspergillus nidulans FGSC A4 conserved hypothetical...  34.5    0.45   1 
+ANID_08426  | Aspergillus nidulans FGSC A4 conserved hypothetical...  34.5    0.45   1 
+ANID_07142  | Aspergillus nidulans FGSC A4 acid phosphatase (1348...  34.5    0.45   1 
+ANID_03369  | Aspergillus nidulans FGSC A4 C6 transcription facto...  34.5    0.45   1 
+ANID_10504  | Aspergillus nidulans FGSC A4 C6 transcription facto...  33.1    0.56   2 
+ANID_10957  | Aspergillus nidulans FGSC A4 C6 transcription facto...  34.1    0.62   1 
+ANID_06173  | Aspergillus nidulans FGSC A4 C6 transcription facto...  34.1    0.62   1 
+ANID_03247  | Aspergillus nidulans FGSC A4 ABC transporter sequen...  34.1    0.62   1 
+ANID_00388  | Aspergillus nidulans FGSC A4 C6 transcription facto...  34.1    0.62   1 
+ANID_10491  | Aspergillus nidulans FGSC A4 fungal specific transc...  33.6    0.85   1 
+ANID_09524  | Aspergillus nidulans FGSC A4 glycosyl hydrolase fam...  33.6    0.85   1 
+ANID_05274  | Aspergillus nidulans FGSC A4 conserved hypothetical...  33.6    0.85   1 
+ANID_11793  | Aspergillus nidulans FGSC A4 conserved hypothetical...  28.6    0.89   2 
+ANID_10550  | Aspergillus nidulans FGSC A4 xylanase transcription...  33.1    1.2    1 
+ANID_06053  | Aspergillus nidulans FGSC A4 serine/threonine prote...  33.1    1.2    1 
+ANID_08355  | Aspergillus nidulans FGSC A4 conserved hypothetical...  28.1    1.4    2 
+ANID_07610  | Aspergillus nidulans FGSC A4 xylanolytic transcript...  32.7    1.5    2 
+ANID_12381  | Aspergillus nidulans FGSC A4 mandelate racemase/muc...  32.7    1.6    1 
+ANID_12017  | Aspergillus nidulans FGSC A4 vacuolar transporter c...  32.7    1.6    1 
+ANID_08414  | Aspergillus nidulans FGSC A4 C6 zinc finger domain-...  32.7    1.6    1 
+ANID_06134  | Aspergillus nidulans FGSC A4 hypothetical protein (...  32.7    1.6    1 
+ANID_10543  | Aspergillus nidulans FGSC A4 C6 transcription facto...  32.2    2.2    1 
+ANID_08855  | Aspergillus nidulans FGSC A4 conserved hypothetical...  32.2    2.2    1 
+ANID_04686  | Aspergillus nidulans FGSC A4 chitosanase (1002 nt)      32.2    2.2    1 
+ANID_04006  | Aspergillus nidulans FGSC A4 conserved hypothetical...  32.2    2.2    1 
+ANID_02910  | Aspergillus nidulans FGSC A4 transthyretin domain-c...  32.2    2.2    1 
+ANID_00689  | Aspergillus nidulans FGSC A4 acetate regulatory DNA...  32.2    2.2    1 
+ANID_00863  | Aspergillus nidulans FGSC A4 fungal specific transc...  28.1    2.5    2 
+ANID_05163  | Aspergillus nidulans FGSC A4 conserved hypothetical...  29.9    2.6    2 
+ANID_11918  | Aspergillus nidulans FGSC A4 hypothetical protein (...  31.8    3.0    1 
+ANID_10755  | Aspergillus nidulans FGSC A4 DNA polymerase alpha c...  31.8    3.0    1 
+ANID_10126  | Aspergillus nidulans FGSC A4 conserved hypothetical...  31.8    3.0    1 
+ANID_09236  | Aspergillus nidulans FGSC A4 conserved hypothetical...  31.8    3.0    1 
+ANID_08741  | Aspergillus nidulans FGSC A4 conserved hypothetical...  31.8    3.0    1 
+ANID_08164  | Aspergillus nidulans FGSC A4 fungal specific transc...  31.8    3.0    1 
+ANID_05037  | Aspergillus nidulans FGSC A4 conserved hypothetical...  31.8    3.0    1 
+ANID_04597  | Aspergillus nidulans FGSC A4 nuclear condensin comp...  31.8    3.0    1 
+ANID_03883  | Aspergillus nidulans FGSC A4 endo-1,3(4)-beta-gluca...  31.8    3.0    1 
+ANID_04825  | Aspergillus nidulans FGSC A4 LysM domain-containing...  29.9    3.4    2 
+ANID_06887  | Aspergillus nidulans FGSC A4 conserved hypothetical...  25.8    3.4    2 
+ANID_02740  | Aspergillus nidulans FGSC A4 high affinity cAMP pho...  29.9    3.9    2 
+ANID_11104  | Aspergillus nidulans FGSC A4 actin associated prote...  31.3    4.2    1 
+ANID_09395  | Aspergillus nidulans FGSC A4 conserved hypothetical...  31.3    4.2    1 
+ANID_07943  | Aspergillus nidulans FGSC A4 conserved hypothetical...  31.3    4.2    1 
+ANID_05859  | Aspergillus nidulans FGSC A4 C6 zinc finger domain-...  31.3    4.2    1 
+ANID_05519  | Aspergillus nidulans FGSC A4 AP-3 complex subunit s...  31.3    4.2    1 
+ANID_02513  | Aspergillus nidulans FGSC A4 serine/threonine-prote...  31.3    4.2    1 
+ANID_01729  | Aspergillus nidulans FGSC A4 C6 transcription facto...  26.3    4.3    3 
+ANID_01114  | Aspergillus nidulans FGSC A4 conserved hypothetical...  25.8    4.7    2 
+ANID_07326  | Aspergillus nidulans FGSC A4 conserved hypothetical...  29.5    5.1    2 
+ANID_01554  | Aspergillus nidulans FGSC A4 chitin synthase activa...  29.9    5.2    2 
+ANID_07264  | Aspergillus nidulans FGSC A4 conserved hypothetical...  28.1    5.5    2 
+ANID_10920  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.9    5.7    1 
+ANID_07188  | Aspergillus nidulans FGSC A4 small oligopeptide tra...  30.9    5.7    1 
+ANID_06523  | Aspergillus nidulans FGSC A4 cytokinesis protein Se...  30.9    5.7    1 
+ANID_06030  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.9    5.7    1 
+ANID_04952  | Aspergillus nidulans FGSC A4 stress response protei...  30.9    5.7    1 
+ANID_04785  | Aspergillus nidulans FGSC A4 C6 transcription facto...  30.9    5.7    1 
+ANID_04681  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.9    5.7    1 
+ANID_02954  | Aspergillus nidulans FGSC A4 extracellular serine-r...  30.9    5.7    1 
+ANID_02521  | Aspergillus nidulans FGSC A4 endosomal sorting comp...  30.9    5.7    1 
+ANID_00240  | Aspergillus nidulans FGSC A4 transaldolase (1443 nt)    30.9    5.7    1 
+ANID_03674  | Aspergillus nidulans FGSC A4 immunogenic protein (1...  28.6    6.0    2 
+ANID_00773  | Aspergillus nidulans FGSC A4 metalloreductase (1884...  24.4    6.2    2 
+ANID_03835  | Aspergillus nidulans FGSC A4 C6 transcription facto...  29.0    6.5    2 
+ANID_05774  | Aspergillus nidulans FGSC A4 proteasome component (...  29.9    6.8    2 
+ANID_11818  | Aspergillus nidulans FGSC A4 predicted protein (235...  29.5    7.4    2 
+ANID_08494  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.4    7.9    1 
+ANID_08412  | Aspergillus nidulans FGSC A4 polyketide synthase (1...  30.4    7.9    1 
+ANID_07074  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.4    7.9    1 
+ANID_05633  | Aspergillus nidulans FGSC A4 transporter smf2 (2526...  30.4    7.9    1 
+ANID_05576  | Aspergillus nidulans FGSC A4 F-box domain-containin...  30.4    7.9    1 
+ANID_03501  | Aspergillus nidulans FGSC A4 C6 transcription facto...  30.4    7.9    1 
+ANID_01678  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.4    7.9    1 
+ANID_00186  | Aspergillus nidulans FGSC A4 conserved hypothetical...  30.4    7.9    1 
+ANID_02168  | Aspergillus nidulans FGSC A4 TRAF-type zinc finger ...  29.9    8.6    2 
+ANID_00218  | Aspergillus nidulans FGSC A4 anion exchange family ...  29.0    9.1    2 
+ANID_06695  | Aspergillus nidulans FGSC A4 nonsense-mediated mRNA...  23.5    9.8    2 
+
+
+>ANID_07050 | Aspergillus nidulans FGSC A4 cutinase transcription factor 
+1 alpha (3563 nt)
+Length=3563
+
+ Score = 449 bits (975),  Expect(12) = 0.0
+ Identities = 201/214 (94%), Positives = 208/214 (97%), Gaps = 0/214 (0%)
+ Frame = +3/+3
+
+Query  303   NRMAVDGMPVTTLTeqqeaqqaSHNTAYAQFMKPKFARAPIKEAGRVAYLGESSNLSLLV  482
+             N MAV+GMPVTTLTE Q AQQAS N+ YAQFMKPKFARAPIKEAGRVAYLGESSNLSLLV
+Sbjct  954   NAMAVNGMPVTTLTEAQAAQQASQNSTYAQFMKPKFARAPIKEAGRVAYLGESSNLSLLV  1133
+
+Query  483   QDRHGTTDVVHYPLPPNIRGSRARLTDLDNLELDILHQRGAFLLPPKPLCDELVEAYFRW  662
+             QDRHGTTDVVHYPLPPNIRGSRAR++DLDNLELDILHQRGAFLLPPK LCDELV+AYF+W
+Sbjct  1134  QDRHGTTDVVHYPLPPNIRGSRARVSDLDNLELDILHQRGAFLLPPKSLCDELVDAYFKW  1313
+
+Query  663   VAPIVPIVNRSRFMRQYRDPKNPPSllllqaillaGSRVCTNPQLMDANGSTTPAAMTFY  842
+             VAP+VPIVNRSRFMRQYRDPKNPPSLLLLQAILLAGSRVCTNPQLMDANGSTTPAAMTFY
+Sbjct  1314  VAPVVPIVNRSRFMRQYRDPKNPPSLLLLQAILLAGSRVCTNPQLMDANGSTTPAAMTFY  1493
+
+Query  843   KRAKALYDANYEDDRVTIVQALVLLGWYWEGPEG  944
+             KRAKALYDANYEDDRVTIVQALVLLGWYWEGPEG
+Sbjct  1494  KRAKALYDANYEDDRVTIVQALVLLGWYWEGPEG  1595
+
+
+ Score = 334 bits (723),  Expect(12) = 0.0
+ Identities = 136/150 (91%), Positives = 142/150 (95%), Gaps = 0/150 (0%)
+ Frame = +2/+3
+
+Query  1100  TDDCSVETSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIE  1279
+             TD  SVE+SQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPI INTDD+DV MLTE+DF+E
+Sbjct  1752  TDRSSVESSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPICINTDDADVEMLTEEDFVE  1931
+
+Query  1280  DEIDSVAEYPPDPVHVQFFLQYVKLCEIMGLVLSQQYSVASKSRRMNAMDLTHSDMALAD  1459
+             DEID  AEYPPDPVHVQFFLQYVKLCEIMGLVLSQQYSVASKSRRMNAMDLTHSDMALAD
+Sbjct  1932  DEIDIAAEYPPDPVHVQFFLQYVKLCEIMGLVLSQQYSVASKSRRMNAMDLTHSDMALAD  2111
+
+Query  1460  WLQNCPKEVCWQKSRHHFLAALLHANY**V  1549
+             WLQNCP+EVCWQ+ RHHF AALLHANY**V
+Sbjct  2112  WLQNCPREVCWQRQRHHFWAALLHANY**V  2201
+
+
+ Score = 190 bits (410),  Expect(15) = 0.0
+ Identities = 110/150 (73%), Positives = 122/150 (81%), Gaps = 0/150 (0%)
+ Frame = -3/-2
+
+Query  1548  TH**Fa*rraakk*CRDFCQHTSFGQF*SQSARAISECVKSMAFILRDLDATEYC*DSTR  1369
+             TH**FA*RRAA+K*C   CQ TS GQF*SQSA A+SE V+S+AFI RDLDATEYC D TR
+Sbjct  2200  TH**FA*RRAAQK*CLCRCQQTSLGQF*SQSASAMSEWVRSIAFIRRDLDATEYCCDRTR  2021
+
+Query  1368  PMISHSLTY*RKNCTCTGSGGYSATLsisssikssSVNMPTSESSVLIPIGRPRATATDR  1189
+             P+IS S TY +KNCT TGSGGYSA +SISSS KSSSV++ TS SSVL+ IGRPRATATDR
+Sbjct  2020  PIISQSFTYCKKNCT*TGSGGYSAAMSISSSTKSSSVSISTSASSVLMQIGRPRATATDR  1841
+
+Query  1188  SLVKRVHQMRFHNLLSGLLS*DVSTLQSSV  1099
+             S VK VH +RFH  LSGLLS + STL  SV
+Sbjct  1840  SRVKSVHHIRFHRRLSGLLSCEDSTLLRSV  1751
+
+
+ Score = 188 bits (404),  Expect(12) = 0.0
+ Identities = 79/84 (94%), Positives = 84/84 (100%), Gaps = 0/84 (0%)
+ Frame = +2/+1
+
+Query  1826  NSVYSLFSALIMHVYQMRSSVPSIVATCQERINICMQALKDVSKVWLVAKMVHTLFESIL  2005
+             +SVYSLFSALIMHVYQMRSSVPSIVATCQERINICMQALKDVSKVWLVAKMVHTLFESIL
+Sbjct  2473  SSVYSLFSALIMHVYQMRSSVPSIVATCQERINICMQALKDVSKVWLVAKMVHTLFESIL  2652
+
+Query  2006  GNKVLEERLQKAAGKRHQRVRPET  2077
+             GNK+LEERLQKAAGKRHQRV+P++
+Sbjct  2653  GNKLLEERLQKAAGKRHQRVKPDS  2724
+
+
+ Score = 165 bits (354),  Expect(12) = 0.0
+ Identities = 65/70 (93%), Positives = 66/70 (94%), Gaps = 0/70 (0%)
+ Frame = +2/+1
+
+Query  2294  GNSRSNTRPTTPFNGHFSLPATPPDLFLVTRTSPNLSPSLWENFQPDQLFPDGTAIFPEL  2473
+             GNSR+NTRPTTPFN  FSLPATPPDLFLVTRTSPNLSPSLWENFQPDQLFPDGTAIFPEL
+Sbjct  2953  GNSRANTRPTTPFNAQFSLPATPPDLFLVTRTSPNLSPSLWENFQPDQLFPDGTAIFPEL  3132
+
+Query  2474  ASPQNHTVDP  2503
+              SPQN TVDP
+Sbjct  3133  TSPQNTTVDP  3162
+
+
+ Score = 149 bits (319),  Expect(15) = 0.0
+ Identities = 66/83 (80%), Positives = 70/83 (84%), Gaps = 0/83 (0%)
+ Frame = -3/-1
+
+Query  2073  SGRTL*CLFPAAF*RRSSRTLLPKIDSNSV*TIFATSQTLDTSFKACMQMLILSWHVATI  1894
+             SG T  CLFPAAF*RRSS  LLPKIDSN V TIFATSQTL+TS  AC+QMLILSW VATI
+Sbjct  2720  SGLTRWCLFPAAF*RRSSSNLLPKIDSNKVCTIFATSQTLETSLSACIQMLILSWQVATI  2541
+
+Query  1893  DGTDDRIW*TCMINAENKL*TLL  1825
+             +GTDDRIW TCMI AE +L*TLL
+Sbjct  2540  EGTDDRIWYTCMIRAEKRL*TLL  2472
+
+
+ Score = 147 bits (316),  Expect(15) = 0.0
+ Identities = 65/83 (78%), Positives = 70/83 (84%), Gaps = 0/83 (0%)
+ Frame = -2/-2
+
+Query  847   RL*NVIAAGVVEPFASISWGFVQTLEPARRMACSRSKEGGFFGSRYCRIKRLRLTMGTIG  668
+             RL*NVIAAGVVEP AS+S G VQTLEPA+RMAC RSKEGGF GS Y R+ RLRLTMGT G
+Sbjct  1498  RL*NVIAAGVVEPLASMSCGLVQTLEPAKRMACKRSKEGGFLGSLYWRMNRLRLTMGTTG  1319
+
+Query  667   ATHLK*ASTSSSQRGLGGSKKAP  599
+             ATHLK*AST+SS    GGS+KAP
+Sbjct  1318  ATHLK*ASTNSSHNDFGGSRKAP  1250
+
+
+ Score = 144 bits (310),  Expect(12) = 0.0
+ Identities = 59/70 (84%), Positives = 63/70 (90%), Gaps = 0/70 (0%)
+ Frame = +1/+3
+
+Query  1570  WKTMTNEPSTTLCLLHRAHMPPASSAPNSYRVEEMAYPSRTIAFQAAGMITSIVENLQTH  1749
+             W + T+  STTLCLLHRAHMPPASS P+SYRVEEMAYPSRTIAFQAAG+ITSIVENLQTH
+Sbjct  2220  WSSATDIDSTTLCLLHRAHMPPASSVPSSYRVEEMAYPSRTIAFQAAGIITSIVENLQTH  2399
+
+Query  1750  QEIRYAPAFM  1779
+              EIRY PAFM
+Sbjct  2400  NEIRYTPAFM  2429
+
+
+ Score = 114 bits (243),  Expect(15) = 0.0
+ Identities = 51/70 (73%), Positives = 57/70 (81%), Gaps = 0/70 (0%)
+ Frame = -3/-1
+
+Query  2502  GSTVWFCGDANSGNMAVPSGNNWSGWKFSQRDGERLGEVRVTRKRSGGVAGSEK*PLKGV  2323
+             GSTV F G+ +SG +AVPSGN+ SG KFSQR+GERLGEVRVTR +SGGVAGSE * L GV
+Sbjct  3161  GSTVVF*GEVSSGKIAVPSGNS*SG*KFSQREGERLGEVRVTRNKSGGVAGSEN*ALNGV  2982
+
+Query  2322  VGRVLLRELP  2293
+             VGRV  RE P
+Sbjct  2981  VGRVFAREFP  2952
+
+
+ Score = 105 bits (225),  Expect(15) = 0.0
+ Identities = 49/76 (64%), Positives = 56/76 (74%), Gaps = 0/76 (0%)
+ Frame = -1/-2
+
+Query  1790  GKTNMNAGAYRIS*CVWRFSTIEVIIPAAWKAIVRDGYAISSTR*LFGADEAGGMCARCR  1611
+             G + MNAG  RIS  V +FST++VIIPAAWKAIVRDGYAISSTR*L G D+AGG+ ARC 
+Sbjct  2440  GPSYMNAGV*RISL*VCKFSTMDVIIPAAWKAIVRDGYAISSTR*LLGTDDAGGI*ARCN  2261
+
+Query  1610  RHRVVLGSLVMVFQRW  1563
+             +  VVL   V   Q W
+Sbjct  2260  KQSVVLSMSVAEDQPW  2213
+
+
+ Score = 82.6 bits (174),  Expect(15) = 0.0
+ Identities = 34/49 (69%), Positives = 37/49 (76%), Gaps = 0/49 (0%)
+ Frame = -3/-1
+
+Query  2229  NSLDGVTAGVCGRDRSYETGGVGPPFGKPRSISSNLRLGGSGFFAGGCC  2083
+             +SL+GV AGV GRDRSYETGGVGPP G+ RSISSNLR GG      G C
+Sbjct  2885  SSLEGVAAGVWGRDRSYETGGVGPPLGRARSISSNLRFGGGSGLLDGKC  2739
+
+
+ Score = 73.5 bits (154),  Expect(12) = 0.0
+ Identities = 29/32 (91%), Positives = 29/32 (91%), Gaps = 0/32 (0%)
+ Frame = +2/+1
+
+Query  2141  LGLPNGGPTPPVSYERSRPQTPAVTPSRELGQ  2236
+             L LPNGGPTPPVSYERSRPQTPA TPSREL Q
+Sbjct  2797  LALPNGGPTPPVSYERSRPQTPAATPSRELPQ  2892
+
+
+ Score = 73.0 bits (153),  Expect(15) = 0.0
+ Identities = 33/42 (79%), Positives = 35/42 (83%), Gaps = 0/42 (0%)
+ Frame = -1/-1
+
+Query  131  SLDLLCCFLRFGVGILHSMEKATQLVQGTPKLAASQRTCSRR  6
+            SL     FLRFGVGILHS+EKATQLVQGTP+LAASQRT S R
+Sbjct  770  SLGFAWLFLRFGVGILHSIEKATQLVQGTPRLAASQRT*SSR  645
+
+
+ Score = 64.8 bits (135),  Expect(15) = 0.0
+ Identities = 30/49 (61%), Positives = 36/49 (73%), Gaps = 0/49 (0%)
+ Frame = -2/-2
+
+Query  454   PR*ATLPASFIGARANLGFINCA*AVLWDAC*ASCCSVRVVTGIPSTAI  308
+             P+ ATLPASF+GARAN GF+N A     +AC A+  SV VVTGIP TA+
+Sbjct  1105  PKYATLPASFMGARANFGFMN*AYVEFCEACWAAWASVSVVTGIPLTAM  959
+
+
+ Score = 64.3 bits (134),  Expect(12) = 0.0
+ Identities = 25/30 (83%), Positives = 28/30 (93%), Gaps = 0/30 (0%)
+ Frame = +1/+3
+
+Query  976   VLTPTDVTKNVFYWTRVAMVVAQGSGMHRR  1065
+             +LT  DVTKNVFYWTRVA++VAQGSGMHRR
+Sbjct  1626  LLTCPDVTKNVFYWTRVAIIVAQGSGMHRR  1715
+
+
+ Score = 60.6 bits (126),  Expect(12) = 0.0
+ Identities = 29/32 (91%), Positives = 29/32 (91%), Gaps = 0/32 (0%)
+ Frame = +2/+1
+
+Query  2723  ATGMDNTSQDDNWssssrsGPTAPTTLNVEDW  2818
+             A  MDN SQDDNWSSSSRSGPTAPTTLNVEDW
+Sbjct  3367  AGAMDNASQDDNWSSSSRSGPTAPTTLNVEDW  3462
+
+
+ Score = 55.1 bits (114),  Expect(15) = 0.0
+ Identities = 22/28 (79%), Positives = 25/28 (89%), Gaps = 0/28 (0%)
+ Frame = -1/-2
+
+Query  1073  RSYLRCMPEPCATTIATLVQ*KTFFVTS  990
+             R++LRC+PEPCAT IATLVQ* TF VTS
+Sbjct  1723  RAHLRCIPEPCATIIATLVQ*NTFLVTS  1640
+
+
+ Score = 47.8 bits (98),  Expect(15) = 0.0
+ Identities = 17/21 (81%), Positives = 20/21 (95%), Gaps = 0/21 (0%)
+ Frame = -2/-2
+
+Query  949   NKPSGPSQYQPRRTRAWTIVT  887
+             ++PSGPSQYQPR T+AWTIVT
+Sbjct  1600  HQPSGPSQYQPRSTKAWTIVT  1538
+
+
+ Score = 40.0 bits (81),  Expect(12) = 0.0
+ Identities = 16/17 (94%), Positives = 16/17 (94%), Gaps = 0/17 (0%)
+ Frame = +1/+3
+
+Query  2872  RFQFFGINGSFGEMAT*  2922
+             RFQFFGINGSFGEMA *
+Sbjct  3513  RFQFFGINGSFGEMAV*  3563
+
+
+ Score = 39.1 bits (79),  Expect(15) = 0.0
+ Identities = 14/15 (93%), Positives = 15/15 (100%), Gaps = 0/15 (0%)
+ Frame = -1/-2
+
+Query  2915  AISPKLPLMPKNWNL  2871
+             AISPKLPL+PKNWNL
+Sbjct  3556  AISPKLPLIPKNWNL  3512
+
+
+ Score = 35.4 bits (71),  Expect(12) = 0.0
+ Identities = 11/21 (52%), Positives = 16/21 (76%), Gaps = 0/21 (0%)
+ Frame = +2/+1
+
+Query  2648  GQPQQVFGLENQHGWPMQGLE  2710
+             GQPQQ++G++ Q  W M GL+
+Sbjct  3295  GQPQQMYGMDPQQSWQMPGLD  3357
+
+
+ Score = 32.2 bits (64),  Expect(15) = 0.0
+ Identities = 13/14 (93%), Positives = 13/14 (93%), Gaps = 0/14 (0%)
+ Frame = -3/-1
+
+Query  2820  YQSSTFSVVGAVGP  2779
+             YQSST SVVGAVGP
+Sbjct  3464  YQSSTLSVVGAVGP  3423
+
+
+ Score = 31.3 bits (62),  Expect(15) = 0.0
+ Identities = 12/21 (57%), Positives = 12/21 (57%), Gaps = 0/21 (0%)
+ Frame = -3/-1
+
+Query  2709  SKPCIGHPC*FSNPNTCCGWP  2647
+             S P I   C* S P  CCGWP
+Sbjct  3356  SSPGICQDC*GSIPYICCGWP  3294
+
+
+ Score = 30.9 bits (61),  Expect(15) = 0.0
+ Identities = 13/17 (76%), Positives = 14/17 (82%), Gaps = 0/17 (0%)
+ Frame = -2/-2
+
+Query  544   DPLMLGGRG*CTTSVVP  494
+             +P MLGG G* TTSVVP
+Sbjct  1195  EPRMLGGSG*WTTSVVP  1145
+
+
+ Score = 28.6 bits (56),  Expect(12) = 0.0
+ Identities = 9/20 (45%), Positives = 14/20 (70%), Gaps = 0/20 (0%)
+ Frame = +2/+1
+
+Query  2600  SPELMSGLPPGMGLHGGQPQ  2659
+             SPE++S +PP +G+ G   Q
+Sbjct  3250  SPEILSSMPPAIGMQGQPQQ  3309
+
+
+ Score = 26.7 bits (52),  Expect(12) = 0.0
+ Identities = 9/21 (43%), Positives = 14/21 (67%), Gaps = 0/21 (0%)
+ Frame = +2/+1
+
+Query  2246  ISVPQGSPTGPQNAMPGNSRS  2308
+             +S+PQ SPT  ++ +PG   S
+Sbjct  2899  MSIPQTSPTAAKDGLPGAGNS  2961
+
+
+ Score = 24.9 bits (48),  Expect(15) = 0.0
+ Identities = 10/16 (63%), Positives = 10/16 (63%), Gaps = 0/16 (0%)
+ Frame = -3/-1
+
+Query  2646  PCRPIPGGRPDISSGL  2599
+             PC PI GG  D  SGL
+Sbjct  3296  PCMPIAGGMLDRISGL  3249
+
+
+ Score = 194 bits (419),  Expect(8) = 2e-163
+ Identities = 93/227 (41%), Positives = 142/227 (63%), Gaps = 0/227 (0%)
+ Frame = -1/-1
+
+Query  944   TFGTFPVPA*ENKGLDNRDAVIFIISIIKCFRPFIECHCSGSGGAVRIHKLGIRANSRAS  765
+             TF + PVPA E+  LDN   +I II II  FR  ++CH S SG A+ +H+L I A+ R S
+Sbjct  1595  TFRSLPVPAQEH*SLDNSHPIILIIRII*SFRSLVKCHSSWSGRAISVHELRIGADPRTS  1416
+
+Query  764   EKDGLQ*KQRRRVLRIAILSHKTAAIDDGDDRCDPSEISFDKLVTEGFGRE*ESATLMEN  585
+             +K+GLQ +QRR VL I+IL+H+ AA+D+G DRCDP E+S   LV +   R+*ES  L+++
+Sbjct  1415  QKNGLQKEQRRWVLGISILAHEPAAVDNGHDRCDPFEVSVH*LVAQRLRRK*ESTALVQD  1236
+
+Query  584   VEFEVVEVRQPSTRSSDVRRKRVVHHIRCSMTILNQERQI**LSEIGDSACFLYRCPSEL  405
+             +  ++++V     R+SDV R+ ++ H+  SM +LNQE +I *L+++ + + FLY    + 
+Sbjct  1235  I*LKIIQVGDSRARTSDVGRQWIMDHVGRSMAVLNQE*KIR*LAQVCNPSSFLYGRAGKF  1056
+
+Query  404   GLHKLCVSSVVGRLLSFLLLGEGGHWHPIDGHPVLAIPESILAIRAV  264
+              LH+L V  ++  LL  L   E  H H +D H V     ++L  + +
+Sbjct  1055  RLHELSVCRILRGLLGGLGFRECCHRHTVDCHGVGVAGVAVLITKRI  915
+
+
+ Score = 181 bits (389),  Expect(8) = 2e-163
+ Identities = 83/151 (55%), Positives = 106/151 (70%), Gaps = 0/151 (0%)
+ Frame = -2/-1
+
+Query  1552  LHSLVVRMKKSCQEVMPGLLPAYLLWAILKPVC*SHI*MRQVHGVHPPRLGRHRVLLRQH  1373
+             +HSLVVR+KKSC E+MP  LPA L   ILKPV   H+ M ++H +H P LGRHR+LLRQ 
+Sbjct  2204  IHSLVVRVKKSCPEMMPLSLPADLSGTILKPVRKRHVGMGEIHCIHSP*LGRHRILLRQD  2025
+
+Query  1372  *THDFAQLDVLKKELYVYRVWRVLGDAVDLVLNKIVLGQHAHVGVVGVNSNRPAEGNCYG  1193
+              TH+ A+L VL+++L+V RV RV    VD V NKI+L QH +V +V V++N  ++GN YG
+Sbjct  2024  KTHNLAELHVLQEKLHVNRVRRVFSCNVDFVFNKILLCQHLNVRIVSVDANWTSQGNSYG  1845
+
+Query  1192  SVPGEEGPPNALP*SLVWLAELRCFHTAIIS  1100
+             SV  EE PP  LP +LV LAELR FH   +S
+Sbjct  1844  SVSSEECPPYPLPQTLVGLAELRRFHATAVS  1752
+
+
+ Score = 105 bits (225),  Expect(8) = 2e-163
+ Identities = 46/77 (60%), Positives = 58/77 (75%), Gaps = 0/77 (0%)
+ Frame = -2/-3
+
+Query  2062  PLMSLSSSFLKTFFENFVAQDRLEQCVNHLRHQPNLGHVFQGLHANVDSLLARRYNRWY*  1883
+             PL+ LSS FLKT F+  V  DRLEQ V+HLRH+P+LG + + LH NVDSLLA  ++R + 
+Sbjct  2709  PLVPLSSRFLKTLFQ*LVT*DRLEQSVHHLRHEPDLGDILERLHTNVDSLLAGGHDRGHR  2530
+
+Query  1882  *PHLVDVHDQRREQAVD  1832
+             *PHLV VHDQ RE+ V+
+Sbjct  2529  *PHLVYVHDQSREKTVN  2479
+
+
+ Score = 88.1 bits (186),  Expect(8) = 2e-163
+ Identities = 36/70 (51%), Positives = 52/70 (74%), Gaps = 0/70 (0%)
+ Frame = -2/-3
+
+Query  2503  WVDSMVLRRRQLGEYGRAIREQLVWLEVLPERRREVGRSTCDKEKIWRCCR*REVTVEGR  2324
+             W++S VLR  +  E   A+ EQL+WL+VLPERR ++ RS CDKE+I R CR*RE++V+ R
+Sbjct  3162  WINSRVLRGGKFWEDSGAVGEQLIWLKVLPERR*KIRRSACDKEQIRRSCR*RELSVKWR  2983
+
+Query  2323  CRSSIASRIA  2294
+              RS + +R++
+Sbjct  2982  RRSGVCARVS  2953
+
+
+ Score = 63.8 bits (133),  Expect(8) = 2e-163
+ Identities = 28/72 (39%), Positives = 45/72 (63%), Gaps = 0/72 (0%)
+ Frame = -3/-1
+
+Query  1779  HERRSISDFLMCLEVFDDRGNHPCSLEGNSTRRIRHLLHTVAVWRRRSRRHVCSMQETQG  1600
+             HERR +++ +M L+V +   ++  SLEG+S  R+RHL  +V  W R  R H+ S+Q+ + 
+Sbjct  2429  HERRRVTNLVMSLQVLNYGCDYSSSLEGDSA*RVRHLFDSVTTWDR*CRWHMSSVQQAKR  2250
+
+Query  1599  GAGFISHGLPKM  1564
+             GA  +S G P +
+Sbjct  2249  GAINVSGGGPTL  2214
+
+
+ Score = 54.2 bits (112),  Expect(8) = 2e-163
+ Identities = 18/22 (82%), Positives = 20/22 (91%), Gaps = 0/22 (0%)
+ Frame = -2/-2
+
+Query  82   TRWKKPHSWCKAHLNWQHRNGP  17
+            TR KKPHSWCKAHL+WQ R+GP
+Sbjct  721  TR*KKPHSWCKAHLDWQRRSGP  656
+
+
+ Score = 28.1 bits (55),  Expect(8) = 2e-163
+ Identities = 9/16 (56%), Positives = 13/16 (81%), Gaps = 0/16 (0%)
+ Frame = -3/-1
+
+Query  2916  CHLSKAPIDAEELEPK  2869
+             CH ++A I+ EELEP+
+Sbjct  3557  CHFAEAAINTEELEPR  3510
+
+
+ Score = 24.4 bits (47),  Expect(8) = 2e-163
+ Identities = 15/46 (33%), Positives = 22/46 (48%), Gaps = 0/46 (0%)
+ Frame = -3/-1
+
+Query  1065  PSVHAGALCDDHCNSRPVEDVLCHVCRS*NRPTLGQSR*TNLRDLP  928
+             P+VH   L +++ +S PVE VL +V          + R    R LP
+Sbjct  1715  PAVHPRTLRNNYRHSCPVEHVLGNVWAGQQASHHNRFRAPTFRSLP  1578
+
+
+ Score = 127 bits (273),  Expect(9) = 1e-137
+ Identities = 74/150 (49%), Positives = 83/150 (55%), Gaps = 0/150 (0%)
+ Frame = +3/+1
+
+Query  1101  LMIAVWKHLNSASQTRDYGSAFGGPSSPGTDP*QLPSAGLLELTPTTPTWAC*PRTILLR  1280
+             L    W   NSAS T   GS +GG SS  TDP* LP       T T  T  C* R ILL+
+Sbjct  1753  LTAVAWNLRNSASPTSVCGSGYGGHSSLETDP*LLPWDVQFASTLTMRTLRC*QRRILLK  1932
+
+Query  1281  TRSTASPSTLQTLytyssffstssCAKSWV*CCLNNTLWRPSLGG*TPWT*RIQIWL*QT  1460
+             T+ST   +T +TL+T S   ST S A+ WV  C +N  WRPS G *  W   I  W  +T
+Sbjct  1933  TKSTLQLNTRRTLFTCSFSCST*SSARLWVLSCRSNIRWRPSHGE*MQWISPIPTWRLRT  2112
+
+Query  1461  GFRIAQRRYAGRSPGITSWQLFFMRTTSEC  1550
+             GFRI   R AG   GI S QLFF RTTSEC
+Sbjct  2113  GFRIVPERSAGSDKGIISGQLFFTRTTSEC  2202
+
+
+ Score = 106 bits (227),  Expect(9) = 1e-137
+ Identities = 57/123 (46%), Positives = 69/123 (56%), Gaps = 0/123 (0%)
+ Frame = +2/+2
+
+Query  581   RHSPSAWRFLTPSQTPL*RACRSLFQMGRTYRPHRQSQPFYATISRSEEPAFFASTAGHP  760
+             R+   A  F T ++  + R    L QMGRT R H Q QP +A I RS+EP FFA  AGH 
+Sbjct  1232  RYPAPARCFPTSAEVVVRRVSGRLLQMGRTCRAHCQPQPVHAPI*RSQEPTFFAPFAGHS  1411
+
+Query  761   SRWLESLHESPTYGCERLHHSRCNDIL*TGESTL*C*L*R*PRHDCPGPCSPRLVLGRSR  940
+               W E LH+S  +G   L HS C DIL   ES++*C L* *    CP   +P LVLG + 
+Sbjct  1412  FGWFEGLHQSAAHGR*WLDHSSCYDILQASESSI*CEL*G**GDYCPSFSAPGLVLGGT*  1591
+
+Query  941   RFV  949
+             R V
+Sbjct  1592  RLV  1600
+
+
+ Score = 98.7 bits (209),  Expect(9) = 1e-137
+ Identities = 44/80 (55%), Positives = 55/80 (69%), Gaps = 0/80 (0%)
+ Frame = +1/+3
+
+Query  1825  QQRLQLVLGVDHARLPNAVISTIYCSDVPGENQHLHASLERRVQGLAGGEDGSHTVRVDL  2004
+             +Q LQ  LG DHAR+P+AVI  +    +PGENQHL+A  +  +QGLA GEDG+H VRVDL
+Sbjct  2472  EQCLQSFLGSDHARIPDAVIGALDRGHLPGENQHLYAGAQGCLQGLARGEDGAHFVRVDL  2651
+
+Query  2005  GQQSSRRTSSESCWKETSEG  2064
+               Q + R SS+S WKE   G
+Sbjct  2652  R*QVTGRASSKSGWKEAPAG  2711
+
+
+ Score = 93.2 bits (197),  Expect(9) = 1e-137
+ Identities = 39/87 (45%), Positives = 59/87 (68%), Gaps = 0/87 (0%)
+ Frame = +1/+3
+
+Query  2296  QFAKQYSTDNALQRSLLATCNTSRSFPCHTYFAQPLSVSLGELPARPVVP*WHGHIPRVG  2475
+             + A+++ TD+A+ RS+LATCN+S   PCHT+FA   + SLGEL AR  VP  H ++PR  
+Sbjct  2955  KLARKHPTDDAI*RSVLATCNSS*FVPCHTHFA*SFTFSLGELSARSTVPRRHRYLPRTY  3134
+
+Query  2476  VSAKPYCRPTTTDAIAVTITRYAATSH  2556
+             + +K  C  T +DA+A+T  RY + ++
+Sbjct  3135  LPSKHDC*STASDAVAITYPRYGSAAN  3215
+
+
+ Score = 85.8 bits (181),  Expect(9) = 1e-137
+ Identities = 32/38 (84%), Positives = 36/38 (95%), Gaps = 0/38 (0%)
+ Frame = +1/+1
+
+Query  19   VRCDAASLGVPCTNCVAFSIECKIPTPKRKKQQSKSKD  132
+            VRCDAASLGVPCTNCVAFSIEC+IPTPKRKK Q+K ++
+Sbjct  658  VRCDAASLGVPCTNCVAFSIECRIPTPKRKKSQAKPRE  771
+
+
+ Score = 58.3 bits (121),  Expect(9) = 1e-137
+ Identities = 24/62 (39%), Positives = 41/62 (66%), Gaps = 0/62 (0%)
+ Frame = +3/+2
+
+Query  1596  HHPVSPASSTHASCFVGAKQLPCGGDGVSVSYYCLPGCRDDYLYRRKPPDTSRNPICSCV  1775
+             HH +  A S++A+  +G K LP   DGV V++Y LPGC +++++  +  D+ R+ + +CV
+Sbjct  2246  HHALLVAPSSYATGIIGPK*LPSRRDGVPVTHYRLPGCWNNHIHS*ELADS*RDSLHACV  2425
+
+Query  1776  HV  1781
+             HV
+Sbjct  2426  HV  2431
+
+
+ Score = 46.9 bits (96),  Expect(9) = 1e-137
+ Identities = 23/74 (31%), Positives = 40/74 (54%), Gaps = 0/74 (0%)
+ Frame = +2/+2
+
+Query  326   ASDHPHRATGSSASVPQHCLRTIYEAQVRSGTDKGSRQSRLSRRVIKSVAPGSGSSWNNG  505
+             A D+ H +     S+ +  +R+I+EA++     KGS +  +  RVI+S   GS   WN+ 
+Sbjct  977   ACDNTHGSPSRPTSLAKFDIRSIHEAEICPRAHKGSWKGCILGRVIESFTLGSRPPWNDR  1156
+
+Query  506   CGALPSSA*HQRIA  547
+              G L +++ H R +
+Sbjct  1157  RGPLSTASQHPRFS  1198
+
+
+ Score = 29.5 bits (58),  Expect(9) = 1e-137
+ Identities = 14/41 (34%), Positives = 23/41 (56%), Gaps = 0/41 (0%)
+ Frame = +1/+3
+
+Query  2080  NATASCEETGSAQAQIRRYGSWFAKRGSYTSGFIRTISTTD  2202
+             +A A  +   S++AQ+R YG    +  +Y + F+R IS  D
+Sbjct  2736  SALAVKKAGSSSKAQVR*YGPRSTQWRTYATSFVRAISPPD  2858
+
+
+ Score = 26.7 bits (52),  Expect(9) = 1e-137
+ Identities = 10/17 (59%), Positives = 15/17 (88%), Gaps = 0/17 (0%)
+ Frame = +3/+2
+
+Query  2871  *VPILRHQWELWRDGNM  2921
+             *VPILR+ W+L R+G++
+Sbjct  3512  *VPILRY*WQLRRNGSL  3562
+
+
+ Score = 98.2 bits (208),  Expect(8) = 2e-80
+ Identities = 56/114 (49%), Positives = 65/114 (57%), Gaps = 0/114 (0%)
+ Frame = +1/+1
+
+Query  604   LSYSLPNPSVTSLSKLISDGSHLSSPSSIAAVLCDNIAIRRTRLLCFYCRPSFSLAREFA  783
+             LSY   +   TS   L S+GSHLS P S AA  C NI I RT LLC +CRP F L R  A
+Sbjct  1255  LSYFRRSRCATS*WTLTSNGSHLSCPLSTAAGSCANIEIPRTHLLCSFCRPFFWLVRGSA  1434
+
+Query  784   RIPNLWMRTAPPLPLQ*HSINGRKHFMMLIMKMTASRLSRPLFS*AGTGKVPKV  945
+              I + W   A PL L *H  + RK +MM IM+M    LS+   S AGTG+  KV
+Sbjct  1435  PIRSSWTLMARPLQLL*HFTSERKLYMMRIMRMIG*LLSKL*CSWAGTGRDLKV  1596
+
+
+ Score = 71.2 bits (149),  Expect(8) = 2e-80
+ Identities = 30/52 (58%), Positives = 35/52 (67%), Gaps = 0/52 (0%)
+ Frame = +3/+2
+
+Query  1908  ARRESTFACKP*KTCPRFGWWRRWFTHCSSRSWATKFSKNVFRKLLERDIRG  2063
+             ARRESTF C+  +  PR G WRRW T CSSRS  T + K+VF+K LER   G
+Sbjct  2555  ARRESTFVCRRSRMSPRSGSWRRWCTLCSSRS*VTSYWKSVFKKRLERGTSG  2710
+
+
+ Score = 68.9 bits (144),  Expect(8) = 2e-80
+ Identities = 36/71 (51%), Positives = 45/71 (63%), Gaps = 0/71 (0%)
+ Frame = +3/+2
+
+Query  2316  DRQRPSTVTSRYLQHLQIFSLSHVLRPTSLRLSGRTSSQTSCSLMARPYSPSWRLRKTIL  2495
+             DR+R  T++SRYLQ L I SLSH LR     LSGRT SQ +CS  A   S +    KT L
+Sbjct  2975  DRRRHLTLSSRYLQLLLICSLSHALRLIFHLLSGRTFSQINCSPTAPLSSQNLPPLKTRL  3154
+
+Query  2496  STHNYRCNRSY  2528
+               H++RC+R+Y
+Sbjct  3155  LIHSFRCSRNY  3187
+
+
+ Score = 57.9 bits (120),  Expect(8) = 2e-80
+ Identities = 27/59 (46%), Positives = 40/59 (68%), Gaps = 0/59 (0%)
+ Frame = +1/+2
+
+Query  1330  VLSSVRQAVRNHGSSAVSTILCGVQVSEDERHGLDAFRYGSSRLASELPKGGMLAEVPA  1506
+             V  +VR+A+R++GS  V+ I  GVQV+ +E +G   FR+G+  LASEL + G+LA   A
+Sbjct  1982  VFLAVREALRDYGSCPVAAIFGGVQVTANECNGSHPFRHGACGLASELSQRGLLAATKA  2158
+
+
+ Score = 55.6 bits (115),  Expect(8) = 2e-80
+ Identities = 20/26 (77%), Positives = 23/26 (88%), Gaps = 0/26 (0%)
+ Frame = +3/+3
+
+Query  18   GPLRCCQFRCALHQLCGFFHRVQDPY  95
+            GPLR CQ RCALHQLCGFF+RVQ+ +
+Sbjct  657  GPLRRCQSRCALHQLCGFFYRVQNSH  734
+
+
+ Score = 46.4 bits (95),  Expect(8) = 2e-80
+ Identities = 19/31 (61%), Positives = 22/31 (71%), Gaps = 0/31 (0%)
+ Frame = +1/+2
+
+Query  1117  GNISTQQARQEIMEAHLVDPLHQGPIRSSCP  1209
+             G  +TQQARQ  +EA +VD LH  PIRS CP
+Sbjct  1769  GIFATQQARQASVEADMVDTLHSRPIRSCCP  1861
+
+
+ Score = 34.5 bits (69),  Expect(8) = 2e-80
+ Identities = 27/89 (30%), Positives = 35/89 (39%), Gaps = 0/89 (0%)
+ Frame = +1/+1
+
+Query  274   IARMLSGIARTGWPSMGCQ*PPSPSNRKLSKRPTTLLTHNL*SPSSLGHR*RKQAESPIS  453
+             + R  +    T W S  C *  S   +  +K      T N *S +     *RK       
+Sbjct  925   VIRTATPATPTPWQSTVCL*QHSRKPKPPNKPRKIRHTLNS*SRNLPARP*RKLEGLHTW  1104
+
+Query  454   ESHQICRSWFRIVMEQRMWCTTLFRLTSE  540
+              SH+I  SWF+  ME+  W       TSE
+Sbjct  1105  ASHRIFHSWFKTAMERPTWSIIHCLPTSE  1191
+
+
+ Score = 25.8 bits (50),  Expect(8) = 2e-80
+ Identities = 10/16 (63%), Positives = 11/16 (69%), Gaps = 0/16 (0%)
+ Frame = +2/+1
+
+Query  2870  LGSNSSASMGALERWQ  2917
+             LGSNSS  M A  +WQ
+Sbjct  3511  LGSNSSVLMAASAKWQ  3558
+
+
+ Score = 95.9 bits (203),  Expect(8) = 6e-77
+ Identities = 56/118 (47%), Positives = 63/118 (53%), Gaps = 0/118 (0%)
+ Frame = -3/-3
+
+Query  948   TNLRDLPSTSLGEQGPGQS*RGHLHN*HHKVLSPVYRMSLQREWWSRSHP*VGDSCKLSS  769
+             TNL+  PSTS G    GQ    H HN HH  LS   +MS Q EW S   P*  D C+ S+
+Sbjct  1599  TNLQVPPSTSPGALKLGQ*SPYHPHNSHHIELSLACKMS*QLEWSSH*RP*AADWCRPSN  1420
+
+Query  768   QREGWPAVEAKKAGSSDRDIVA*NGCD*RWGR*VRPI*NKLRQARHRGVWEGVRKRHA  595
+             Q + WPA  AKK GS D  I A* GC *+W R VRPI*+K    R       V K  A
+Sbjct  1419  QPKEWPAKGAKKVGSWDLYIGA*TGCG*QWARQVRPI*SKRPLTRRTTTSAEVGKHRA  1246
+
+
+ Score = 90.0 bits (190),  Expect(8) = 6e-77
+ Identities = 44/84 (52%), Positives = 50/84 (60%), Gaps = 0/84 (0%)
+ Frame = -1/-2
+
+Query  2078  ASRAVPSDVSFQQLSEDVLRELCCPRSTRTVCEPSSPPAKPWTRLSRLACKC*FSPGTSL  1899
+             +S+A P+  SFQ L ED L   C  RSTRT C PSSP A+PW      A KC*FSPG   
+Sbjct  2725  SSQA*PAGASFQPLFEDALPVTCYLRSTRTKCAPSSPRARPWRHP*APAYKC*FSPGRWP  2546
+
+Query  1898  Q*MVLMTAFGRRA*STPRTSCRRC  1827
+             +    MTA G RA*S PR  C+ C
+Sbjct  2545  RSRAPMTASGIRA*SEPRKDCKHC  2474
+
+
+ Score = 68.4 bits (143),  Expect(8) = 6e-77
+ Identities = 34/62 (55%), Positives = 38/62 (61%), Gaps = 0/62 (0%)
+ Frame = -1/-3
+
+Query  1547  LTSSSHEEELPRSDAGTSASIPPLGNSEASLLEPYLNASSPWRSSSETWTPQSIVETALD  1368
+             LTSSS EEELPR+DA  +AS P   NSEAS   P  N   P  S + TWTP +I  T  D
+Sbjct  2199  LTSSSREEELPRNDAFVAASRPLWDNSEASPQAPCRNG*DPLHSFAVTWTPPNIAATGQD  2020
+
+Query  1367  P*  1362
+             P*
+Sbjct  2019  P*  2014
+
+
+ Score = 57.4 bits (119),  Expect(8) = 6e-77
+ Identities = 36/75 (48%), Positives = 42/75 (56%), Gaps = 0/75 (0%)
+ Frame = -1/-2
+
+Query  2540  YLVIVTAIASVVVGRQYGFAETPTRGIWPCHQGTTGLAGSSPRETERGWAKYV*QGKDLE  2361
+             Y   V A AS  V +Q  F      G   C +GT  LA SSPRE  +  AK V*QG + E
+Sbjct  3199  YRGYVIATASEAVDQQSCFEGR*VLGR*RCRRGTVDLAESSPREKVKD*AKCV*QGTNQE  3020
+
+Query  2360  VLQVARSDR*RALSV  2316
+              LQVAR++R* A SV
+Sbjct  3019  ELQVARTER*MASSV  2975
+
+
+ Score = 43.7 bits (89),  Expect(8) = 6e-77
+ Identities = 17/20 (85%), Positives = 19/20 (95%), Gaps = 0/20 (0%)
+ Frame = -3/-3
+
+Query  72   KSHTVGARHT*TGSIATDLL  13
+            KSHTVGARHT*TGS+A DL+
+Sbjct  711  KSHTVGARHT*TGSVAADLI  652
+
+
+ Score = 35.0 bits (70),  Expect(8) = 6e-77
+ Identities = 17/39 (44%), Positives = 20/39 (51%), Gaps = 0/39 (0%)
+ Frame = -2/-3
+
+Query  1708  QPGRQ*YETDTPSPPHGSCLAPTKQEACVLDAGDTGWCW  1592
+             QPGR+*  T TPS   G+ L P    A  L A    WC+
+Sbjct  2358  QPGRR*CVTGTPSLRLGNYLGPMMPVAYELGATSKAWCY  2242
+
+
+ Score = 32.7 bits (65),  Expect(8) = 6e-77
+ Identities = 18/31 (58%), Positives = 19/31 (61%), Gaps = 0/31 (0%)
+ Frame = -1/-3
+
+Query  1208  GQLLRIGPW*RGSTKCASIISCLAC*VEMFP  1116
+             GQ LRIG  *R ST  AS  +C AC*V   P
+Sbjct  1860  GQQLRIGLE*RVSTISASTDACRAC*VAKIP  1768
+
+
+ Score = 24.0 bits (46),  Expect(8) = 6e-77
+ Identities = 16/44 (36%), Positives = 19/44 (43%), Gaps = 0/44 (0%)
+ Frame = -3/-3
+
+Query  516   SAPHPLFHDDPEPGATDLMTLRDRRLCLLPLSVPERTWAS*IVR  385
+             + P   FH   EP   D MT    +   LPL    +  AS*I R
+Sbjct  1167  NGPRRSFHGGLEPRVKDSMTRPSMQPFQLPLWARGQISAS*IER  1036
+
+
+ Score = 42.3 bits (86),  Expect = 0.002
+ Identities = 17/19 (89%), Positives = 17/19 (89%), Gaps = 0/19 (0%)
+ Frame = +2/+2
+
+Query  17   RSVAMLPV*VCLAPTVWLF  73
+            RS A LPV*VCLAPTVWLF
+Sbjct  656  RSAATLPV*VCLAPTVWLF  712
+
+
+>ANID_01425 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2975 nt)
+Length=2975
+
+ Score = 70.3 bits (147),  Expect(6) = 6e-31
+ Identities = 25/50 (50%), Positives = 36/50 (72%), Gaps = 0/50 (0%)
+ Frame = +2/+3
+
+Query  1124  SQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDF  1273
+             S++    +R+WKRIWW+ +TRDR +A+ + RP+ +  DD DV MLT DDF
+Sbjct  1209  SRMDVRRQRMWKRIWWSTYTRDRLIALGMRRPMRVKDDDCDVPMLTLDDF  1358
+
+
+ Score = 50.1 bits (103),  Expect(6) = 6e-31
+ Identities = 18/43 (42%), Positives = 33/43 (77%), Gaps = 0/43 (0%)
+ Frame = +3/+3
+
+Query  813   STTPAAMTFYKRAKALYDANYEDDRVTIVQALVLLGWYWEGPE  941
+             S   A  +F++RA+ LYD +YE DR+++VQ+L+L+ +++E P+
+Sbjct  999   SRKSARKSFFQRARLLYDFDYEVDRISLVQSLLLMTYWYETPD  1127
+
+
+ Score = 42.8 bits (87),  Expect(6) = 6e-31
+ Identities = 15/32 (47%), Positives = 19/32 (59%), Gaps = 0/32 (0%)
+ Frame = +1/+1
+
+Query  16   QVRCDAASLGVPCTNCVAFSIECKIPTPKRKK  111
+            +VRCD    G PCTNC    +EC +   KR+K
+Sbjct  145  KVRCDVVENGSPCTNCRLDQVECVVTESKRRK  240
+
+
+ Score = 31.3 bits (62),  Expect(6) = 6e-31
+ Identities = 14/61 (23%), Positives = 32/61 (52%), Gaps = 0/61 (0%)
+ Frame = +2/+3
+
+Query  1823  SNSVYSLFSALIMHVYQMRSSVPSIVATCQERINICMQALKDVSKVWLVAKMVHTLFESI  2002
+             +  V  L  A+I+H+  ++SS  ++  T  +R   CM+ L+ + +++  A    +  E+ 
+Sbjct  1905  TTGVTVLLPAVIIHLLDIKSSDQNVRMTSLQRFYQCMRILQRLREIYASADFATSFLEAA  2084
+
+Query  2003  L  2005
+             +
+Sbjct  2085  I  2087
+
+
+ Score = 27.6 bits (54),  Expect(6) = 6e-31
+ Identities = 12/23 (52%), Positives = 15/23 (65%), Gaps = 0/23 (0%)
+ Frame = +2/+3
+
+Query  1334  FLQYVKLCEIMGLVLSQQYSVAS  1402
+             F++  KLC  +  VLS QYSV S
+Sbjct  1452  FIEKAKLCLCVSHVLSAQYSVLS  1520
+
+
+ Score = 24.0 bits (46),  Expect(6) = 6e-31
+ Identities = 8/24 (33%), Positives = 15/24 (63%), Gaps = 0/24 (0%)
+ Frame = +1/+3
+
+Query  991   DVTKNVFYWTRVAMVVAQGSGMHR  1062
+             D  K+ ++W  V++ +A   G+HR
+Sbjct  1125  DDQKDTWHWMGVSLSLAHTIGLHR  1196
+
+
+ Score = 34.1 bits (68),  Expect(2) = 0.20
+ Identities = 17/36 (47%), Positives = 23/36 (64%), Gaps = 0/36 (0%)
+ Frame = -3/-2
+
+Query  1260  VNMPTSESSVLIPIGRPRATATDRSLVKRVHQMRFH  1153
+             V++ TS+SS    +GR    A +RS V  +HQMRFH
+Sbjct  1345  VSIGTSQSSSFTRMGRLIPRAINRSRV*VLHQMRFH  1238
+
+
+ Score = 25.4 bits (49),  Expect(2) = 0.20
+ Identities = 14/35 (40%), Positives = 15/35 (43%), Gaps = 0/35 (0%)
+ Frame = -1/-1
+
+Query  110  FLRFGVGILHSMEKATQLVQGTPKLAASQRTCSRR  6
+            FLR      HS   + Q V G P    SQRT   R
+Sbjct  239  FLRLLSVTTHSTWSSRQFVHGEPFSTTSQRTLRAR  135
+
+
+>ANID_06762 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2263 nt)
+Length=2263
+
+ Score = 48.3 bits (99),  Expect(7) = 1e-28
+ Identities = 19/45 (42%), Positives = 24/45 (53%), Gaps = 0/45 (0%)
+ Frame = +3/+2
+
+Query  588  LHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRDP  722
+            L   GA   PP+   D L++AYFRW  P  PIV+R+   R    P
+Sbjct  485  LESNGALSFPPEATVDALLQAYFRWFHPCFPIVDRAAICRARTQP  619
+
+
+ Score = 41.4 bits (84),  Expect(7) = 1e-28
+ Identities = 18/35 (51%), Positives = 21/35 (60%), Gaps = 0/35 (0%)
+ Frame = +2/+2
+
+Query  1181  TRDRSVAVALGRPIGINTDDSDVGMLTEDDFIEDE  1285
+             TRD+  A ALG P  I  +D DV ML  DD +E E
+Sbjct  1106  TRDQQSAAALGLPPRIRDEDGDVAMLEPDDVVEGE  1210
+
+
+ Score = 38.6 bits (78),  Expect(7) = 1e-28
+ Identities = 16/38 (42%), Positives = 24/38 (63%), Gaps = 0/38 (0%)
+ Frame = +3/+2
+
+Query  825  AAMTFYKRAKALYDANYEDDRVTIVQALVLLGWYWEGP  938
+            A   FY RAKA+Y+A+ E   +  +QAL +L ++  GP
+Sbjct  740  AKFLFYSRAKAIYEADAEASPIVKLQALFMLSFWRGGP  853
+
+
+ Score = 33.6 bits (67),  Expect(7) = 1e-28
+ Identities = 9/13 (69%), Positives = 12/13 (92%), Gaps = 0/13 (0%)
+ Frame = +2/+1
+
+Query  1142  DKRLWKRIWWTLF  1180
+             +K+LWKRIWW L+
+Sbjct  1012  EKKLWKRIWWALY  1050
+
+
+ Score = 32.7 bits (65),  Expect(7) = 1e-28
+ Identities = 15/60 (25%), Positives = 29/60 (48%), Gaps = 0/60 (0%)
+ Frame = +2/+2
+
+Query  1844  FSALIMHVYQMRSSVPSIVATCQERINICMQALKDVSKVWLVAKMVHTLFESILGNKVLE  2023
+             FS L +H    R +  ++    + R  +C+ +L+++ K W +   V  LF   L ++  E
+Sbjct  1817  FSTLCIHTIHHRRNCGTMRTLAEHRARLCLLSLEELQKSWDLENWVLHLFFRGLDDRTAE  1996
+
+
+ Score = 30.4 bits (60),  Expect(7) = 1e-28
+ Identities = 11/25 (44%), Positives = 16/25 (64%), Gaps = 0/25 (0%)
+ Frame = +1/+2
+
+Query  1000  KNVFYWTRVAMVVAQGSGMHRRYDL  1074
+             ++V YW  +A+ +AQ  GMH  Y L
+Sbjct  863   RDVRYWLGIAISLAQKRGMHMMYSL  937
+
+
+ Score = 29.9 bits (59),  Expect(7) = 1e-28
+ Identities = 9/21 (43%), Positives = 14/21 (67%), Gaps = 0/21 (0%)
+ Frame = +1/+1
+
+Query  49   PCTNCVAFSIECKIPTPKRKK  111
+            PC+NCVA  + C++   +R K
+Sbjct  79   PCSNCVAQDVPCEVGVSRRGK  141
+
+
+>ANID_04035 | Aspergillus nidulans FGSC A4 acetamidase regulatory protein 
+(2747 nt)
+Length=2747
+
+ Score = 45.5 bits (93),  Expect(6) = 1e-20
+ Identities = 21/39 (54%), Positives = 22/39 (56%), Gaps = 0/39 (0%)
+ Frame = +3/+2
+
+Query  603  AFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRD  719
+            A  LP   L DELV AYF  V P  PIV    FM QYR+
+Sbjct  824  ALTLPEPALADELVHAYFAQVNPGYPIVEEELFMSQYRN  940
+
+
+ Score = 35.9 bits (72),  Expect(6) = 1e-20
+ Identities = 11/26 (42%), Positives = 19/26 (73%), Gaps = 0/26 (0%)
+ Frame = +2/+2
+
+Query  1142  DKRLWKRIWWTLFTRDRSVAVALGRP  1219
+             D+R+W+R+W+ L   D  V+++ GRP
+Sbjct  1256  DRRMWRRLWYILVQFDVMVSLSYGRP  1333
+
+
+ Score = 35.4 bits (71),  Expect(6) = 1e-20
+ Identities = 14/30 (47%), Positives = 21/30 (70%), Gaps = 0/30 (0%)
+ Frame = +3/+2
+
+Query  837   FYKRAKALYDANYEDDRVTIVQALVLLGWY  926
+             F++RAK L+D   E +R  +VQA +LL W+
+Sbjct  1046  FFRRAKWLFDNRIERNRDILVQAALLLTWH  1135
+
+
+ Score = 34.5 bits (69),  Expect(6) = 1e-20
+ Identities = 13/28 (46%), Positives = 16/28 (57%), Gaps = 0/28 (0%)
+ Frame = +1/+2
+
+Query  979   LTPTDVTKNVFYWTRVAMVVAQGSGMHR  1062
+             L   DV+ N  YW  +A  +A G GMHR
+Sbjct  1142  LADDDVSANAHYWIGIAARIATGLGMHR  1225
+
+
+ Score = 33.1 bits (66),  Expect(6) = 1e-20
+ Identities = 10/16 (63%), Positives = 14/16 (88%), Gaps = 0/16 (0%)
+ Frame = +1/+2
+
+Query  16   QVRCDAASLGVPCTNC  63
+            +VRCDA  +G+PC+NC
+Sbjct  167  KVRCDARLVGLPCSNC  214
+
+
+ Score = 24.4 bits (47),  Expect(6) = 1e-20
+ Identities = 12/37 (32%), Positives = 18/37 (49%), Gaps = 0/37 (0%)
+ Frame = +2/+2
+
+Query  1430  LTHSDMALADWLQNCPKEVCWQKSRHHFLAALLHANY  1540
+             L  +D ALA+W    P  +  + S     +A+LH  Y
+Sbjct  1571  LLEADEALANWSLRLPDRLRLRASDMDPWSAMLHLTY  1681
+
+
+>ANID_10331 | Aspergillus nidulans FGSC A4 predicted protein (2242 nt)
+Length=2242
+
+ Score = 60.2 bits (125),  Expect(4) = 1e-20
+ Identities = 24/43 (56%), Positives = 30/43 (70%), Gaps = 0/43 (0%)
+ Frame = +3/+3
+
+Query  810  GSTTPAAMTFYKRAKALYDANYEDDRVTIVQALVLLGWYWEGP  938
+            G+   AA T Y RAKALYDA YE D V ++QAL+ L ++WE P
+Sbjct  774  GNRYMAAFTCYHRAKALYDAGYETDAVAVIQALLCLSFWWETP  902
+
+
+ Score = 31.3 bits (62),  Expect(4) = 1e-20
+ Identities = 13/39 (33%), Positives = 23/39 (59%), Gaps = 0/39 (0%)
+ Frame = +3/+3
+
+Query  588  LHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFM  704
+            L + GAF    +   D+L+  +F  + P+VPI++R  F+
+Sbjct  555  LDELGAFDTLNRNTRDKLLCTFFEMINPVVPIIDRKDFL  671
+
+
+ Score = 31.3 bits (62),  Expect(4) = 1e-20
+ Identities = 8/22 (36%), Positives = 14/22 (64%), Gaps = 0/22 (0%)
+ Frame = +2/+3
+
+Query  1130  LSKPDKRLWKRIWWTLFTRDRS  1195
+             L +   +LW+R+WWT++    S
+Sbjct  1038  LDQRKSKLWRRLWWTIYVSSSS  1103
+
+
+ Score = 29.9 bits (59),  Expect(4) = 1e-20
+ Identities = 9/21 (43%), Positives = 17/21 (81%), Gaps = 0/21 (0%)
+ Frame = +1/+3
+
+Query  1000  KNVFYWTRVAMVVAQGSGMHR  1062
+             K+++YWT +++ +AQ  GMH+
+Sbjct  912   KDMWYWTGISVNLAQSLGMHQ  974
+
+
+>ANID_03863 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2359 nt)
+Length=2359
+
+ Score = 63.8 bits (133),  Expect(5) = 4e-19
+ Identities = 23/46 (50%), Positives = 32/46 (70%), Gaps = 0/46 (0%)
+ Frame = +2/+2
+
+Query  1145  KRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIED  1282
+             + LW+R+WWT F RDR +++ LGRP+ I+ DD DV M +  D I D
+Sbjct  1205  RHLWRRLWWTCFLRDRWLSLTLGRPLRIDLDDCDVPMPSVSDIIYD  1342
+
+
+ Score = 37.3 bits (75),  Expect(5) = 4e-19
+ Identities = 18/65 (28%), Positives = 31/65 (48%), Gaps = 0/65 (0%)
+ Frame = +3/+1
+
+Query  522  LPPNIRGSRARLTDLDNLELDILHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRF  701
+            LP ++       T L   + + L  +G   LP    C  L++AYFR V  I+PI+   + 
+Sbjct  562  LPQHLFIPSRHSTSLSEEDRNYLASKGVLDLPSSVACQCLLQAYFRHVHTIMPIIEADQI  741
+
+Query  702  MRQYR  716
+            +  ++
+Sbjct  742  LHFFQ  756
+
+
+ Score = 30.9 bits (61),  Expect(5) = 4e-19
+ Identities = 14/51 (27%), Positives = 24/51 (47%), Gaps = 0/51 (0%)
+ Frame = +2/+2
+
+Query  1841  LFSALIMHVYQMRSSVPSIVATCQERINICMQALKDVSKVWLVAKMVHTLF  1993
+             L  A+ MH+   RS           ++N CM  L++  +V+ VA +   +F
+Sbjct  1910  LIPAMQMHLLNCRSGTSLSRRLRLNKLNACMMVLEEFQQVYTVASIYRGIF  2062
+
+
+ Score = 27.2 bits (53),  Expect(5) = 4e-19
+ Identities = 9/25 (36%), Positives = 12/25 (48%), Gaps = 0/25 (0%)
+ Frame = +1/+1
+
+Query  16   QVRCDAASLGVPCTNCVAFSIECKI  90
+            +VRC     G+PC  C     EC +
+Sbjct  55   KVRCSINVTGIPCIRCSQDCAECVV  129
+
+
+ Score = 24.0 bits (46),  Expect(5) = 4e-19
+ Identities = 7/21 (33%), Positives = 14/21 (67%), Gaps = 0/21 (0%)
+ Frame = +1/+2
+
+Query  1009  FYWTRVAMVVAQGSGMHRRYD  1071
+             +YW+ +++ + Q  G+HR  D
+Sbjct  1106  WYWSGISVSLCQMLGLHRNPD  1168
+
+
+ Score = 33.1 bits (66),  Expect = 1.2
+ Identities = 16/32 (50%), Positives = 18/32 (56%), Gaps = 0/32 (0%)
+ Frame = -3/-2
+
+Query  1248  TSESSVLIPIGRPRATATDRSLVKRVHQMRFH  1153
+             TS+SS  I  GRP+     RS  K VHQ R H
+Sbjct  1308  TSQSSRSIRSGRPKVRLNHRSRRKHVHQRRRH  1213
+
+
+>ANID_09117 | Aspergillus nidulans FGSC A4 C6 transcription factor (2413 
+nt)
+Length=2413
+
+ Score = 56.5 bits (117),  Expect(4) = 4e-16
+ Identities = 23/51 (45%), Positives = 32/51 (63%), Gaps = 0/51 (0%)
+ Frame = +2/+2
+
+Query  1121  TSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDF  1273
+             +S L    KRL  R+WW LF+RDR +A+ + RP  +N   S++ ML  DDF
+Sbjct  806   SSDLDIRTKRLRTRLWWCLFSRDRLIAMGMRRPTQVNEGSSNLPMLRLDDF  958
+
+
+ Score = 42.8 bits (87),  Expect(4) = 4e-16
+ Identities = 16/44 (36%), Positives = 25/44 (57%), Gaps = 0/44 (0%)
+ Frame = +3/+1
+
+Query  576  ELDILHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMR  707
+            +L+ L  RGA  +P   L  EL+  Y +WV   +P++N   F+R
+Sbjct  304  DLEFLRFRGALAIPESGLRIELLRCYIKWVHSFLPVLNLQEFLR  435
+
+
+ Score = 27.6 bits (54),  Expect(4) = 4e-16
+ Identities = 10/23 (43%), Positives = 17/23 (74%), Gaps = 0/23 (0%)
+ Frame = +3/+2
+
+Query  858  LYDANYEDDRVTIVQALVLLGWY  926
+            LY  + E+DR+ IVQ L+L+ ++
+Sbjct  641  LYSLDCEEDRLVIVQTLLLMTYW  709
+
+
+ Score = 25.8 bits (50),  Expect(4) = 4e-16
+ Identities = 9/20 (45%), Positives = 14/20 (70%), Gaps = 0/20 (0%)
+ Frame = +2/+2
+
+Query  1334  FLQYVKLCEIMGLVLSQQYS  1393
+             F++  KLC+ +G VL  QY+
+Sbjct  1049  FIEKAKLCQCIGRVLFAQYT  1108
+
+
+>ANID_10789 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2612 nt)
+Length=2612
+
+ Score = 39.6 bits (80),  Expect(4) = 1e-15
+ Identities = 13/31 (42%), Positives = 20/31 (65%), Gaps = 0/31 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSDV  1249
+             KR+WW    RDR +++ + RPI I  D+ D+
+Sbjct  831   KRLWWCCMIRDRIISLGMRRPIQITPDEFDL  923
+
+
+ Score = 39.1 bits (79),  Expect(4) = 1e-15
+ Identities = 16/50 (32%), Positives = 26/50 (52%), Gaps = 0/50 (0%)
+ Frame = +3/+3
+
+Query  777  VCTNPQLMDANGSTTPAAMTFYKRAKALYDANYEDDRVTIVQALVLLGWY  926
+            +C    L  + G++     +F    + LY++  E DR+ I QA +LL WY
+Sbjct  552  ICAGRSLPTSQGTSLVLPDSFKLTRQRLYESGIEKDRLVIAQACLLLTWY  701
+
+
+ Score = 38.2 bits (77),  Expect(4) = 1e-15
+ Identities = 15/38 (39%), Positives = 22/38 (58%), Gaps = 0/38 (0%)
+ Frame = +1/+1
+
+Query  16   QVRCDAASLGVPCTNCVAFSIECKIPTPKRKKQQSKSK  129
+            +VRCD +  G PCTNC   +  C + + KR K++   K
+Sbjct  76   KVRCDGSITGFPCTNCRLDARPCILHSGKRDKERQLFK  189
+
+
+ Score = 35.0 bits (70),  Expect(4) = 1e-15
+ Identities = 14/50 (28%), Positives = 26/50 (52%), Gaps = 0/50 (0%)
+ Frame = +3/+1
+
+Query  567  DNLELDILHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYR  716
+            D + L     +    +P + + D  V+ YF +V P +P+V+ + F  +YR
+Sbjct  235  DRVSLTFFKSQMTLKVPIQEILDVFVKHYFIYVHPFLPVVDEAVFWAKYR  384
+
+
+>ANID_01077 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2664 nt)
+Length=2664
+
+ Score = 50.1 bits (103),  Expect(4) = 1e-15
+ Identities = 18/64 (28%), Positives = 33/64 (52%), Gaps = 0/64 (0%)
+ Frame = +3/+1
+
+Query  546  RARLTDLDNLELDILHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRDPK  725
+            R   T +D   +D L  +G F  P   +C+ ++  YF +V P  P+V+   F+ ++ + +
+Sbjct  730  RINQTYMDQETIDYLRHKGVFDFPTSSVCEMIIRTYFYYVHPFFPVVDARSFLEKFENAR  909
+
+Query  726  NPPS  737
+            N  S
+Sbjct  910  NEVS  921
+
+
+ Score = 46.0 bits (94),  Expect(4) = 1e-15
+ Identities = 15/47 (32%), Positives = 27/47 (57%), Gaps = 0/47 (0%)
+ Frame = +2/+1
+
+Query  1130  LSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDD  1270
+             +S  D R+W+++WW+ F R+   +  +GRP+ IN  D    +   +D
+Sbjct  1345  ISMNDSRIWRQLWWSCFYRETWFSAGMGRPMRINLADCSTPIPDAED  1485
+
+
+ Score = 32.2 bits (64),  Expect(4) = 1e-15
+ Identities = 13/39 (33%), Positives = 17/39 (44%), Gaps = 0/39 (0%)
+ Frame = +1/+1
+
+Query  16   QVRCDAASLGVPCTNCVAFSIECKIPTPKRKKQQSKSKD  132
+            +VRC     G PCTNC    + C     +R K    + D
+Sbjct  97   KVRCSLPQTGQPCTNCSLDHVTCVPRPSRRSK*AMSTSD  213
+
+
+ Score = 23.5 bits (45),  Expect(4) = 1e-15
+ Identities = 8/21 (38%), Positives = 14/21 (67%), Gaps = 0/21 (0%)
+ Frame = +1/+1
+
+Query  1009  FYWTRVAMVVAQGSGMHRRYD  1071
+             ++W  VA+ + Q  G+HR+ D
+Sbjct  1258  WHWNGVAIGLCQTIGLHRQPD  1320
+
+
+>ANID_08590 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2503 nt)
+Length=2503
+
+ Score = 42.3 bits (86),  Expect(2) = 7e-07
+ Identities = 18/50 (36%), Positives = 29/50 (58%), Gaps = 0/50 (0%)
+ Frame = +3/+2
+
+Query  564  LDNLELDILHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+            LD+ EL +      +  PP+ + D+L++ YF  V P  PI+ +  FM+QY
+Sbjct  824  LDDEELSLEPNIDPYGRPPRHIADQLLDCYFFTVHPSFPIIAKMPFMQQY  973
+
+
+ Score = 35.9 bits (72),  Expect(2) = 7e-07
+ Identities = 10/34 (29%), Positives = 22/34 (65%), Gaps = 0/34 (0%)
+ Frame = +2/+2
+
+Query  1118  ETSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRP  1219
+             E+ + S   K +  R+WW+++T + ++++  GRP
+Sbjct  1301  ESKETSTLSKEIRYRVWWSIYTLENTLSIMTGRP  1402
+
+
+>ANID_04001 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2019 nt)
+Length=2019
+
+ Score = 40.5 bits (82),  Expect(3) = 1e-05
+ Identities = 15/35 (43%), Positives = 23/35 (66%), Gaps = 0/35 (0%)
+ Frame = +2/+1
+
+Query  1145  KRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDV  1249
+             + L KRI+W+ +  DR ++ ALG P+G+   D DV
+Sbjct  793   RHLRKRIFWSAYALDRYLSQALGLPLGVQDSDIDV  897
+
+
+ Score = 28.1 bits (55),  Expect(3) = 1e-05
+ Identities = 10/31 (32%), Positives = 18/31 (58%), Gaps = 0/31 (0%)
+ Frame = +3/+1
+
+Query  615  PPKPLCDELVEAYFRWVAPIVPIVNRSRFMR  707
+            PP+ L  +L+  YF+   P+ P ++   F+R
+Sbjct  268  PPQQLAKDLMMVYFKVWHPLFPFLHGPTFLR  360
+
+
+ Score = 26.3 bits (51),  Expect(3) = 1e-05
+ Identities = 8/16 (50%), Positives = 9/16 (56%), Gaps = 0/16 (0%)
+ Frame = +3/+2
+
+Query  2196  HRHLPSHHPENWDNLR  2243
+             HRH P HH  +W   R
+Sbjct  1169  HRHRPRHHHPHWKRER  1216
+
+
+>ANID_07507 | Aspergillus nidulans FGSC A4 C6 transcription factor (2500 
+nt)
+Length=2500
+
+ Score = 49.2 bits (101),  Expect = 2e-05
+ Identities = 22/58 (38%), Positives = 33/58 (57%), Gaps = 0/58 (0%)
+ Frame = +3/+2
+
+Query  564   LDNLELDILHQRGAFLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRDPKNPPS  737
+             LD+ E+ I+     F  P   + D LVE+YF  V P  PIV+++ F+ QY+   + PS
+Sbjct  911   LDDTEVVIMEDVDLFQRPLPAVADRLVESYFHLVQPYFPIVSKATFLGQYKSFYSTPS  1084
+
+
+>ANID_04972 | Aspergillus nidulans FGSC A4 C6 transcription factor (2857 
+nt)
+Length=2857
+
+ Score = 44.1 bits (90),  Expect(2) = 2e-05
+ Identities = 16/38 (42%), Positives = 25/38 (66%), Gaps = 0/38 (0%)
+ Frame = +3/+2
+
+Query  606   FLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRD  719
+             + +PP+ + D+L E Y   V P+ PI++RS F  QYR+
+Sbjct  962   YWMPPRNIADKLFEDYLDTVHPVFPIISRSLFSAQYRN  1075
+
+
+ Score = 29.5 bits (58),  Expect(2) = 2e-05
+ Identities = 9/24 (38%), Positives = 14/24 (58%), Gaps = 0/24 (0%)
+ Frame = +2/+2
+
+Query  1160  RIWWTLFTRDRSVAVALGRPIGIN  1231
+             R+WW L+T +  +    GR  GI+
+Sbjct  1493  RVWWCLYTLEHMLGTMTGRVTGIS  1564
+
+
+>ANID_00026 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2176 nt)
+Length=2176
+
+ Score = 48.3 bits (99),  Expect(2) = 2e-05
+ Identities = 17/39 (44%), Positives = 24/39 (62%), Gaps = 0/39 (0%)
+ Frame = +2/+2
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDF  1273
+             +RIWWT F R+R  A+   +P  I+ +D D+   T DDF
+Sbjct  1124  RRIWWTAFARERLTAICQNKPCTIDPEDCDIAEPTLDDF  1240
+
+
+ Score = 24.4 bits (47),  Expect(2) = 2e-05
+ Identities = 13/40 (33%), Positives = 19/40 (48%), Gaps = 0/40 (0%)
+ Frame = +1/+2
+
+Query  958   LSESRPVLTPTDVTKNVFYWTRVAMVVAQGSGMHRRYDLA  1077
+             L  +R  LTP D + +     R+    AQ +G   R+D A
+Sbjct  275   LRRARTPLTPPDSSDSARRSQRLQRPAAQETGSENRHDRA  394
+
+
+>ANID_10976 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2296 nt)
+Length=2296
+
+ Score = 47.8 bits (98),  Expect = 5e-05
+ Identities = 20/57 (35%), Positives = 33/57 (58%), Gaps = 0/57 (0%)
+ Frame = +2/+3
+
+Query  1079  MVIFGSVTDDCSVETSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDV  1249
+             ++  G   D  +  T Q+S  D+ +  RI+W ++T DR+V   +GRPIGI  +  D+
+Sbjct  1122  VIDLGLQRDVRASSTLQISMFDQEMRTRIFWVVYTFDRTVCTMMGRPIGIRDEACDI  1292
+
+
+>ANID_02667 | Aspergillus nidulans FGSC A4 C6 transcription factor (2434 
+nt)
+Length=2434
+
+ Score = 47.8 bits (98),  Expect = 5e-05
+ Identities = 17/44 (39%), Positives = 27/44 (61%), Gaps = 0/44 (0%)
+ Frame = +2/+2
+
+Query  1118  ETSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDV  1249
+             E S+ +  D     R+WWT++T DR  ++  GRP+GIN  D ++
+Sbjct  959   EPSRGTFEDNEERNRVWWTIYTWDRFASITYGRPLGINDRDCNI  1090
+
+
+ Score = 34.5 bits (69),  Expect = 0.45
+ Identities = 21/53 (40%), Positives = 27/53 (51%), Gaps = 0/53 (0%)
+ Frame = -3/-2
+
+Query  1242  ESSVLIPIGRPRATATDRSLVKRVHQMRFHNLLSGLLS*DVSTLQSSVTEPKI  1084
+             +S  LIP GRP     +RS V  VHQ RF + LS  +  D S    +  E +I
+Sbjct  1083  QSLSLIPNGRPYVIDANRSHVYIVHQTRFLSSLSSNVPRDGSRCNPTACEIRI  925
+
+
+>ANID_08930 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2496 nt)
+Length=2496
+
+ Score = 46.4 bits (95),  Expect(2) = 1e-04
+ Identities = 17/35 (49%), Positives = 25/35 (71%), Gaps = 0/35 (0%)
+ Frame = +3/+1
+
+Query  609  LLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+            LLPP+P  + LV+ YF  +AP  P++NR+ FM Q+
+Sbjct  763  LLPPQPWAESLVKIYFGSIAPSFPLLNRTLFMSQF  867
+
+
+ Score = 24.4 bits (47),  Expect(2) = 1e-04
+ Identities = 7/19 (37%), Positives = 12/19 (63%), Gaps = 0/19 (0%)
+ Frame = +2/+1
+
+Query  1160  RIWWTLFTRDRSVAVALGR  1216
+             RIWW +F+ +  ++   GR
+Sbjct  1276  RIWWAIFSLEHLLSSMTGR  1332
+
+
+>ANID_11683 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2098 nt)
+Length=2098
+
+ Score = 45.5 bits (93),  Expect = 2e-04
+ Identities = 17/44 (39%), Positives = 29/44 (66%), Gaps = 0/44 (0%)
+ Frame = +2/+1
+
+Query  1142  DKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDF  1273
+             ++RL +R+WW +++ D+  A+ +GRP  IN  + DV  + E DF
+Sbjct  1012  ERRLRRRLWWAIYSEDKWHALLMGRPPYINEYEWDVTDIDEADF  1143
+
+
+>ANID_07379 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2229 nt)
+Length=2229
+
+ Score = 44.6 bits (91),  Expect = 4e-04
+ Identities = 18/62 (29%), Positives = 34/62 (55%), Gaps = 0/62 (0%)
+ Frame = +2/+1
+
+Query  1103  DDCSVETSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIED  1282
+             DD    ++ LS  D  + KR++W+L+  D+ +++ LGR         +V +   DDF E+
+Sbjct  916   DDLQRHSTSLSAEDVEIRKRLFWSLYAWDKHISLYLGRMPNFTMGAENVSLEFLDDFTEE  1095
+
+Query  1283  EI  1288
+             ++
+Sbjct  1096  DL  1101
+
+
+>ANID_02677 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2778 nt)
+Length=2778
+
+ Score = 43.7 bits (89),  Expect(2) = 5e-04
+ Identities = 17/51 (33%), Positives = 29/51 (57%), Gaps = 0/51 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIEDEIDSVAEYP  1309
+             KR+WW++  RDRS+ + L R   + + D  +G++TE     D  D + + P
+Sbjct  900   KRLWWSIILRDRSLCLGLRRRPQVTSFDMSMGVVTELPDEADFADEIVDSP  1052
+
+
+ Score = 24.9 bits (48),  Expect(2) = 5e-04
+ Identities = 10/25 (40%), Positives = 14/25 (56%), Gaps = 0/25 (0%)
+ Frame = +1/+2
+
+Query  1921  QHLHASLERRVQGLAGGEDGSHTVR  1995
+             Q   +SL RR +    G+D  H+VR
+Sbjct  1709  QSTSSSLRRRQKWCVAGDDSMHSVR  1783
+
+
+>ANID_05651 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2269 nt)
+Length=2269
+
+ Score = 44.1 bits (90),  Expect = 6e-04
+ Identities = 18/53 (34%), Positives = 29/53 (55%), Gaps = 0/53 (0%)
+ Frame = +2/+1
+
+Query  1130  LSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIEDEI  1288
+             L+  ++   +R WW L+  DR  A  LG+PI +  +D DV M + D    +E+
+Sbjct  1105  LTPVERESRRRTWWVLYFFDRFSASKLGQPIAVRDEDIDVEMPSMDGLTREEM  1263
+
+
+>ANID_00891 | Aspergillus nidulans FGSC A4 purine utilization positive regulator 
+(3284 nt)
+Length=3284
+
+ Score = 36.3 bits (73),  Expect(2) = 0.001
+ Identities = 11/25 (44%), Positives = 18/25 (72%), Gaps = 0/25 (0%)
+ Frame = +2/+1
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGIN  1231
+             +R+WW  ++ DR V+  +GRP GI+
+Sbjct  1513  RRLWWCCYSFDRLVSCCVGRPFGIS  1587
+
+
+ Score = 31.3 bits (62),  Expect(2) = 0.001
+ Identities = 12/30 (40%), Positives = 17/30 (57%), Gaps = 0/30 (0%)
+ Frame = +3/+1
+
+Query  615  PPKPLCDELVEAYFRWVAPIVPIVNRSRFM  704
+            P + L + L + YF    P +PIV+R  FM
+Sbjct  895  PDRELAERLADLYFEHANPQIPIVHRVDFM  984
+
+
+>ANID_07189 | Aspergillus nidulans FGSC A4 C6 transcription factor (2166 
+nt)
+Length=2166
+
+ Score = 42.3 bits (86),  Expect = 0.002
+ Identities = 16/41 (39%), Positives = 25/41 (61%), Gaps = 0/41 (0%)
+ Frame = +2/+1
+
+Query  1142  DKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTE  1264
+             D  + KR +W+L+  DR +A  LGRP+GI  +D  + +  E
+Sbjct  1117  DDEMTKRAFWSLYNLDRLIASTLGRPLGIADEDITLSLPRE  1239
+
+
+>ANID_04821 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2076 nt)
+Length=2076
+
+ Score = 40.0 bits (81),  Expect(2) = 0.002
+ Identities = 15/39 (38%), Positives = 26/39 (67%), Gaps = 0/39 (0%)
+ Frame = +2/+1
+
+Query  1133  SKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDV  1249
+             S P+    +R++W+++  +R ++ ALG P+GI  DD DV
+Sbjct  757   SGPEIATRRRLFWSIYCLERYLSQALGIPLGIKDDDIDV  873
+
+
+ Score = 25.8 bits (50),  Expect(2) = 0.002
+ Identities = 10/29 (34%), Positives = 17/29 (59%), Gaps = 0/29 (0%)
+ Frame = +2/+3
+
+Query  2279  QNAMPGNSRSNTRPTTPFNGHFSLPATPP  2365
+             +++ P  +  NTR  TPFN + +  + PP
+Sbjct  1761  RSSPPTGALLNTRRRTPFNAYPTCRSKPP  1847
+
+
+>ANID_03269 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor (2150 nt)
+Length=2150
+
+ Score = 41.8 bits (85),  Expect = 0.003
+ Identities = 15/34 (44%), Positives = 22/34 (65%), Gaps = 0/34 (0%)
+ Frame = +3/+3
+
+Query  612  LPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+            LPP+   D LV  Y+R+V P+ PI++  RF+  Y
+Sbjct  549  LPPRGYADHLVHIYWRFVEPVEPILDYQRFVENY  650
+
+
+>ANID_08441 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2094 nt)
+Length=2094
+
+ Score = 40.9 bits (83),  Expect = 0.005
+ Identities = 12/36 (33%), Positives = 21/36 (58%), Gaps = 0/36 (0%)
+ Frame = +2/+1
+
+Query  1124  SQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGIN  1231
+             S +  P++ L +R+WW ++  D    + LGRP  +N
+Sbjct  931   SSMPGPEQELRRRLWWAVYVMDSKTGMKLGRPFNLN  1038
+
+
+>ANID_00742 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2629 nt)
+Length=2629
+
+ Score = 37.3 bits (75),  Expect(2) = 0.007
+ Identities = 15/34 (44%), Positives = 21/34 (62%), Gaps = 0/34 (0%)
+ Frame = +3/+2
+
+Query  612   LPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+             LPPKP    LV  +F  V P  P+V++S F+ Q+
+Sbjct  926   LPPKPWAKTLVGLFFETVYPSFPVVSKSLFIIQF  1027
+
+
+ Score = 27.2 bits (53),  Expect(2) = 0.007
+ Identities = 15/59 (25%), Positives = 27/59 (46%), Gaps = 0/59 (0%)
+ Frame = +2/+2
+
+Query  1127  QLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIEDEIDSVAE  1303
+             Q+    K    RI W++FT + +++   GRP  I++    V +    D  + +   V E
+Sbjct  1415  QIDPVSKETRTRIRWSIFTLEHALSGMTGRPSCIDSQFMSVRLPLPFDEAQFQTPGVEE  1591
+
+
+>ANID_12296 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2508 nt)
+Length=2508
+
+ Score = 37.3 bits (75),  Expect(2) = 0.009
+ Identities = 14/35 (40%), Positives = 21/35 (60%), Gaps = 0/35 (0%)
+ Frame = +3/+3
+
+Query  633   DELVEAYFRWVAPIVPIVNRSRFMRQYRDPKNPPS  737
+             D L++AYF W     PI++ S F  +YR+ +  PS
+Sbjct  930   DNLIDAYFLWYNRSYPILHESTFREKYRNRQRIPS  1034
+
+
+ Score = 26.7 bits (52),  Expect(2) = 0.009
+ Identities = 6/22 (27%), Positives = 13/22 (59%), Gaps = 0/22 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPI  1222
+             + +WW ++  D   ++  GRP+
+Sbjct  1392  RAVWWVVYCFDSGFSLTTGRPV  1457
+
+
+>ANID_04366 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1164 nt)
+Length=1164
+
+ Score = 40.0 bits (81),  Expect = 0.010
+ Identities = 17/27 (63%), Positives = 19/27 (70%), Gaps = 0/27 (0%)
+ Frame = +3/-1
+
+Query  1710  RDDYLYRRKPPDTSRNPICSCVHVGLS  1790
+             RDDYL RR+  D +RN ICSCV   LS
+Sbjct  105   RDDYLRRRRENDMTRNLICSCVDRRLS  25
+
+
+>ANID_07332 | Aspergillus nidulans FGSC A4 C6 zinc finger domain-containing 
+protein (2441 nt)
+Length=2441
+
+ Score = 39.6 bits (80),  Expect = 0.014
+ Identities = 14/35 (40%), Positives = 21/35 (60%), Gaps = 0/35 (0%)
+ Frame = +3/+2
+
+Query  612  LPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYR  716
+            +P +P+CDELV+ Y R   PI  +++   F   YR
+Sbjct  797  IPSQPVCDELVQCYLRTFEPIYRVLHVPSFWESYR  901
+
+
+ Score = 24.4 bits (47),  Expect(2) = 8.0
+ Identities = 11/27 (41%), Positives = 13/27 (48%), Gaps = 0/27 (0%)
+ Frame = -3/-3
+
+Query  2442  NNWSGWKFSQRDGERLGEVRVTRKRSG  2362
+             NNWS W F  R+ +R    R    R G
+Sbjct  2346  NNWSFWIFIPRNRKRTTGCRAN*VRFG  2266
+
+
+ Score = 22.6 bits (43),  Expect(2) = 8.0
+ Identities = 8/14 (57%), Positives = 11/14 (79%), Gaps = 0/14 (0%)
+ Frame = -2/-2
+
+Query  2317  SSIASRIAWHCILR  2276
+             +S ASR++ HCI R
+Sbjct  2242  NSCASRLSCHCIAR  2201
+
+
+>ANID_06396 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor domain-containing protein (2599 nt)
+Length=2599
+
+ Score = 39.6 bits (80),  Expect = 0.014
+ Identities = 12/36 (33%), Positives = 23/36 (64%), Gaps = 0/36 (0%)
+ Frame = +3/+2
+
+Query  606   FLLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+             ++LPP+ + D L+  Y+ +V P+ P+V+  R   +Y
+Sbjct  929   YVLPPRKIADNLMNVYWHYVFPLYPLVDSIRLREEY  1036
+
+
+>ANID_02944 | Aspergillus nidulans FGSC A4 C6 transcription factor (2313 
+nt)
+Length=2313
+
+ Score = 37.3 bits (75),  Expect(2) = 0.015
+ Identities = 18/60 (30%), Positives = 32/60 (53%), Gaps = 0/60 (0%)
+ Frame = +2/+1
+
+Query  1142  DKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIEDEIDSVAEYPPDPV  1321
+             +K L KR+ W L+ +D+  A+  GRP  + + +  V  L E+DF +    + ++    PV
+Sbjct  1267  EKGLRKRLAWALYMQDKWSAMVHGRPSHVVSSNWTVQDLVEEDFTDAFASTASQPEDAPV  1446
+
+
+ Score = 25.8 bits (50),  Expect(2) = 0.015
+ Identities = 11/31 (35%), Positives = 13/31 (42%), Gaps = 0/31 (0%)
+ Frame = +2/+2
+
+Query  2150  PNGGPTPPVSYERSRPQTPAVTPSRELGQPP  2242
+             P+    PP S   SR + PA  P      PP
+Sbjct  1640  PSN*TLPPTSLRTSRRKMPATAPCTSPTSPP  1732
+
+
+>ANID_07118 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(3077 nt)
+Length=3077
+
+ Score = 38.2 bits (77),  Expect = 0.036
+ Identities = 14/35 (40%), Positives = 19/35 (54%), Gaps = 0/35 (0%)
+ Frame = +1/+1
+
+Query  37   SLGVPCTNCVAFSIECKIPTPKRKKQQSKSKDTNS  141
+            S G PC  C    I+C+ P P+++K QS    T S
+Sbjct  280  SRGSPCDRCSVKEIQCEYPVPRKRKSQSGLGQTGS  384
+
+
+>ANID_00853 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2285 nt)
+Length=2285
+
+ Score = 38.2 bits (77),  Expect = 0.036
+ Identities = 13/27 (48%), Positives = 19/27 (70%), Gaps = 0/27 (0%)
+ Frame = +1/+1
+
+Query  49   PCTNCVAFSIECKIPTPKRKKQQSKSK  129
+            PCTNC  +S+EC  P+P RK  + ++K
+Sbjct  175  PCTNCSRWSVECIFPSPIRKCPRVRTK  255
+
+
+>ANID_12314 | Aspergillus nidulans FGSC A4 C6 transcription factor (2013 
+nt)
+Length=2013
+
+ Score = 37.3 bits (75),  Expect = 0.067
+ Identities = 13/30 (43%), Positives = 21/30 (70%), Gaps = 0/30 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSD  1246
+             KR++WT +T D+ ++V LGRP  I+ +  D
+Sbjct  861   KRVFWTAYTIDKYISVVLGRPCLIHNEGID  950
+
+
+>ANID_06814 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor domain-containing protein (969 nt)
+Length=969
+
+ Score = 37.3 bits (75),  Expect = 0.067
+ Identities = 12/36 (33%), Positives = 21/36 (58%), Gaps = 0/36 (0%)
+ Frame = +2/+1
+
+Query  1124  SQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGIN  1231
+             + L +P + L + IWWTL+  +    + LGRP  ++
+Sbjct  157   ADLPRPQRELRRCIWWTLYVVETKTCMKLGRPSSVS  264
+
+
+>ANID_00096 | Aspergillus nidulans FGSC A4 C2H2 transcription factor (3454 
+nt)
+Length=3454
+
+ Score = 37.3 bits (75),  Expect = 0.067
+ Identities = 12/23 (52%), Positives = 16/23 (70%), Gaps = 0/23 (0%)
+ Frame = +1/+3
+
+Query  43   GVPCTNCVAFSIECKIPTPKRKK  111
+            G+PCT C   S+EC+ PT +R K
+Sbjct  549  GMPCTRCETRSLECQYPTERRSK  617
+
+
+>ANID_08447 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2194 nt)
+Length=2194
+
+ Score = 36.3 bits (73),  Expect = 0.13
+ Identities = 13/39 (33%), Positives = 24/39 (62%), Gaps = 0/39 (0%)
+ Frame = +2/+1
+
+Query  1130  LSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSD  1246
+             +S     + KR +W+ +T + + AV LGRP+ +N ++ D
+Sbjct  1141  VSPAQVEMQKRTFWSAYTMECAAAVMLGRPLSLNYNEID  1257
+
+
+>ANID_07061 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2538 nt)
+Length=2538
+
+ Score = 36.3 bits (73),  Expect = 0.13
+ Identities = 10/42 (24%), Positives = 23/42 (55%), Gaps = 0/42 (0%)
+ Frame = +2/+2
+
+Query  1112  SVETSQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTD  1237
+             ++   + S  ++   +R+WWT++T D  +A+  G P  +  +
+Sbjct  1370  NISPRKSSSVERERARRLWWTIYTLDHEMAIRFGYPCAVGDE  1495
+
+
+>ANID_05299 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2410 nt)
+Length=2410
+
+ Score = 36.3 bits (73),  Expect = 0.13
+ Identities = 14/36 (39%), Positives = 23/36 (64%), Gaps = 0/36 (0%)
+ Frame = +2/+2
+
+Query  1163  IWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDD  1270
+             +++T++  DRS+A   GRP+GI  +  D+ M T  D
+Sbjct  1292  VFYTVYNLDRSIATIQGRPLGIRDETFDLRMPTLAD  1399
+
+
+>ANID_12154 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1322 nt)
+Length=1322
+
+ Score = 29.5 bits (58),  Expect(2) = 0.14
+ Identities = 11/22 (50%), Positives = 14/22 (64%), Gaps = 0/22 (0%)
+ Frame = -3/+2
+
+Query  462  MTLRDRRLCLLPLSVPERTWAS  397
+            ++L DRRLC+  L    RTW S
+Sbjct  455  LSLSDRRLCMFSLRTVLRTWIS  520
+
+
+ Score = 24.0 bits (46),  Expect(2) = 0.14
+ Identities = 9/22 (41%), Positives = 10/22 (45%), Gaps = 0/22 (0%)
+ Frame = -3/+3
+
+Query  333  SLASHRRPSGSCDTRKHPCYPC  268
+            +L S     G    R HPCY C
+Sbjct  588  ALPSGSPKRGRSQHRSHPCYRC  653
+
+
+>ANID_07919 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor (2631 nt)
+Length=2631
+
+ Score = 27.6 bits (54),  Expect(2) = 0.32
+ Identities = 11/35 (31%), Positives = 20/35 (57%), Gaps = 0/35 (0%)
+ Frame = +2/+1
+
+Query  1184  RDRSVAVALGRPIGINTDDSDVGMLTEDDFIEDEI  1288
+             +DR +++  GRP+  +  D D  + T  D ++ EI
+Sbjct  1360  KDRKISIFHGRPLSTHRFDVDAPLPTHRDDLQCEI  1464
+
+
+ Score = 24.4 bits (47),  Expect(2) = 0.32
+ Identities = 6/11 (55%), Positives = 9/11 (82%), Gaps = 0/11 (0%)
+ Frame = +2/+2
+
+Query  1160  RIWWTLFTRDR  1192
+             R+WWT +T +R
+Sbjct  1277  RVWWTAYTLER  1309
+
+
+>ANID_08116 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1527 nt)
+Length=1527
+
+ Score = 35.0 bits (70),  Expect = 0.33
+ Identities = 16/42 (38%), Positives = 19/42 (45%), Gaps = 0/42 (0%)
+ Frame = +2/+1
+
+Query  2189  SRPQTPAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSNT  2314
+             SRPQTPA    R L + P    P    T   +  P  S+S T
+Sbjct  919   SRPQTPAADARRRLQKEPSRRPPSAQSTATFSLFPAQSQSRT  1044
+
+
+>ANID_08128 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1705 nt)
+Length=1705
+
+ Score = 28.1 bits (55),  Expect(2) = 0.33
+ Identities = 10/26 (38%), Positives = 14/26 (54%), Gaps = 0/26 (0%)
+ Frame = -3/+3
+
+Query  336   WSLASHRRPSGSCDTRKHPCYPCRHL  259
+             W+ A+  RP  +  +  HPC PC  L
+Sbjct  1098  WTTAALLRPMQTFSSVFHPCLPCNAL  1175
+
+
+ Score = 24.0 bits (46),  Expect(2) = 0.33
+ Identities = 13/32 (41%), Positives = 14/32 (44%), Gaps = 0/32 (0%)
+ Frame = -1/+2
+
+Query  152   STYPLFVSLDLLCCFLRFGVGILHSMEKATQL  57
+             S YP    LDL    L   +  L SM   TQL
+Sbjct  1226  SLYPQLTVLDLSQADLTVSLNSLQSMSSITQL  1321
+
+
+>ANID_12398 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1067 nt)
+Length=1067
+
+ Score = 34.5 bits (69),  Expect = 0.45
+ Identities = 13/29 (45%), Positives = 17/29 (59%), Gaps = 0/29 (0%)
+ Frame = +2/+3
+
+Query  2657  QQVFGLENQHGWPMQGLEAALNATGMDNT  2743
+             QQ+F L     W  +GL+AA N TG+  T
+Sbjct  198   QQIFALSQHPSWRTRGLDAAANLTGLQIT  284
+
+
+>ANID_08426 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2525 nt)
+Length=2525
+
+ Score = 34.5 bits (69),  Expect = 0.45
+ Identities = 12/37 (32%), Positives = 21/37 (57%), Gaps = 0/37 (0%)
+ Frame = +3/+3
+
+Query  609  LLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRD  719
+            LLP   +   ++EAYF ++ P  P+++  R  R+  D
+Sbjct  549  LLPDDEVLSHVLEAYFNYIHPWTPVIHEGRLRRRLID  659
+
+
+>ANID_07142 | Aspergillus nidulans FGSC A4 acid phosphatase (1348 nt)
+Length=1348
+
+ Score = 34.5 bits (69),  Expect = 0.45
+ Identities = 13/30 (43%), Positives = 18/30 (60%), Gaps = 0/30 (0%)
+ Frame = -1/-1
+
+Query  566  EVRQPSTRSSDVRRKRVVHHIRCSMTILNQ  477
+            E+ +P T   DVR   +V H+RC  T+L Q
+Sbjct  739  ELPRPPTGERDVRVVSIVRHVRCDETVLRQ  650
+
+
+>ANID_03369 | Aspergillus nidulans FGSC A4 C6 transcription factor (2432 
+nt)
+Length=2432
+
+ Score = 34.5 bits (69),  Expect = 0.45
+ Identities = 13/23 (57%), Positives = 15/23 (65%), Gaps = 0/23 (0%)
+ Frame = +2/+2
+
+Query  1151  LWKRIWWTLFTRDRSVAVALGRP  1219
+             L +R+WWTLF  D    V LGRP
+Sbjct  1259  LRRRVWWTLFLMDCWGGVTLGRP  1327
+
+
+>ANID_10504 | Aspergillus nidulans FGSC A4 C6 transcription factor (2461 
+nt)
+Length=2461
+
+ Score = 33.1 bits (66),  Expect(2) = 0.56
+ Identities = 11/25 (44%), Positives = 15/25 (60%), Gaps = 0/25 (0%)
+ Frame = +1/+1
+
+Query  49   PCTNCVAFSIECKIPTPKRKKQQSK  123
+            PC+NCV   +EC  P P R  ++ K
+Sbjct  190  PCSNCVRAGVECIFPPPGRAPRRLK  264
+
+
+ Score = 24.4 bits (47),  Expect(2) = 0.56
+ Identities = 10/24 (42%), Positives = 16/24 (67%), Gaps = 0/24 (0%)
+ Frame = +1/+2
+
+Query  991   DVTKNVFYWTRVAMVVAQGSGMHR  1062
+             D TK V+  + + + +AQG G+HR
+Sbjct  1127  DDTKFVWSMSALVLRLAQGLGLHR  1198
+
+
+>ANID_10957 | Aspergillus nidulans FGSC A4 C6 transcription factor (2507 
+nt)
+Length=2507
+
+ Score = 34.1 bits (68),  Expect = 0.62
+ Identities = 14/32 (44%), Positives = 18/32 (56%), Gaps = 0/32 (0%)
+ Frame = +2/+3
+
+Query  1160  RIWWTLFTRDRSVAVALGRPIGINTDDSDVGM  1255
+             RIWWT++  DR  A  +G P  I  DD  + M
+Sbjct  1203  RIWWTIYIFDRMWASKMGLPSQILDDDIHLDM  1298
+
+
+>ANID_06173 | Aspergillus nidulans FGSC A4 C6 transcription factor (2493 
+nt)
+Length=2493
+
+ Score = 34.1 bits (68),  Expect = 0.62
+ Identities = 13/38 (34%), Positives = 24/38 (63%), Gaps = 0/38 (0%)
+ Frame = +2/+1
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDD  1270
+             +R++WT++  +R V+V+LGRP  I     D+ +  + D
+Sbjct  1336  RRLFWTVYYLERVVSVSLGRPFSIADRHIDLPLPVDVD  1449
+
+
+>ANID_03247 | Aspergillus nidulans FGSC A4 ABC transporter sequence aa5 patent-A2-Penicillium 
+chrysogenum (4494 nt)
+Length=4494
+
+ Score = 34.1 bits (68),  Expect = 0.62
+ Identities = 14/41 (34%), Positives = 21/41 (51%), Gaps = 0/41 (0%)
+ Frame = +3/+3
+
+Query  2139  ILVCQTGVLHLRFHTNDLDHRHLPSHHPENWDNLRGSACRK  2261
+             +L+CQ  V   +   N L H HL  H   +W N RG+  ++
+Sbjct  3897  VLLCQASV*LQQSRINVLHHAHLRVHLHRHWSNHRGNCSQR  4019
+
+
+>ANID_00388 | Aspergillus nidulans FGSC A4 C6 transcription factor (2514 
+nt)
+Length=2514
+
+ Score = 34.1 bits (68),  Expect = 0.62
+ Identities = 12/38 (32%), Positives = 22/38 (58%), Gaps = 0/38 (0%)
+ Frame = +2/+1
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDD  1270
+             +R WW L+  DR +A+   RP+ +   +S+  +L  D+
+Sbjct  1495  RRTWWLLYIMDRHLALCYNRPLALLDAESEDLLLPLDE  1608
+
+
+>ANID_10491 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor domain-containing protein (2436 nt)
+Length=2436
+
+ Score = 33.6 bits (67),  Expect = 0.85
+ Identities = 13/35 (37%), Positives = 22/35 (63%), Gaps = 0/35 (0%)
+ Frame = +2/+1
+
+Query  1142  DKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSD  1246
+             ++ L KRI W+ +T D+ + V  GRP  ++ +D D
+Sbjct  1198  ERELRKRILWSAYTLDKYLNVIFGRPRLLHDEDID  1302
+
+
+>ANID_09524 | Aspergillus nidulans FGSC A4 glycosyl hydrolase family 61 protein 
+(1266 nt)
+Length=1266
+
+ Score = 33.6 bits (67),  Expect = 0.85
+ Identities = 18/55 (33%), Positives = 27/55 (49%), Gaps = 0/55 (0%)
+ Frame = +2/+2
+
+Query  2249  SVPQGSPTGPQNAMPGNSRSNTRPTTPFNGHFSLPATPPDLFLVTRTSPNLSPSL  2413
+             S P  S T   + +PG + S++R TTP       P+        TR+SP  +P+L
+Sbjct  446   STPSASSTTLPSLVPGVTMSSSRTTTPGWSRSPPPSRRVTTSCATRSSPFTAPAL  610
+
+
+>ANID_05274 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1939 nt)
+Length=1939
+
+ Score = 33.6 bits (67),  Expect = 0.85
+ Identities = 12/50 (24%), Positives = 30/50 (60%), Gaps = 0/50 (0%)
+ Frame = +2/+1
+
+Query  1130  LSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDDFIE  1279
+             LS P++   +R++W+ +  DR ++    RP+ I+ +D  V +  +++ ++
+Sbjct  730   LSFPEQEERRRVFWSGYLLDRLISCGKSRPLCIHDEDCHVRLPCDEETLQ  879
+
+
+>ANID_11793 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2146 nt)
+Length=2146
+
+ Score = 28.6 bits (56),  Expect(2) = 0.89
+ Identities = 13/35 (37%), Positives = 18/35 (51%), Gaps = 0/35 (0%)
+ Frame = +3/+3
+
+Query  612  LPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYR  716
+            LP + + D LVE YF        I++   FM +YR
+Sbjct  684  LPDRGVMDALVELYFTTFESCYGILDYYSFMEEYR  788
+
+
+ Score = 28.1 bits (55),  Expect(2) = 0.89
+ Identities = 12/29 (41%), Positives = 15/29 (52%), Gaps = 0/29 (0%)
+ Frame = +1/+1
+
+Query  2410  SLGELPARPVVP*WHGHIPRVGVSAKPYC  2496
+             SLGE  +RP  P   GH P +G   +  C
+Sbjct  1651  SLGEACSRPYYPGRVGHFPGIGSRCRRRC  1737
+
+
+>ANID_10550 | Aspergillus nidulans FGSC A4 xylanase transcription factor 
+(2450 nt)
+Length=2450
+
+ Score = 33.1 bits (66),  Expect = 1.2
+ Identities = 12/38 (32%), Positives = 22/38 (58%), Gaps = 0/38 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDD  1270
+             +R+WW L+  DR +A+   RP+ +   +S   +L  D+
+Sbjct  1470  RRVWWLLYMMDRHLALCHNRPLMLLDSESKGLLLPLDE  1583
+
+
+>ANID_06053 | Aspergillus nidulans FGSC A4 serine/threonine protein kinase 
+(2901 nt)
+Length=2901
+
+ Score = 33.1 bits (66),  Expect = 1.2
+ Identities = 14/27 (52%), Positives = 14/27 (52%), Gaps = 0/27 (0%)
+ Frame = -3/+3
+
+Query  582   RVRGCRGPSTEHAIL*C*AEEGSAPHP  502
+             RV  CR P   H    C  EEGS PHP
+Sbjct  2019  RVCSCRAPFQVHGRSSCRCEEGSNPHP  2099
+
+
+>ANID_08355 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1795 nt)
+Length=1795
+
+ Score = 28.1 bits (55),  Expect(2) = 1.4
+ Identities = 9/19 (47%), Positives = 11/19 (58%), Gaps = 0/19 (0%)
+ Frame = +1/+1
+
+Query  49   PCTNCVAFSIECKIPTPKR  105
+            PC+ CV   I CK P  +R
+Sbjct  79   PCSYCVKVRINCKYPASRR  135
+
+
+ Score = 27.6 bits (54),  Expect(2) = 1.4
+ Identities = 9/15 (60%), Positives = 11/15 (73%), Gaps = 0/15 (0%)
+ Frame = +2/+2
+
+Query  1157  KRIWWTLFTRDRSVA  1201
+             +R+WW LFT D  VA
+Sbjct  1028  RRVWWQLFTLDIRVA  1072
+
+
+>ANID_07610 | Aspergillus nidulans FGSC A4 xylanolytic transcriptional activator 
+(2746 nt)
+Length=2746
+
+ Score = 32.7 bits (65),  Expect(2) = 1.5
+ Identities = 9/22 (41%), Positives = 15/22 (68%), Gaps = 0/22 (0%)
+ Frame = +2/+2
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPI  1222
+             +R+WW L+  DR +A+   RP+
+Sbjct  1682  RRLWWLLYATDRHLALCYNRPL  1747
+
+
+ Score = 23.5 bits (45),  Expect(2) = 1.5
+ Identities = 9/23 (39%), Positives = 13/23 (57%), Gaps = 0/23 (0%)
+ Frame = +1/+2
+
+Query  1999  DLGQQSSRRTSSESCWKETSEGT  2067
+             D G+Q  RR    S ++ T +GT
+Sbjct  2660  DFGEQQQRRREVLSLYRWTGDGT  2728
+
+
+>ANID_12381 | Aspergillus nidulans FGSC A4 mandelate racemase/muconate lactonizing 
+enzyme family protein (4015 nt)
+Length=4015
+
+ Score = 32.7 bits (65),  Expect = 1.6
+ Identities = 11/30 (37%), Positives = 20/30 (67%), Gaps = 0/30 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSD  1246
+             KR++W +++ D  ++ ALGRP   + D+ D
+Sbjct  2781  KRVFWCMYSLDNYLSAALGRPRIFHDDEID  2870
+
+
+>ANID_12017 | Aspergillus nidulans FGSC A4 vacuolar transporter chaperone 
+4 (2701 nt)
+Length=2701
+
+ Score = 32.7 bits (65),  Expect = 1.6
+ Identities = 13/25 (52%), Positives = 15/25 (60%), Gaps = 0/25 (0%)
+ Frame = +2/-3
+
+Query  305   PDGRRWDASDHPHRATGSSASVPQH  379
+             P  RR + + HP RATG  AS  QH
+Sbjct  1523  PPKRRMEIAQHPRRATGKMASQLQH  1449
+
+
+>ANID_08414 | Aspergillus nidulans FGSC A4 C6 zinc finger domain-containing 
+protein (2289 nt)
+Length=2289
+
+ Score = 32.7 bits (65),  Expect = 1.6
+ Identities = 13/42 (31%), Positives = 22/42 (52%), Gaps = 0/42 (0%)
+ Frame = +3/+1
+
+Query  609  LLPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRDPKNPP  734
+            L+PP+  CD L+E Y       + I++   F ++YR   + P
+Sbjct  676  LIPPRATCDVLLELYVNTFESAIRILHIPSFYQEYRQYWSSP  801
+
+
+>ANID_06134 | Aspergillus nidulans FGSC A4 hypothetical protein (5163 nt)
+Length=5163
+
+ Score = 32.7 bits (65),  Expect = 1.6
+ Identities = 15/51 (29%), Positives = 22/51 (43%), Gaps = 0/51 (0%)
+ Frame = -3/-2
+
+Query  2361  GVAGSEK*PLKGVVGRVLLRELPGIAF*GPVGDPCGTLIPGGCPNSLDGVT  2209
+             G   S    ++ +   +L   +P     G  G   G + PGGCP  L G+T
+Sbjct  4298  GTKSSSSKHIRSLTRSILAESVPSALLVGFGGT*VGRVKPGGCPGGLTGLT  4146
+
+
+ Score = 32.7 bits (65),  Expect = 1.6
+ Identities = 14/37 (38%), Positives = 18/37 (49%), Gaps = 0/37 (0%)
+ Frame = +2/+1
+
+Query  2201  TPAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSN  2311
+             T +V P    GQPPG ++P   P  P N   G   +N
+Sbjct  4138  TTSVRPVNPPGQPPGFTLPTYVPPKPTNNAEGTLSAN  4248
+
+
+>ANID_10543 | Aspergillus nidulans FGSC A4 C6 transcription factor (2193 
+nt)
+Length=2193
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 11/21 (52%), Positives = 14/21 (67%), Gaps = 0/21 (0%)
+ Frame = +2/+1
+
+Query  1157  KRIWWTLFTRDRSVAVALGRP  1219
+             +R+WWTLF     V + LGRP
+Sbjct  1126  RRVWWTLFIFVSGVQLILGRP  1188
+
+
+>ANID_08855 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(896 nt)
+Length=896
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 19/52 (37%), Positives = 24/52 (46%), Gaps = 0/52 (0%)
+ Frame = +1/+3
+
+Query  2017  SRRTSSESCWKETSEGTARDANATASCEETGSAQAQIRRYGSWFAKRGSYTS  2172
+             S   SSE      S+G A     ++   +T SA  +IRR G     RG YTS
+Sbjct  51    SPTNSSEEKCSLISKGNANSHTLSSHTFKTASASTKIRRPGFSAQARGGYTS  206
+
+
+>ANID_04686 | Aspergillus nidulans FGSC A4 chitosanase (1002 nt)
+Length=1002
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 11/24 (46%), Positives = 13/24 (54%), Gaps = 0/24 (0%)
+ Frame = -3/-3
+
+Query  336  WSLASHRRPSGSCDTRKHPCYPCR  265
+            W  A HRR    C + +H  YPCR
+Sbjct  328  WLRARHRRCRHICSSHRHSRYPCR  257
+
+
+>ANID_04006 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(3485 nt)
+Length=3485
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 11/24 (46%), Positives = 17/24 (71%), Gaps = 0/24 (0%)
+ Frame = +3/+3
+
+Query  936   PEGLFICFVRESACSNSYRRDKER  1007
+             P+GL  C V E+ CS+SYR + ++
+Sbjct  840   PQGLLGCGVEETQCSSSYRPESDK  911
+
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 12/44 (27%), Positives = 24/44 (55%), Gaps = 0/44 (0%)
+ Frame = +3/-2
+
+Query  2124  NSTIWILVCQTGVLHLRFHTNDLDHRHLPSHHPENWDNLRGSAC  2255
+             N+++  ++       L++   +LD++ L SHHP   D +  +AC
+Sbjct  2260  NTSVSAMLLAVNSTFLKYRGAELDNKRLISHHPRY*DRIAFAAC  2129
+
+
+>ANID_02910 | Aspergillus nidulans FGSC A4 transthyretin domain-containing 
+protein (447 nt)
+Length=447
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 16/36 (44%), Positives = 20/36 (56%), Gaps = 0/36 (0%)
+ Frame = -3/+3
+
+Query  2394  GEVRVTRKRSGGVAGSEK*PLKGVVGRVLLRELPGI  2287
+             G+V   R R GG  G E     GVVG + L ++PGI
+Sbjct  336   GQVYGQRARKGG*GGMETLSCSGVVGAMELFDVPGI  443
+
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 11/26 (42%), Positives = 17/26 (65%), Gaps = 0/26 (0%)
+ Frame = +2/-3
+
+Query  2288  MPGNSRSNTRPTTPFNGHFSLPATPP  2365
+             +PG S ++  PTTP + + S+P  PP
+Sbjct  442   IPGTSNNSMAPTTPEHDNVSIPPHPP  365
+
+
+>ANID_00689 | Aspergillus nidulans FGSC A4 acetate regulatory DNA binding 
+protein FacB (2819 nt)
+Length=2819
+
+ Score = 32.2 bits (64),  Expect = 2.2
+ Identities = 10/32 (31%), Positives = 21/32 (66%), Gaps = 0/32 (0%)
+ Frame = +3/+3
+
+Query  618  PKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+            P+ + D+L+  +F+  AP+ P+V+R   ++ Y
+Sbjct  666  PRLVSDQLINIFFQEWAPLYPVVHRPTILKAY  761
+
+
+>ANID_00863 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor domain-containing protein (2557 nt)
+Length=2557
+
+ Score = 28.1 bits (55),  Expect(2) = 2.5
+ Identities = 9/36 (25%), Positives = 19/36 (53%), Gaps = 0/36 (0%)
+ Frame = +3/+3
+
+Query  612   LPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQYRD  719
+             LPP+ +   L+  Y   +    P+++   FM++Y +
+Sbjct  936   LPPQDVAHHLLAQYHAHIHTTFPVIHWPTFMKEYEE  1043
+
+
+ Score = 27.2 bits (53),  Expect(2) = 2.5
+ Identities = 8/14 (57%), Positives = 11/14 (79%), Gaps = 0/14 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSV  1198
+             KR+WW ++T DR V
+Sbjct  1377  KRVWWGMYTWDRFV  1418
+
+
+>ANID_05163 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1887 nt)
+Length=1887
+
+ Score = 29.9 bits (59),  Expect(2) = 2.6
+ Identities = 15/39 (38%), Positives = 21/39 (54%), Gaps = 0/39 (0%)
+ Frame = +3/-1
+
+Query  2397  TSLRLSGRTSSQTSCSLMARPYSPSWRLRKTILSTHNYR  2513
+             T L L G   S    S  ARP++ + RLR+  ++ H YR
+Sbjct  540   TLLALHGHHLSCLVSSAAARPHNRTPRLRRPRINNHRYR  424
+
+
+ Score = 24.9 bits (48),  Expect(2) = 2.6
+ Identities = 11/28 (39%), Positives = 12/28 (43%), Gaps = 0/28 (0%)
+ Frame = +2/-2
+
+Query  2168  PPVSYERSRPQTPAVTPSRELGQPPGIS  2251
+             PP       P   A   SR  G PPG+S
+Sbjct  632   PPSPVNSGSPNASAPLASRVPGVPPGLS  549
+
+
+>ANID_11918 | Aspergillus nidulans FGSC A4 hypothetical protein (2335 nt)
+Length=2335
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 12/34 (35%), Positives = 19/34 (56%), Gaps = 0/34 (0%)
+ Frame = +3/+2
+
+Query  612  LPPKPLCDELVEAYFRWVAPIVPIVNRSRFMRQY  713
+            LPPK + DELV+ Y R +     +++   F  +Y
+Sbjct  827  LPPKGVADELVDCYLRTIETTFRVLHVPTFRSEY  928
+
+
+>ANID_10755 | Aspergillus nidulans FGSC A4 DNA polymerase alpha catalytic 
+subunit (4581 nt)
+Length=4581
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 13/35 (37%), Positives = 16/35 (46%), Gaps = 0/35 (0%)
+ Frame = -1/+2
+
+Query  2636  PSPVAGPT*APGWKGDVPASAAFDSPSCDVAAYLV  2532
+             PSP A    AP  +G  P S   + P+C     LV
+Sbjct  4037  PSPAAAARNAPSLRGSQPQSTCVNPPACSALTLLV  4141
+
+
+>ANID_10126 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1104 nt)
+Length=1104
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 16/43 (37%), Positives = 21/43 (49%), Gaps = 0/43 (0%)
+ Frame = +3/+2
+
+Query  1086  SSAQSLMIAVWKHLNSASQTRDYGSAFGGPSSPGTDP*QLPSA  1214
+             S   SL +A W HL++ S +    S    P SP + P Q P A
+Sbjct  245   SQRPSLTLAQWPHLSTTSSSAQRTSQIYHPRSPKS*PLQSPRA  373
+
+
+>ANID_09236 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1750 nt)
+Length=1750
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 11/40 (28%), Positives = 21/40 (53%), Gaps = 0/40 (0%)
+ Frame = +2/+2
+
+Query  1124  SQLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTDDS  1243
+             S L +  + + +R+WWT++  D    + LGR   ++   S
+Sbjct  728   STLPEAKREMRRRLWWTVYFMDTRATMKLGRSFMLSESHS  847
+
+
+>ANID_08741 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(990 nt)
+Length=990
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 13/43 (30%), Positives = 22/43 (51%), Gaps = 0/43 (0%)
+ Frame = +2/+3
+
+Query  2201  TPAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSNTRPTTP  2329
+             TPA TP+ +L +  G++ P   P+  ++ +P   R    P  P
+Sbjct  693   TPAATPAHDLARDTGLAAPPLLPSFLKHTLPAEPRPIYLPHLP  821
+
+
+>ANID_08164 | Aspergillus nidulans FGSC A4 fungal specific transcription 
+factor domain-containing protein (2518 nt)
+Length=2518
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 13/36 (36%), Positives = 22/36 (61%), Gaps = 0/36 (0%)
+ Frame = +2/+1
+
+Query  1163  IWWTLFTRDRSVAVALGRPIGINTDDSDVGMLTEDD  1270
+             ++W+++  DR++A+ LGR   I   D DV +  E D
+Sbjct  1405  LFWSIYCMDRALALRLGRAATIPDYDIDVPVSFEGD  1512
+
+
+>ANID_05037 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(4127 nt)
+Length=4127
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 20/63 (32%), Positives = 33/63 (52%), Gaps = 0/63 (0%)
+ Frame = -3/+3
+
+Query  1260  VNMPTSESSVLIPIGRPRATATDRSLVKRVHQMRFHNLLSGLLS*DVSTLQSSVTEPKIT  1081
+             V+  +S SSV   +G+ R ++  RS   RVH+      L  + S* +  L  ++T  ++T
+Sbjct  1116  VSRRSSVSSVQERLGQQRFSSAQRSTAYRVHR*WEGTCLETVTS*SLVFLCPNITGGRLT  1295
+
+Query  1080  MGK  1072
+              GK
+Sbjct  1296  QGK  1304
+
+
+>ANID_04597 | Aspergillus nidulans FGSC A4 nuclear condensin complex subunit 
+Smc4 (4509 nt)
+Length=4509
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 11/23 (48%), Positives = 16/23 (70%), Gaps = 0/23 (0%)
+ Frame = +2/-1
+
+Query  341   HRATGSSASVPQHCLRTIYEAQV  409
+             HRATG+S++   HC R+I E  +
+Sbjct  2769  HRATGNSSTATTHCTRSINELTI  2701
+
+
+>ANID_03883 | Aspergillus nidulans FGSC A4 endo-1,3(4)-beta-glucanase (1456 
+nt)
+Length=1456
+
+ Score = 31.8 bits (63),  Expect = 3.0
+ Identities = 17/66 (26%), Positives = 30/66 (45%), Gaps = 0/66 (0%)
+ Frame = -1/+3
+
+Query  2582  ASAAFDSPSCDVAAYLVIVTAIASVVVGRQYGFAETPTRGIWPCHQGTTGLAGSSPRETE  2403
+             A A F + SCDV+++    + IA++ +  Q+G A       W C      L    P   E
+Sbjct  1074  ALADFPNTSCDVSSHFKNQSIIANIDLCGQWGGAPNVYSRQWDCPGKCKELVARHPERFE  1253
+
+Query  2402  RGWAKY  2385
+             + + ++
+Sbjct  1254  KAYWEF  1271
+
+
+>ANID_04825 | Aspergillus nidulans FGSC A4 LysM domain-containing protein 
+(3703 nt)
+Length=3703
+
+ Score = 29.9 bits (59),  Expect(2) = 3.4
+ Identities = 12/33 (36%), Positives = 17/33 (52%), Gaps = 0/33 (0%)
+ Frame = -1/-1
+
+Query  1919  FSPGTSLQ*MVLMTAFGRRA*STPRTSCRRCWK  1821
+             + PG SL+  +    FG    +  RT CRR W+
+Sbjct  841   WKPGMSLEGSIQWRFFGSNHCTLHRTDCRRLWR  743
+
+
+ Score = 25.4 bits (49),  Expect(2) = 3.4
+ Identities = 8/18 (44%), Positives = 11/18 (61%), Gaps = 0/18 (0%)
+ Frame = -1/-2
+
+Query  1979  PSSPPAKPWTRLSRLACK  1926
+             P +PP + WT + R  CK
+Sbjct  2475  PIAPPIRAWTSMIRDICK  2422
+
+
+>ANID_06887 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2070 nt)
+Length=2070
+
+ Score = 25.8 bits (50),  Expect(2) = 3.4
+ Identities = 7/11 (64%), Positives = 8/11 (73%), Gaps = 0/11 (0%)
+ Frame = -2/-1
+
+Query  2224  SGWCDGRCLWS  2192
+             SGWC G C W+
+Sbjct  975   SGWCKGGCGWT  943
+
+
+ Score = 22.6 bits (43),  Expect(2) = 3.4
+ Identities = 14/46 (30%), Positives = 20/46 (43%), Gaps = 0/46 (0%)
+ Frame = -1/-3
+
+Query  2102  SSQEAVAFASRAVPSDVSFQQLSEDVLRELCCPRSTRTVCEPSSPP  1965
+             S +  +AF  R   SD S   +  +  R +C P+       PS PP
+Sbjct  856   SREIQLAFG*RHSLSDSSAASVCWEGPRAMCYPQMCSDWPAPSGPP  719
+
+
+>ANID_02740 | Aspergillus nidulans FGSC A4 high affinity cAMP phosphodiesterase 
+(3045 nt)
+Length=3045
+
+ Score = 29.9 bits (59),  Expect(2) = 3.9
+ Identities = 13/36 (36%), Positives = 19/36 (53%), Gaps = 0/36 (0%)
+ Frame = +2/+2
+
+Query  518   PSSA*HQRIACSVDGPRQPRTRHSPSAWRFLTPSQT  625
+             PS+    R +C+  GP+  +TRH  S    L+  QT
+Sbjct  1490  PSTVLPSRRSCAATGPQHSKTRHCASCLSVLSWPQT  1597
+
+
+ Score = 24.9 bits (48),  Expect(2) = 3.9
+ Identities = 10/21 (48%), Positives = 11/21 (52%), Gaps = 0/21 (0%)
+ Frame = +2/+2
+
+Query  2162  PTPPVSYERSRPQTPAVTPSR  2224
+             P PP      RPQTP  T +R
+Sbjct  2567  PIPPRPAAHRRPQTPNATVAR  2629
+
+
+>ANID_11104 | Aspergillus nidulans FGSC A4 actin associated protein Wsp1 
+(2085 nt)
+Length=2085
+
+ Score = 31.3 bits (62),  Expect = 4.2
+ Identities = 17/54 (31%), Positives = 21/54 (39%), Gaps = 0/54 (0%)
+ Frame = +2/+3
+
+Query  2162  PTPPVSYERSRPQTPAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSNTRPT  2323
+             P P  +   + PQ P   P+   G PP       S   P   +PG SR    PT
+Sbjct  1281  PPPRTASPATPPQLPPKVPAFSSGPPPPPPRSPASQPPPPPPVPGASRPVPPPT  1442
+
+
+>ANID_09395 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2522 nt)
+Length=2522
+
+ Score = 31.3 bits (62),  Expect = 4.2
+ Identities = 11/38 (29%), Positives = 19/38 (50%), Gaps = 0/38 (0%)
+ Frame = +1/+1
+
+Query  16   QVRCDAASLGVPCTNCVAFSIECKIPTPKRKKQQSKSK  129
+            ++RCD +   + C  C    +EC +PT    +Q+   K
+Sbjct  79   KIRCDRSQGEISCDKCRHAGLECVVPTHHVGRQKGVKK  192
+
+
+>ANID_07943 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1049 nt)
+Length=1049
+
+ Score = 31.3 bits (62),  Expect = 4.2
+ Identities = 18/45 (40%), Positives = 22/45 (49%), Gaps = 0/45 (0%)
+ Frame = +3/+1
+
+Query  2334  TVTSRYLQHLQIFSLSHVLRPTSLRLSGRTSSQTSCSLMARPYSP  2468
+             T+   Y Q+  + SLS   R  S  +SGR  S TS    AR  SP
+Sbjct  172   TLVRSYYQYR*LISLSRSWRTPSSPISGRNGSLTSRFATARSSSP  306
+
+
+>ANID_05859 | Aspergillus nidulans FGSC A4 C6 zinc finger domain-containing 
+protein (2189 nt)
+Length=2189
+
+ Score = 31.3 bits (62),  Expect = 4.2
+ Identities = 11/22 (50%), Positives = 14/22 (64%), Gaps = 0/22 (0%)
+ Frame = +3/+1
+
+Query  609  LLPPKPLCDELVEAYFRWVAPI  674
+            LLPP   CD L + YFR  +P+
+Sbjct  577  LLPPSRYCDALKDVYFRVFSPV  642
+
+
+>ANID_05519 | Aspergillus nidulans FGSC A4 AP-3 complex subunit sigma (621 
+nt)
+Length=621
+
+ Score = 31.3 bits (62),  Expect = 4.2
+ Identities = 13/29 (45%), Positives = 17/29 (59%), Gaps = 0/29 (0%)
+ Frame = +3/-2
+
+Query  1233  PTTPTWAC*PRTILLRTRSTASPSTLQTL  1319
+             P  P+W C P TIL    ST +P T+ +L
+Sbjct  545   PRLPSWLCTPATILSIFVSTTTPPTIISL  459
+
+
+>ANID_02513 | Aspergillus nidulans FGSC A4 serine/threonine-protein kinase 
+bud32 (858 nt)
+Length=858
+
+ Score = 31.3 bits (62),  Expect = 4.2
+ Identities = 14/45 (31%), Positives = 18/45 (40%), Gaps = 0/45 (0%)
+ Frame = +2/+3
+
+Query  2204  PAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSNTRPTTPFNG  2338
+             P   P+R    PP  ++P   P  P N  P  +RS   P     G
+Sbjct  132   PLTVPARRAQNPPVKTLPAPDPRSPPNPRPHITRSALSPEVSERG  266
+
+
+>ANID_01729 | Aspergillus nidulans FGSC A4 C6 transcription factor (2924 
+nt)
+Length=2924
+
+ Score = 26.3 bits (51),  Expect(3) = 4.3
+ Identities = 8/22 (36%), Positives = 12/22 (55%), Gaps = 0/22 (0%)
+ Frame = +3/+1
+
+Query  1074  CPWLSSAQSLMIAVWKHLNSAS  1139
+             CPW+S    L + + +HL   S
+Sbjct  2341  CPWVSGRPGLRLVLLRHLRGLS  2406
+
+
+ Score = 24.9 bits (48),  Expect(3) = 4.3
+ Identities = 10/30 (33%), Positives = 18/30 (60%), Gaps = 0/30 (0%)
+ Frame = +1/+1
+
+Query  979   LTPTDVTKNVFYWTRVAMVVAQGSGMHRRY  1068
+             L P D +   + +  +A+ +A  +GMHR+Y
+Sbjct  1399  LLPLDTSGLCYTYFGLALKMAIQNGMHRKY  1488
+
+
+ Score = 24.0 bits (46),  Expect(3) = 4.3
+ Identities = 8/17 (47%), Positives = 10/17 (59%), Gaps = 0/17 (0%)
+ Frame = +1/+1
+
+Query  706  DNIAIRRTRLLCFYCRP  756
+            D   + R RL CF+C P
+Sbjct  868  DESRVPRGRLPCFHCNP  918
+
+
+>ANID_01114 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1554 nt)
+Length=1554
+
+ Score = 25.8 bits (50),  Expect(2) = 4.7
+ Identities = 16/50 (32%), Positives = 19/50 (38%), Gaps = 0/50 (0%)
+ Frame = +2/+1
+
+Query  2162  PTPPVSYERSRPQTPAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSN  2311
+             PTP +S E      P V  +     PP    P      P  A   +SRSN
+Sbjct  337   PTPSMSGELIVKDQPMVDGADIFALPPAALSPAKVDAAPAPASRKSSRSN  486
+
+
+ Score = 22.1 bits (42),  Expect(2) = 4.7
+ Identities = 12/33 (36%), Positives = 17/33 (52%), Gaps = 0/33 (0%)
+ Frame = +1/+1
+
+Query  2347  ATCNTSRSFPCHTYFAQPLSVSLGELPARPVVP  2445
+             A+  +SRS P   + A P S  +   P+R V P
+Sbjct  460   ASRKSSRSNPSILFPASPTSPRIDPSPSRNVNP  558
+
+
+>ANID_07326 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2133 nt)
+Length=2133
+
+ Score = 29.5 bits (58),  Expect(2) = 5.1
+ Identities = 10/23 (43%), Positives = 13/23 (57%), Gaps = 0/23 (0%)
+ Frame = +2/-3
+
+Query  1460  WLQNCPKEVCWQKSRHHFLAALL  1528
+             W+Q+CP  VC   + HH  A  L
+Sbjct  940   WMQDCPDLVCVSLASHHASAVAL  872
+
+
+ Score = 24.4 bits (47),  Expect(2) = 5.1
+ Identities = 14/35 (40%), Positives = 17/35 (49%), Gaps = 0/35 (0%)
+ Frame = +3/-2
+
+Query  2397  TSLRLSGRTSSQTSCSLMARPYSPSWRLRKTILST  2501
+             T LR +G TS   SC  +    S   RLR  +L T
+Sbjct  764   TRLRFAGWTSRTGSCGSLTGSISFEIRLRFFLLRT  660
+
+
+>ANID_01554 | Aspergillus nidulans FGSC A4 chitin synthase activator (2210 
+nt)
+Length=2210
+
+ Score = 29.9 bits (59),  Expect(2) = 5.2
+ Identities = 11/39 (28%), Positives = 22/39 (56%), Gaps = 0/39 (0%)
+ Frame = +2/+2
+
+Query  2549  RHMMVNQTPQMPGRHLSSPELMSGLPPGMGLHGGQPQQV  2665
+             RH+++ QT ++P  HL+S  ++    P + + G  P  +
+Sbjct  740   RHILLRQTMRLPRHHLTSNLVLHLETPALPMFGRSPSLI  856
+
+
+ Score = 24.0 bits (46),  Expect(2) = 5.2
+ Identities = 6/9 (67%), Positives = 9/9 (100%), Gaps = 0/9 (0%)
+ Frame = +3/+1
+
+Query  3123  KRYKEGVRW  3149
+             KRY+EG++W
+Sbjct  1471  KRYREGIKW  1497
+
+
+>ANID_07264 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1187 nt)
+Length=1187
+
+ Score = 28.1 bits (55),  Expect(2) = 5.5
+ Identities = 8/16 (50%), Positives = 12/16 (75%), Gaps = 0/16 (0%)
+ Frame = +3/-1
+
+Query  2877  PILRHQWELWRDGNMT  2924
+             P+LR  W+LWR G ++
+Sbjct  539   PVLRRVWKLWRAGRVS  492
+
+
+ Score = 24.9 bits (48),  Expect(2) = 5.5
+ Identities = 11/17 (65%), Positives = 12/17 (71%), Gaps = 0/17 (0%)
+ Frame = +3/-2
+
+Query  1002  ERLLLDESCNGRRTRLR  1052
+             ER L  +S  GRRTRLR
+Sbjct  598   ERTLALQSVRGRRTRLR  548
+
+
+>ANID_10920 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1778 nt)
+Length=1778
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 10/33 (30%), Positives = 16/33 (48%), Gaps = 0/33 (0%)
+ Frame = -2/+3
+
+Query  2449  IREQLVWLEVLPERRREVGRSTCDKEKIWRCCR  2351
+             I +  +W+        E+G   C + K+W CCR
+Sbjct  255   IEQA*LWISSAASSASELGCQCCIRYKLWDCCR  353
+
+
+>ANID_07188 | Aspergillus nidulans FGSC A4 small oligopeptide transporter 
+(2862 nt)
+Length=2862
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 17/58 (29%), Positives = 30/58 (52%), Gaps = 0/58 (0%)
+ Frame = +3/-3
+
+Query  2265  PLPALKMQCQAIREAILDRQRPSTVTSRYLQHLQIFSLSHVLRPTSLRLSGRTSSQTS  2438
+             PLP L+   Q+  E+   R + +      ++ + I  +  VLR  S   +GRT+++TS
+Sbjct  685   PLPTLR*HSQSAPESEKVRGQTAKGAHTIVKRMPIIHIRIVLRGNSTSSTGRTTARTS  512
+
+
+>ANID_06523 | Aspergillus nidulans FGSC A4 cytokinesis protein SepA/Bni1 
+(5435 nt)
+Length=5435
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 21/74 (28%), Positives = 21/74 (28%), Gaps = 0/74 (0%)
+ Frame = +2/+2
+
+Query  2144  GLPNGGPTPPVSYERSRPQTPAVTPSRELGQPPGISVPQGSPTGPQNAMPGNSRSNTRPT  2323
+             GL    P PP       P   A  P      PP      G P  P    PG       P 
+Sbjct  3092  GLSGAAPPPPPPPPPPPPGAGAAPPPPPPPPPPPPGGLGGPPPPPPPPPPGGFGGPPPPP  3271
+
+Query  2324  TPFNGHFSLPATPP  2365
+              P  G    P  PP
+Sbjct  3272  PPPGGFGGPPPPPP  3313
+
+
+>ANID_06030 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2366 nt)
+Length=2366
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 9/24 (38%), Positives = 15/24 (63%), Gaps = 0/24 (0%)
+ Frame = +2/+3
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGI  1228
+             ++IWWT++  DR +   +G P  I
+Sbjct  1263  RKIWWTIYVLDRQMTSLMGLPQSI  1334
+
+
+>ANID_04952 | Aspergillus nidulans FGSC A4 stress response protein nst1 (3634 
+nt)
+Length=3634
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 11/20 (55%), Positives = 13/20 (65%), Gaps = 0/20 (0%)
+ Frame = -3/-2
+
+Query  2664  TCCGWPPCRPIPGGRPDISS  2605
+             TC G PPC  +P  RP+I S
+Sbjct  1464  TCVGPPPCAVLPSWRPNIIS  1405
+
+
+>ANID_04785 | Aspergillus nidulans FGSC A4 C6 transcription factor (2768 
+nt)
+Length=2768
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 11/37 (30%), Positives = 20/37 (54%), Gaps = 0/37 (0%)
+ Frame = +2/+2
+
+Query  1127  QLSKPDKRLWKRIWWTLFTRDRSVAVALGRPIGINTD  1237
+             ++S   + + +R+WW ++  D   A   GRPI +  D
+Sbjct  1673  KISLLQREVRRRLWWGVYIFDSGAAKTFGRPILLPED  1783
+
+
+>ANID_04681 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1503 nt)
+Length=1503
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 16/45 (36%), Positives = 21/45 (47%), Gaps = 0/45 (0%)
+ Frame = -1/+2
+
+Query  1556  LSALTSSSHEEELPRSDAGTSASIPPLGNSEASLLEPYLNASSPW  1422
+             LS   S+     L  S  G S  IP  G+   S+  P+L+  SPW
+Sbjct  320   LSVPLSTKPSSALTSSCIGLSRKIPLTGSRWRSVSSPHLSFRSPW  454
+
+
+>ANID_02954 | Aspergillus nidulans FGSC A4 extracellular serine-rich protein 
+(2842 nt)
+Length=2842
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 17/57 (30%), Positives = 23/57 (40%), Gaps = 0/57 (0%)
+ Frame = +2/+1
+
+Query  2240  PGISVPQGSPTGPQNAMPGNSRSNTRPTTPFNGHFSLPATPPDLFLVTRTSPNLSPS  2410
+             P  S P  S        PG S S+  PT+      +  +TP     VT ++   SPS
+Sbjct  397   PSASEPSTSEPSSSTGTPGTSTSDPDPTSATEPSSTSTSTPEPSGTVTSSTSTSSPS  567
+
+
+>ANID_02521 | Aspergillus nidulans FGSC A4 endosomal sorting complex protein 
+TSG101 (2308 nt)
+Length=2308
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 16/53 (30%), Positives = 22/53 (42%), Gaps = 0/53 (0%)
+ Frame = +2/+3
+
+Query  2141  LGLPNGGPTPPVSYERSRPQTPAVTPSRELGQPPGISVPQGSPTGPQNAMPGN  2299
+             L LP+ GPT      +     P       L  P  + +P  +PTGP   +P N
+Sbjct  1209  LQLPHHGPTQAAPTSQPPAPRPKPETEDLLTSPFELELPSFTPTGPAPPIPPN  1367
+
+
+>ANID_00240 | Aspergillus nidulans FGSC A4 transaldolase (1443 nt)
+Length=1443
+
+ Score = 30.9 bits (61),  Expect = 5.7
+ Identities = 13/28 (46%), Positives = 16/28 (57%), Gaps = 0/28 (0%)
+ Frame = +2/+3
+
+Query  2282  NAMPGNSRSNTRPTTPFNGHFSLPATPP  2365
+             N  P + RS+T P TPF    +LP  PP
+Sbjct  1062  NHSPVSLRSSTTPRTPFPRSSTLPPPPP  1145
+
+
+>ANID_03674 | Aspergillus nidulans FGSC A4 immunogenic protein (1843 nt)
+Length=1843
+
+ Score = 28.6 bits (56),  Expect(2) = 6.0
+ Identities = 16/34 (47%), Positives = 20/34 (59%), Gaps = 0/34 (0%)
+ Frame = +3/+3
+
+Query  2376  LSHVLRPTSLRLSGRTSSQTSCSLMARPYSPSWR  2477
+             L+ V RP  +RLS RTSS+   +  AR  SP  R
+Sbjct  1575  LTLVTRPLRVRLSPRTSSEAFSASPARL*SPRLR  1676
+
+
+ Score = 24.9 bits (48),  Expect(2) = 6.0
+ Identities = 12/28 (43%), Positives = 16/28 (57%), Gaps = 0/28 (0%)
+ Frame = +1/+1
+
+Query  2047  KETSEGTARDANATASCEETGSAQAQIR  2130
+             +ET    A  ++ATAS EET    A+ R
+Sbjct  880   EETPAAGAATSSATASAEETKDKDAKSR  963
+
+
+>ANID_00773 | Aspergillus nidulans FGSC A4 metalloreductase (1884 nt)
+Length=1884
+
+ Score = 24.4 bits (47),  Expect(2) = 6.2
+ Identities = 7/15 (47%), Positives = 9/15 (60%), Gaps = 0/15 (0%)
+ Frame = +2/+2
+
+Query  464   KSVAPGSGSSWNNGC  508
+             +S+ PG GS W   C
+Sbjct  1562  QSICPGYGSGWTASC  1606
+
+
+ Score = 23.1 bits (44),  Expect(2) = 6.2
+ Identities = 8/23 (35%), Positives = 11/23 (48%), Gaps = 0/23 (0%)
+ Frame = +2/+3
+
+Query  314   RRWDASDHPHRATGSSASVPQHC  382
+             RRWD   H H A  +   + + C
+Sbjct  1452  RRWDNPPHAHCARSAHPRLTRPC  1520
+
+
+>ANID_03835 | Aspergillus nidulans FGSC A4 C6 transcription factor (2037 
+nt)
+Length=2037
+
+ Score = 29.0 bits (57),  Expect(2) = 6.5
+ Identities = 10/25 (40%), Positives = 14/25 (56%), Gaps = 0/25 (0%)
+ Frame = +1/+2
+
+Query  37   SLGVPCTNCVAFSIECKIPTPKRKK  111
+            SL  PC  CV+   EC    P++K+
+Sbjct  158  SLSRPCELCVSLGFECTFLDPQKKR  232
+
+
+ Score = 24.4 bits (47),  Expect(2) = 6.5
+ Identities = 8/23 (35%), Positives = 14/23 (61%), Gaps = 0/23 (0%)
+ Frame = +3/+2
+
+Query  642  VEAYFRWVAPIVPIVNRSRFMRQ  710
+            ++ YF  + P +P++NRS    Q
+Sbjct  746  IDVYFDRLHPTLPVLNRSLLFTQ  814
+
+
+>ANID_05774 | Aspergillus nidulans FGSC A4 proteasome component (6109 nt)
+Length=6109
+
+ Score = 29.9 bits (59),  Expect(2) = 6.8
+ Identities = 14/48 (29%), Positives = 23/48 (48%), Gaps = 0/48 (0%)
+ Frame = -1/-1
+
+Query  2594  GDVPASAAFDSPSCDVAAYLVIVTAIASVVVGRQYGFAETPTRGIWPC  2451
+             G +P S +  SP+  +++  +    IAS V  R      TP + + PC
+Sbjct  5200  GPLPESTSMGSPASLLSSSTLETMLIASAVRSRSLCACATPPKAVRPC  5057
+
+
+ Score = 24.9 bits (48),  Expect(2) = 6.8
+ Identities = 10/20 (50%), Positives = 12/20 (60%), Gaps = 0/20 (0%)
+ Frame = -2/-2
+
+Query  1975  LRHQPNLGHVFQGLHANVDS  1916
+             +R  PNLG   Q  H N+DS
+Sbjct  393   VRRCPNLGDALQ*RHQNLDS  334
+
+
+>ANID_11818 | Aspergillus nidulans FGSC A4 predicted protein (2357 nt)
+Length=2357
+
+ Score = 29.5 bits (58),  Expect(2) = 7.4
+ Identities = 13/39 (33%), Positives = 19/39 (49%), Gaps = 0/39 (0%)
+ Frame = +3/-2
+
+Query  1668  GDGVSVSYYCLPGCRDDYLYRRKPPDTSRNPICSCVHVG  1784
+             GD     Y  L  CRD + Y++  P T  + +CS   +G
+Sbjct  379   GD*PLCCYCHLQHCRDSHYYKQAQPRTRLHSVCSVWPLG  263
+
+
+ Score = 24.0 bits (46),  Expect(2) = 7.4
+ Identities = 8/14 (57%), Positives = 9/14 (64%), Gaps = 0/14 (0%)
+ Frame = +2/-2
+
+Query  2615  SGLPPGMGLHGGQP  2656
+             SGLP   G+HG  P
+Sbjct  250   SGLPAAAGVHGSPP  209
+
+
+>ANID_08494 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1127 nt)
+Length=1127
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 11/32 (34%), Positives = 19/32 (59%), Gaps = 0/32 (0%)
+ Frame = +2/+3
+
+Query  2318  PTTPFNGHFSLPATPPDLFLVTRTSPNLSPSL  2413
+             P   +  H   PA   D+F+ T+ +P++SPS+
+Sbjct  288   PQYHYQCHVRRPAPFDDIFVTTKNTPDISPSV  383
+
+
+>ANID_08412 | Aspergillus nidulans FGSC A4 polyketide synthase (11936 nt)
+Length=11936
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 12/34 (35%), Positives = 20/34 (59%), Gaps = 0/34 (0%)
+ Frame = -2/-3
+
+Query  2020  ENFVAQDRLEQCVNHLRHQPNLGHVFQGLHANVD  1919
+             E+ V +DR   C++ L H P  G ++  LH N++
+Sbjct  2607  ESSVGRDRSIDCLDRLLHWPF*GWMWAQLHGNIE  2506
+
+
+>ANID_07074 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1061 nt)
+Length=1061
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 10/20 (50%), Positives = 12/20 (60%), Gaps = 0/20 (0%)
+ Frame = -3/+1
+
+Query  528  AEEGSAPHPLFHDDPEPGAT  469
+            A  G  PHPL H  PEP ++
+Sbjct  202  ASAGRQPHPLLHQAPEPSSS  261
+
+
+>ANID_05633 | Aspergillus nidulans FGSC A4 transporter smf2 (2526 nt)
+Length=2526
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 15/43 (35%), Positives = 22/43 (51%), Gaps = 0/43 (0%)
+ Frame = +3/+3
+
+Query  510  VHYPLPPNIRGSRARLTDLDNLELDILHQRGAFLLPPKPLCDE  638
+            + Y LPP++R ++A +T    L L      GA  L P+P   E
+Sbjct  480  ISY*LPPSLRRNKAVVTTHHELPLANRRHPGASRLEPEPAASE  608
+
+
+>ANID_05576 | Aspergillus nidulans FGSC A4 F-box domain-containing protein 
+(1536 nt)
+Length=1536
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 15/51 (29%), Positives = 22/51 (43%), Gaps = 0/51 (0%)
+ Frame = -1/-1
+
+Query  1082  PWARSYLRCMPEPCATTIATLVQ*KTFFVTSVGVRTGRLSDKADEQTFGTF  930
+             PWA+  L      CAT   T+ + +T  +  +G    R+ D    Q F  F
+Sbjct  807   PWAKGKLDKRKRDCATVRDTVARLRTKVIAGIGAVEERVEDFGGLQGFVAF  655
+
+
+>ANID_03501 | Aspergillus nidulans FGSC A4 C6 transcription factor (2241 
+nt)
+Length=2241
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 10/37 (27%), Positives = 15/37 (41%), Gaps = 0/37 (0%)
+ Frame = +1/+2
+
+Query  49   PCTNCVAFSIECKIPTPKRKKQQSKSKDTNSGYVESP  159
+            PC NC  F + C    P R++   ++     G    P
+Sbjct  326  PCQNCADFDVPCTYDRPARRRGARRNASPAGGQSAQP  436
+
+
+>ANID_01678 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(2275 nt)
+Length=2275
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 12/30 (40%), Positives = 19/30 (63%), Gaps = 0/30 (0%)
+ Frame = +2/+1
+
+Query  1157  KRIWWTLFTRDRSVAVALGRPIGINTDDSD  1246
+             +RI W  +T D+ ++V LGRP   + +D D
+Sbjct  1066  RRILWCSYTLDKYISVILGRPRLWHDEDLD  1155
+
+
+>ANID_00186 | Aspergillus nidulans FGSC A4 conserved hypothetical protein 
+(1577 nt)
+Length=1577
+
+ Score = 30.4 bits (60),  Expect = 7.9
+ Identities = 13/33 (39%), Positives = 15/33 (45%), Gaps = 0/33 (0%)
+ Frame = +3/+3
+
+Query  2148  CQTGVLHLRFHTNDLDHRHLPSHHPENWDNLRG  2246
+             C T V+    H   L HR  P  HP   +N RG
+Sbjct  390   CSTIVIDSTVHLRILTHRP*PCRHPSPMENRRG  488
+
+
+>ANID_02168 | Aspergillus nidulans FGSC A4 TRAF-type zinc finger protein 
+(1417 nt)
+Length=1417
+
+ Score = 29.9 bits (59),  Expect(2) = 8.6
+ Identities = 11/20 (55%), Positives = 14/20 (70%), Gaps = 0/20 (0%)
+ Frame = -2/-3
+
+Query  3154  PSHRTPSLYRFSLAYCGQSA  3095
+             P HR P+++R SL YC  SA
+Sbjct  1325  PLHRQPNVFRPSLHYCSASA  1266
+
+
+ Score = 22.6 bits (43),  Expect(2) = 8.6
+ Identities = 7/17 (41%), Positives = 11/17 (65%), Gaps = 0/17 (0%)
+ Frame = -2/-1
+
+Query  1663  HGSCLAPTKQEACVLDA  1613
+             HG+   P++Q  C+L A
+Sbjct  373   HGTGYGPSEQPPCILQA  323
+
+
+>ANID_00218 | Aspergillus nidulans FGSC A4 anion exchange family protein 
+(2152 nt)
+Length=2152
+
+ Score = 29.0 bits (57),  Expect(2) = 9.1
+ Identities = 9/11 (82%), Positives = 10/11 (91%), Gaps = 0/11 (0%)
+ Frame = +2/+3
+
+Query  890   HDCPGPCSPRL  922
+             H+CPGPCS RL
+Sbjct  1470  HNCPGPCSYRL  1502
+
+
+ Score = 24.0 bits (46),  Expect(2) = 9.1
+ Identities = 13/35 (37%), Positives = 17/35 (49%), Gaps = 0/35 (0%)
+ Frame = +2/+1
+
+Query  719  SEEPAFFASTAGHPSRWLESLHESPTYGCERLHHS  823
+            S E A +  TAG  S  +  L+    YG ER+  S
+Sbjct  754  SNEFALYGPTAGFLSSLIAVLYFFTVYGLERVGSS  858
+
+
+>ANID_06695 | Aspergillus nidulans FGSC A4 nonsense-mediated mRNA decay factor 
+(5690 nt)
+Length=5690
+
+ Score = 23.5 bits (45),  Expect(2) = 9.8
+ Identities = 6/11 (55%), Positives = 8/11 (73%), Gaps = 0/11 (0%)
+ Frame = +3/-3
+
+Query  2199  RHLPSHHPENW  2231
+             +H PSHH  +W
+Sbjct  942   KHYPSHHGTSW  910
+
+
+ Score = 23.1 bits (44),  Expect(2) = 9.8
+ Identities = 9/25 (36%), Positives = 15/25 (60%), Gaps = 0/25 (0%)
+ Frame = +2/-1
+
+Query  2339  HFSLPATPPDLFLVTRTSPNLSPSL  2413
+             H+S P+ P + + +   SP  +PSL
+Sbjct  875   HYSQPSNPIEDY*MQSHSPTSAPSL  801
+
+
+
+Lambda      K        H
+   0.318    0.134    0.401 
+
+
+Effective search space used: 5542971975
+
+
+  Database: a_n_genes.fasta
+    Posted date:  Jun 28, 2018  11:34 AM
+  Number of letters in database: 18,035,147
+  Number of sequences in database:  10,560
+
+
+
+Matrix: BLOSUM62
+Neighboring words threshold: 13
+Window for multiple hits: 40
