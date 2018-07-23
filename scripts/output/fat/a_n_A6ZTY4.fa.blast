@@ -1,0 +1,8 @@
+# TBLASTN 2.6.0+
+# Query: tr|A6ZTY4|A6ZTY4_YEAS7 Acyl-coenzyme A oxidase OS=Saccharomyces cerevisiae (strain YJM789) OX=307796 GN=POX1 PE=3 SV=1
+# Database: ../db/a_n_genes.fasta
+# Fields: subject id, evalue
+# 2 hits found
+ANID_06752	5.17e-58
+ANID_06752	5.17e-58
+# BLAST processed 1 queries

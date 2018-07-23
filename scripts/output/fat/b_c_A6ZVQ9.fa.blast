@@ -1,0 +1,8 @@
+# TBLASTN 2.6.0+
+# Query: tr|A6ZVQ9|A6ZVQ9_YEAS7 Long chain fatty acyl-CoA synthetase OS=Saccharomyces cerevisiae (strain YJM789) OX=307796 GN=FAA3 PE=4 SV=1
+# Database: ../db/b_c_genes.fasta
+# Fields: subject id, evalue
+# 2 hits found
+BC1G_15689	1.25e-136
+BC1G_15689	1.13e-48
+# BLAST processed 1 queries

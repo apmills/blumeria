@@ -4,17 +4,19 @@
 # Master control script for the Blumeria comparative genomics pipeline
 
 from subprocess import call
-import sys
-import glob
+import sys, glob, requests, time, re
+# import glob
 from Bio.Seq import Seq
 from Bio.Alphabet import generic_dna
-import requests
-import time
-from Bio import Phylo
+# import requests
+# import time
+from Bio import Phylo, AlignIO, SeqIO
 from Bio.Phylo.Applications import PhymlCommandline
-from Bio import AlignIO
+# from Bio import AlignIO
+# from Bio import SeqIO
+# import re
 
-query = '../test/rnap.fa'
+query = '../test/facb.fa'
 bluGenome = '../db/blumeria/latest/Bgt_genome_v2_1.fa'
 # '../test/facb.fa'
 
@@ -283,6 +285,11 @@ stop = int(lines[2].split()[7])
 contig = lines[2].split()[0]
 print (start)
 print (stop)
+if start > stop:
+    swap = start
+    start = stop
+    stop = swap
+    reverse = True
 bluFile = open('output/b_g_GOI.fa', 'w')
 genomeFile = open(bluGenome, 'r')
 # bluSeq = seqRetriever([['../db/blumeria/b_g_genes.fasta', bluGene]])
@@ -291,13 +298,17 @@ print ('Extracting best match from Blumeria genome at ' + bluGenome + '...')
 output = [genomeSlicer(start, stop, x, contig) for x in genomeFile]
 selection = [x for x in output if x is not None]
 bluSeq = ''.join(selection)
+if reverse:
+    flipped = Seq(bluSeq)
+    flipped = flipped.reverse_complement()
+    bluSeq = str(flipped)
 bluFile.write('>Blumeria graminis candidate gene' + '\n')
 bluFile.write(bluSeq)
 genomeFile.close()
 bluFile.close()
 
 # And counter-search to check if it's really a good match, the top hit should be the query sequence
-call('tblastx -db ../db/a_n_genes.fasta -query output/b_g_GOI.fa -out output/counterBlast.blast -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+call('tblastx -db ../db/a_f_genes.fasta -query output/b_g_GOI.fa -out output/counterBlast.blast -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
 
 ################################
 # Identify motifs in sequences #
@@ -307,22 +318,54 @@ def ORFanarium(inSeq):
     # Uses advanced AI (if statements) to select the best ORF in a given sequence
     readingFrames = [Seq.translate(inSeq.seq[i:], table='Standard', stop_symbol='*', to_stop=False, cds=False) for i in range(3)]
 
+###########################################################################
+# Look for transcription factor binding sites upstream of metabolic genes #
+###########################################################################
+
+motif = 'CCTCGG'
+
+for upper in glob.iglob('../db/*upstream.fasta'):
+    motifs = []
+    infile = open(upper, 'r')
+    for record in SeqIO.parse(infile, 'fasta'):
+        count = len(re.findall(motif, str(record.seq)))
+        motifs.append([record.id, count])
+    tot = 0
+    for ide, count in motifs:
+        tot += count
+    print ('Found ' + str(tot) + ' occurences of "' + motif + '" in ' + upper)
+    #print (motifs)
+
+
+
+"""
+- Retrieve or have target DNA motif already in some format
+- Could then search for this motif on the upstream bits of the Blumeria
+- Get probably lots of results
+- Iterate through results and retreive associated genes (via .gff file)
+- Figure out what these genes are somehow (BLAST against A nidulans or something)
+- Eventually make a list of metabolic genes that have one or more motifs
+
+Alternatively:
+- Map all the genes in .gff file to known genes in other fungi or maybe just metabolic ones
+- Reduce search space for finding motifs
+"""
 
 #################################
 # Make a phylogeny of sequences #
 #################################
-unal = open('output/unaligned.fa', 'a')
+unaln = open('output/unaligned.fa', 'a')
 bluFile = open('output/b_g_GOI.fa', 'r')
 addition = bluFile.read()
-unal.write(addition)
-unal.close()
+unaln.write(addition)
+unaln.close()
 bluFile.close()
 call('clustalo -i output/unaligned.fa -o output/alignedAll.aln --force --outfmt=clu', shell=True)
 AlignIO.convert('output/alignedAll.aln', 'clustal', 'output/phyAlign.phy', 'phylip-relaxed')
-cmdline = PhymlCommandline(input='output/phyAlign.phy', alpha='e', bootstrap=100, sequential=False)
+cmdline = PhymlCommandline(input='output/phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
 call(str(cmdline), shell=True)
 my_tree = Phylo.read("output/phyAlign.phy_phyml_tree.txt", "newick")
-Phylo.draw(my_tree, show_confidence=True)
+Phylo.draw(my_tree, show_confidence=False)
 
-# Got to print 'Done' at the end, that's just common decency
+# Got to print 'Done' at the end
 print ('Done')

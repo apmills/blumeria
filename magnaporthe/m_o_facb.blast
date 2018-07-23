@@ -1,0 +1,29 @@
+# TBLASTX 2.6.0+
+# Query: ANID_00689 | Aspergillus nidulans FGSC A4 acetate regulatory DNA binding protein FacB (2819 nt)
+# Database: ../db/m_o_genes.fasta
+# Fields: subject id, evalue
+# 23 hits found
+MGG_04108	1.42e-153
+MGG_04108	1.42e-153
+MGG_04108	1.42e-153
+MGG_04108	1.42e-153
+MGG_04108	1.42e-153
+MGG_04108	1.42e-153
+MGG_04108	1.42e-153
+MGG_04108	2.79e-41
+MGG_04108	2.79e-41
+MGG_04108	2.79e-41
+MGG_04108	2.79e-41
+MGG_04108	2.79e-41
+MGG_04108	3.37e-26
+MGG_04108	3.37e-26
+MGG_04108	3.37e-26
+MGG_04108	3.37e-26
+MGG_04108	3.37e-26
+MGG_04108	3.04e-12
+MGG_04108	3.04e-12
+MGG_04108	3.04e-12
+MGG_04108	3.04e-12
+MGG_04108	3.04e-12
+MGG_04108	0.58
+# BLAST processed 1 queries

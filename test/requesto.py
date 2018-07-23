@@ -3,16 +3,46 @@
 
 import requests
 import time
+import glob
+import re
 from Bio import Phylo
 from Bio.Phylo.Applications import PhymlCommandline
 from Bio import AlignIO
 from subprocess import call
+from Bio import SeqIO
+
+woof = [[1, 'a'], [2, 'b'], [3, 'c']]
+honk = [b for a, b in woof]
+print (honk)
+quit()
+
+motif = 'CCTCGG'
+
+for upper in glob.iglob('../db/*upstream.fasta'):
+    motifs = []
+    infile = open(upper, 'r')
+    for record in SeqIO.parse(infile, 'fasta'):
+        count = len(re.findall(motif, str(record.seq).upper()))
+        if count > 0:
+            motifs.append([record.id, count])
+        if count > 1:
+            print(record.id + " " + str(count))
+    tot = 0
+    for ide, count in motifs:
+        tot += count
+    print ('Found ' + str(tot) + ' occurences of "' + motif + '" in ' + upper)
+    print (len(motifs))
+    break
+    #print (motifs)
+
+quit()
 
 
-#call('clustalo -i ../scripts/output/unaligned.fa -o phyAlign.clu --force --outfmt=clu', shell=True)
-#AlignIO.convert('phyAlign.clu', 'clustal', 'phyAlign.phy', 'phylip-relaxed')
-#cmdline = PhymlCommandline(input='phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
-#call(str(cmdline), shell=True)
+
+call('clustalo -i ../scripts/output/unaligned.fa -o phyAlign.clu --force --outfmt=clu', shell=True)
+AlignIO.convert('phyAlign.clu', 'clustal', 'phyAlign.phy', 'phylip-relaxed')
+cmdline = PhymlCommandline(input='phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
+call(str(cmdline), shell=True)
 my_tree = Phylo.read("phyAlign.phy_phyml_tree.txt", "newick")
 Phylo.draw(my_tree, show_confidence=False)
 

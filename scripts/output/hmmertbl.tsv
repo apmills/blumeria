@@ -1,12 +1,7 @@
-# target name           accession  query name           accession  hmmfrom hmm to alifrom  ali to envfrom  env to  sq len strand   E-value  score  bias  description of target
-#   ------------------- ---------- -------------------- ---------- ------- ------- ------- ------- ------- ------- ------- ------ --------- ------ ----- ---------------------
-Bgt_ctg-10000_consensus -          aligned              -               10    3705 7551389 7555048 7551380 7555089 19663785    +           0 2457.5  62.3  -
-Bgt_ctg-156_consensus   -          aligned              -             2087    3383  360692  361973  360671  361994  464116    +       3e-67  228.2   9.1  -
-Bgt_ctg-555_consensus   -          aligned              -             2134    3428  293127  294452  293107  294472  396492    +     1.1e-56  193.2  10.8  -
-Bgt_ctg-555_consensus   -          aligned              -             1648    1730  292428  292510  292408  292530  396492    +       0.028   12.6   0.3  -
-Bgt_ctg-156_consensus   -          aligned              -              545     649  359122  359226  359092  359246  464116    +       0.039   12.2   3.4  -
-Bgt_ctg-156_consensus   -          aligned              -             1652    1800  360194  360339  360176  360359  464116    +        0.14   10.4   3.5  -
-Bgt_ctg-555_consensus   -          aligned              -              591     644  291440  291493  291421  291508  396492    +         6.5    4.8   2.5  -
+# target name        accession  query name           accession  hmmfrom hmm to alifrom  ali to envfrom  env to  sq len strand   E-value  score  bias  description of target
+#------------------- ---------- -------------------- ---------- ------- ------- ------- ------- ------- ------- ------- ------ --------- ------ ----- ---------------------
+Bgt_ctg-35_consensus -          aligned              -             1254    1405 1446306 1446204 1446352 1446183 1673709    -        0.23   10.6   6.2  -
+Bgt_ctg-48_consensus -          aligned              -              861     910 1648111 1648160 1648102 1648195 2959386    +         3.4    6.7   1.7  -
 #
 # Program:         nhmmer
 # Version:         3.1b2 (February 2015)
@@ -15,5 +10,5 @@ Bgt_ctg-555_consensus   -          aligned              -              591     6
 # Target file:     ../db/blumeria/latest/Bgt_genome_v2_1.fa
 # Option settings: nhmmer -o output/nhmmer.txt --tblout output/hmmertbl.tsv output/query.hmm ../db/blumeria/latest/Bgt_genome_v2_1.fa 
 # Current dir:     /project/home17/apm114/project3/scripts
-# Date:            Wed Jul  4 17:39:50 2018
+# Date:            Thu Jul 12 11:43:02 2018
 # [ok]

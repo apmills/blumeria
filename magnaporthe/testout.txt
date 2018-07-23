@@ -1,0 +1,1388 @@
+TBLASTN 2.6.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: m_o_genes.fasta
+           12,827 sequences; 25,793,590 total letters
+
+
+
+Query= Yep
+
+Length=67
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+MGG_04108  | Magnaporthe oryzae 70-15 transcriptional activator p...  102     1e-27
+MGG_07450  | Magnaporthe oryzae 70-15 fungal specific transcripti...  48.9    1e-08
+MGG_09780  | Magnaporthe oryzae 70-15 hypothetical protein (2828 nt)  46.2    1e-07
+MGG_01486  | Magnaporthe oryzae 70-15 fungal specific transcripti...  43.1    1e-06
+MGG_17669  | Magnaporthe oryzae 70-15 hypothetical protein (3526 nt)  41.2    5e-06
+MGG_16477  | Magnaporthe oryzae 70-15 hypothetical protein (4973 nt)  40.8    8e-06
+MGG_01734  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  40.4    1e-05
+MGG_00934  | Magnaporthe oryzae 70-15 hypothetical protein (4171 nt)  38.9    4e-05
+MGG_07218  | Magnaporthe oryzae 70-15 transcription factor (2277 nt)  38.5    5e-05
+MGG_05033  | Magnaporthe oryzae 70-15 hypothetical protein (2382 nt)  38.5    5e-05
+MGG_03939  | Magnaporthe oryzae 70-15 pathway-specific nitrogen r...  37.7    8e-05
+MGG_08777  | Magnaporthe oryzae 70-15 hypothetical protein (2730 nt)  37.4    1e-04
+MGG_09118  | Magnaporthe oryzae 70-15 hypothetical protein (3173 nt)  37.4    1e-04
+MGG_08974  | Magnaporthe oryzae 70-15 hypothetical protein (2337 nt)  37.0    2e-04
+MGG_07777  | Magnaporthe oryzae 70-15 quinic acid utilization act...  37.0    2e-04
+MGG_08185  | Magnaporthe oryzae 70-15 hypothetical protein (2655 nt)  37.0    2e-04
+MGG_05683  | Magnaporthe oryzae 70-15 hypothetical protein (5114 nt)  35.8    5e-04
+MGG_02226  | Magnaporthe oryzae 70-15 hypothetical protein (4194 nt)  35.4    6e-04
+MGG_07458  | Magnaporthe oryzae 70-15 hypothetical protein (3387 nt)  35.4    7e-04
+MGG_15023  | Magnaporthe oryzae 70-15 hypothetical protein (3846 nt)  34.7    0.001
+MGG_01518  | Magnaporthe oryzae 70-15 nitrogen assimilation trans...  34.7    0.001
+MGG_07845  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  33.9    0.002
+MGG_08130  | Magnaporthe oryzae 70-15 hypothetical protein (3554 nt)  33.9    0.002
+MGG_05845  | Magnaporthe oryzae 70-15 hypothetical protein (1869 nt)  33.5    0.003
+MGG_07368  | Magnaporthe oryzae 70-15 hypothetical protein (2054 nt)  33.1    0.004
+MGG_01777  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  32.7    0.005
+MGG_15914  | Magnaporthe oryzae 70-15 hypothetical protein (817 nt)   32.3    0.008
+MGG_06243  | Magnaporthe oryzae 70-15 zinc finger transcription f...  32.3    0.009
+MGG_08784  | Magnaporthe oryzae 70-15 C6 transcription factor Reg...  32.0    0.009
+MGG_10307  | Magnaporthe oryzae 70-15 hypothetical protein (4781 nt)  32.0    0.011
+MGG_14175  | Magnaporthe oryzae 70-15 hypothetical protein (3377 nt)  32.0    0.011
+MGG_05343  | Magnaporthe oryzae 70-15 C6 zinc finger protein (368...  32.0    0.012
+MGG_08753  | Magnaporthe oryzae 70-15 hypothetical protein (1249 nt)  31.6    0.012
+MGG_03763  | Magnaporthe oryzae 70-15 hypothetical protein (2897 nt)  31.6    0.016
+MGG_01414  | Magnaporthe oryzae 70-15 transcriptional activator x...  31.2    0.017
+MGG_12776  | Magnaporthe oryzae 70-15 hypothetical protein (2190 nt)  31.2    0.021
+MGG_01624  | Magnaporthe oryzae 70-15 fungal specific transcripti...  31.2    0.023
+MGG_13994  | Magnaporthe oryzae 70-15 hypothetical protein (3196 nt)  30.8    0.024
+MGG_11724  | Magnaporthe oryzae 70-15 hypothetical protein (2343 nt)  30.8    0.026
+MGG_02377  | Magnaporthe oryzae 70-15 hypothetical protein (3269 nt)  30.8    0.027
+MGG_16444  | Magnaporthe oryzae 70-15 C6 transcription factor Prf...  30.8    0.032
+MGG_03413  | Magnaporthe oryzae 70-15 hypothetical protein (2730 nt)  30.4    0.038
+MGG_03623  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  30.0    0.045
+MGG_00417  | Magnaporthe oryzae 70-15 zinc finger transcription f...  30.0    0.057
+MGG_18016  | Magnaporthe oryzae 70-15 hypothetical protein (1154 nt)  29.6    0.062
+MGG_09829  | Magnaporthe oryzae 70-15 hypothetical protein (3690 nt)  29.6    0.075
+MGG_14816  | Magnaporthe oryzae 70-15 hypothetical protein (2525 nt)  28.9    0.12 
+MGG_00329  | Magnaporthe oryzae 70-15 hypothetical protein (3551 nt)  28.9    0.12 
+MGG_07636  | Magnaporthe oryzae 70-15 hypothetical protein (2965 nt)  28.5    0.18 
+MGG_01870  | Magnaporthe oryzae 70-15 hypothetical protein (1603 nt)  28.5    0.19 
+MGG_05578  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  28.5    0.20 
+MGG_06312  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  28.1    0.22 
+MGG_06279  | Magnaporthe oryzae 70-15 binuclear zinc transcriptio...  28.1    0.24 
+MGG_05891  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  27.7    0.34 
+MGG_17623  | Magnaporthe oryzae 70-15 hypothetical protein (2771 nt)  27.7    0.34 
+MGG_17932  | Magnaporthe oryzae 70-15 hypothetical protein (3899 nt)  27.3    0.42 
+MGG_15000  | Magnaporthe oryzae 70-15 hypothetical protein (5603 nt)  27.3    0.42 
+MGG_07800  | Magnaporthe oryzae 70-15 hypothetical protein (2581 nt)  27.3    0.43 
+MGG_01887  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  26.9    0.67 
+MGG_05724  | Magnaporthe oryzae 70-15 hypothetical protein (3596 nt)  26.9    0.74 
+MGG_00032  | Magnaporthe oryzae 70-15 hypothetical protein (2043 nt)  26.6    0.79 
+MGG_01779  | Magnaporthe oryzae 70-15 hypothetical protein (2292 nt)  26.6    0.81 
+MGG_01780  | Magnaporthe oryzae 70-15 hypothetical protein (5148 nt)  26.6    0.83 
+MGG_04665  | Magnaporthe oryzae 70-15 hypothetical protein (3924 nt)  26.6    0.86 
+MGG_15021  | Magnaporthe oryzae 70-15 hypothetical protein (1458 nt)  26.6    0.96 
+MGG_03848  | Magnaporthe oryzae 70-15 C6 transcription factor (34...  26.6    0.99 
+MGG_08168  | Magnaporthe oryzae 70-15 hypothetical protein (4052 nt)  26.2    1.1  
+MGG_12962  | Magnaporthe oryzae 70-15 hypothetical protein (2832 nt)  26.2    1.2  
+MGG_02408  | Magnaporthe oryzae 70-15 hypothetical protein (4070 nt)  26.2    1.4  
+MGG_07131  | Magnaporthe oryzae 70-15 hypothetical protein (4513 nt)  25.8    1.5  
+MGG_02289  | Magnaporthe oryzae 70-15 hypothetical protein (1902 nt)  25.8    1.5  
+MGG_05939  | Magnaporthe oryzae 70-15 hypothetical protein (2556 nt)  25.8    1.5  
+MGG_14728  | Magnaporthe oryzae 70-15 hypothetical protein (2727 nt)  25.8    1.5  
+MGG_07674  | Magnaporthe oryzae 70-15 hypothetical protein (2402 nt)  25.4    2.0  
+MGG_15759  | Magnaporthe oryzae 70-15 hypothetical protein (2238 nt)  25.4    2.6  
+MGG_09263  | Magnaporthe oryzae 70-15 hypothetical protein (5844 nt)  25.4    2.7  
+MGG_09276  | Magnaporthe oryzae 70-15 hypothetical protein (2998 nt)  25.0    2.9  
+MGG_08199  | Magnaporthe oryzae 70-15 cutinase transcription fact...  25.0    2.9  
+MGG_06626  | Magnaporthe oryzae 70-15 hypothetical protein (2244 nt)  25.0    3.0  
+MGG_12037  | Magnaporthe oryzae 70-15 hypothetical protein (3051 nt)  25.0    3.2  
+MGG_13635  | Magnaporthe oryzae 70-15 hypothetical protein (2183 nt)  25.0    3.2  
+MGG_05153  | Magnaporthe oryzae 70-15 hypothetical protein (4600 nt)  25.0    3.7  
+MGG_00677  | Magnaporthe oryzae 70-15 endoglucanase-1 (1403 nt)       24.6    4.0  
+MGG_11119  | Magnaporthe oryzae 70-15 fungal specific transcripti...  24.6    4.9  
+MGG_17821  | Magnaporthe oryzae 70-15 hypothetical protein (4847 nt)  24.3    5.1  
+MGG_00320  | Magnaporthe oryzae 70-15 hypothetical protein (4240 nt)  24.3    5.3  
+MGG_12424  | Magnaporthe oryzae 70-15 C6 transcription factor (37...  24.3    5.6  
+MGG_00672  | Magnaporthe oryzae 70-15 C6 zinc finger domain-conta...  24.3    5.7  
+MGG_02866  | Magnaporthe oryzae 70-15 hypothetical protein (4339 nt)  24.3    5.9  
+MGG_09701  | Magnaporthe oryzae 70-15 hypothetical protein (4801 nt)  24.3    6.0  
+MGG_08361  | Magnaporthe oryzae 70-15 hypothetical protein (1587 nt)  24.3    6.1  
+MGG_16835  | Magnaporthe oryzae 70-15 hypothetical protein (2580 nt)  24.3    6.4  
+MGG_02954  | Magnaporthe oryzae 70-15 dolichyl-phosphate-mannose-...  24.3    6.8  
+MGG_11764  | Magnaporthe oryzae 70-15 hypothetical protein (4594 nt)  24.3    7.0  
+MGG_03711  | Magnaporthe oryzae 70-15 hypothetical protein (2153 nt)  23.9    7.1  
+MGG_03183  | Magnaporthe oryzae 70-15 hypothetical protein (2171 nt)  23.9    7.2  
+MGG_10212  | Magnaporthe oryzae 70-15 hypothetical protein (3100 nt)  23.9    9.1  
+MGG_00494  | Magnaporthe oryzae 70-15 transcriptional regulatory ...  23.9    9.2  
+MGG_13894  | Magnaporthe oryzae 70-15 hypothetical protein (1973 nt)  23.5    9.6  
+
+
+>MGG_04108 | Magnaporthe oryzae 70-15 transcriptional activator protein 
+acu-15 (3814 nt)
+Length=3814
+
+ Score = 102 bits (255),  Expect = 1e-27, Method: Compositional matrix adjust.
+ Identities = 54/74 (73%), Positives = 54/74 (73%), Gaps = 20/74 (27%)
+ Frame = +3
+
+Query  1    SQSRIAQACDRCRSK--------------------KIRCDGIRPTCTQCANVGFECKTSD  40
+            SQSRIAQACDRCRSK                    KIRCDGIRPTCTQCANVGFECKTSD
+Sbjct  690  SQSRIAQACDRCRSKVSAVPRGLI**ARRPLTVT*KIRCDGIRPTCTQCANVGFECKTSD  869
+
+Query  41   KLSRRAFPRGYTES  54
+            KLSRRAFPRGYTES
+Sbjct  870  KLSRRAFPRGYTES  911
+
+
+>MGG_07450 | Magnaporthe oryzae 70-15 fungal specific transcription factor 
+domain-containing protein (4912 nt)
+Length=4912
+
+ Score = 48.9 bits (115),  Expect = 1e-08, Method: Compositional matrix adjust.
+ Identities = 22/46 (48%), Positives = 28/46 (61%), Gaps = 0/46 (0%)
+ Frame = +3
+
+Query  7     QACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPRGYT  52
+             QACD CR KKI+CDG  P CT C N   +C  +    +R+ P+GY 
+Sbjct  1599  QACDMCRKKKIKCDGKLPACTHCINYKTDCVFTQVEKKRSPPKGYV  1736
+
+
+>MGG_09780 | Magnaporthe oryzae 70-15 hypothetical protein (2828 nt)
+Length=2828
+
+ Score = 46.2 bits (108),  Expect = 1e-07, Method: Composition-based stats.
+ Identities = 18/34 (53%), Positives = 23/34 (68%), Gaps = 0/34 (0%)
+ Frame = +3
+
+Query  3     SRIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+             +R+A+AC  C   K RCDG  PTC+ CA+ G EC
+Sbjct  915   ARVAKACVNCHKSKTRCDGREPTCSPCADKGREC  1016
+
+
+>MGG_01486 | Magnaporthe oryzae 70-15 fungal specific transcription factor 
+domain-containing protein (4311 nt)
+Length=4311
+
+ Score = 43.1 bits (100),  Expect = 1e-06, Method: Compositional matrix adjust.
+ Identities = 21/49 (43%), Positives = 27/49 (55%), Gaps = 0/49 (0%)
+ Frame = +2
+
+Query  1    SQSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPR  49
+            S  R   AC RCR++K RCD   P CT C   G +C   D +++R  PR
+Sbjct  761  SNFRNVSACSRCRARKNRCDQRLPNCTGCEKAGVDCIGYDPITKREVPR  907
+
+
+>MGG_17669 | Magnaporthe oryzae 70-15 hypothetical protein (3526 nt)
+Length=3526
+
+ Score = 41.2 bits (95),  Expect = 5e-06, Method: Composition-based stats.
+ Identities = 16/39 (41%), Positives = 24/39 (62%), Gaps = 0/39 (0%)
+ Frame = +1
+
+Query  15   KKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPRGYTE  53
+            +KIRCD +   C+ CAN   EC  +D+++ R   RGY +
+Sbjct  655  RKIRCDALPQGCSHCANQNLECFVTDRVTGRTERRGYIQ  771
+
+
+>MGG_16477 | Magnaporthe oryzae 70-15 hypothetical protein (4973 nt)
+Length=4973
+
+ Score = 40.8 bits (94),  Expect = 8e-06, Method: Compositional matrix adjust.
+ Identities = 17/33 (52%), Positives = 21/33 (64%), Gaps = 0/33 (0%)
+ Frame = +2
+
+Query  8    ACDRCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+            A D CR++K+RCDG R  CT C  +GF C   D
+Sbjct  392  ALDTCRARKVRCDGRRDVCTNCERLGFGCTYHD  490
+
+
+ Score = 32.0 bits (71),  Expect = 0.010, Method: Compositional matrix adjust.
+ Identities = 15/33 (45%), Positives = 18/33 (55%), Gaps = 0/33 (0%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            R+  AC  C S+K RC G  P C +C   G EC
+Sbjct  566  RVRLACANCHSRKARCSGSLPKCDRCRARGIEC  664
+
+
+>MGG_01734 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(4153 nt)
+Length=4153
+
+ Score = 40.4 bits (93),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 14/28 (50%), Positives = 19/28 (68%), Gaps = 0/28 (0%)
+ Frame = +3
+
+Query  9     CDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+             C+ CRS+K RCDG +P C  C  +G +C
+Sbjct  1065  CEVCRSRKSRCDGTKPKCKLCLELGADC  1148
+
+
+>MGG_00934 | Magnaporthe oryzae 70-15 hypothetical protein (4171 nt)
+Length=4171
+
+ Score = 38.9 bits (89),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 18/53 (34%), Positives = 28/53 (53%), Gaps = 4/53 (8%)
+ Frame = +2
+
+Query  2     QSRIAQACDRCRSKKIRCDGIRPT----CTQCANVGFECKTSDKLSRRAFPRG  50
+             +S++++ACD CR KK++CD I  T    C+ C      C  S    +R   +G
+Sbjct  1601  RSKVSRACDECRRKKVKCDAISETGETACSNCRRSQIRCDFSRIPQKRGPSKG  1759
+
+
+>MGG_07218 | Magnaporthe oryzae 70-15 transcription factor (2277 nt)
+Length=2277
+
+ Score = 38.5 bits (88),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 15/38 (39%), Positives = 22/38 (58%), Gaps = 0/38 (0%)
+ Frame = +2
+
+Query  2    QSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTS  39
+            Q R+  +CD C   K++C   RP C++C   G EC+ S
+Sbjct  833  QPRLRASCDGCFLAKVKCSKARPICSRCLACGIECRYS  946
+
+
+>MGG_05033 | Magnaporthe oryzae 70-15 hypothetical protein (2382 nt)
+Length=2382
+
+ Score = 38.5 bits (88),  Expect = 5e-05, Method: Compositional matrix adjust.
+ Identities = 15/36 (42%), Positives = 22/36 (61%), Gaps = 0/36 (0%)
+ Frame = +1
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSR  44
+            C  CR ++++CD  RP C +C   GFECK  + + R
+Sbjct  28   CHTCRMRRVKCDRARPACERCIKAGFECKGYETVLR  135
+
+
+>MGG_03939 | Magnaporthe oryzae 70-15 pathway-specific nitrogen regulator 
+(3851 nt)
+Length=3851
+
+ Score = 37.7 bits (86),  Expect = 8e-05, Method: Compositional matrix adjust.
+ Identities = 16/33 (48%), Positives = 21/33 (64%), Gaps = 0/33 (0%)
+ Frame = +1
+
+Query  5    IAQACDRCRSKKIRCDGIRPTCTQCANVGFECK  37
+            +A +C  CR +K RCDG RPTC+ C   G  C+
+Sbjct  586  VALSCYTCRRRKTRCDGARPTCSTCTKNGHSCR  684
+
+
+>MGG_08777 | Magnaporthe oryzae 70-15 hypothetical protein (2730 nt)
+Length=2730
+
+ Score = 37.4 bits (85),  Expect = 1e-04, Method: Compositional matrix adjust.
+ Identities = 16/37 (43%), Positives = 24/37 (65%), Gaps = 0/37 (0%)
+ Frame = +1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+            R++ AC+RCR++K+RCD   P C  C      C+T+D
+Sbjct  94   RLSVACNRCRARKVRCDASLPKCRNCITRNEVCETTD  204
+
+
+>MGG_09118 | Magnaporthe oryzae 70-15 hypothetical protein (3173 nt)
+Length=3173
+
+ Score = 37.4 bits (85),  Expect = 1e-04, Method: Compositional matrix adjust.
+ Identities = 19/27 (70%), Positives = 21/27 (78%), Gaps = 1/27 (4%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCA  30
+            RI +ACD CR KKI+CDG RP CT CA
+Sbjct  233  RIPRACDDCRRKKIKCDGKRP-CTSCA  310
+
+
+>MGG_08974 | Magnaporthe oryzae 70-15 hypothetical protein (2337 nt)
+Length=2337
+
+ Score = 37.0 bits (84),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 17/42 (40%), Positives = 24/42 (57%), Gaps = 0/42 (0%)
+ Frame = +2
+
+Query  3    SRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSR  44
+            +R +  C  CR +K +CD  +PTC  CA++  EC  SD   R
+Sbjct  224  NRNSDGCWTCRLRKKKCDLGQPTCVSCASLEIECVYSDAKPR  349
+
+
+>MGG_07777 | Magnaporthe oryzae 70-15 quinic acid utilization activator 
+(2846 nt)
+Length=2846
+
+ Score = 37.0 bits (84),  Expect = 2e-04, Method: Compositional matrix adjust.
+ Identities = 13/33 (39%), Positives = 24/33 (73%), Gaps = 0/33 (0%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            R+++ACD+CR+ + +CDG++P C  C ++   C
+Sbjct  308  RVSRACDQCRAAREKCDGVQPQCYSCTSLSRPC  406
+
+
+>MGG_08185 | Magnaporthe oryzae 70-15 hypothetical protein (2655 nt)
+Length=2655
+
+ Score = 37.0 bits (84),  Expect = 2e-04, Method: Compositional matrix adjust.
+ Identities = 18/34 (53%), Positives = 20/34 (59%), Gaps = 0/34 (0%)
+ Frame = +3
+
+Query  4     RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECK  37
+             R+A AC  CR KKI+CD   P C QC   G  CK
+Sbjct  1695  RLAIACVTCREKKIKCDPDYPRCVQCEKFGRVCK  1796
+
+
+>MGG_05683 | Magnaporthe oryzae 70-15 hypothetical protein (5114 nt)
+Length=5114
+
+ Score = 35.8 bits (81),  Expect = 5e-04, Method: Compositional matrix adjust.
+ Identities = 16/27 (59%), Positives = 21/27 (78%), Gaps = 1/27 (4%)
+ Frame = +2
+
+Query  4     RIAQACDRCRSKKIRCDGIRPTCTQCA  30
+             R+ +ACD CR KKI+CDG +P CT C+
+Sbjct  1466  RVTRACDECRRKKIKCDGRQP-CTHCS  1543
+
+
+>MGG_02226 | Magnaporthe oryzae 70-15 hypothetical protein (4194 nt)
+Length=4194
+
+ Score = 35.4 bits (80),  Expect = 6e-04, Method: Compositional matrix adjust.
+ Identities = 16/33 (48%), Positives = 22/33 (67%), Gaps = 1/33 (3%)
+ Frame = +3
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            + ++ACD C++KK RC G  P CT+CA  G  C
+Sbjct  294  KASRACDTCKAKKARCSGTMP-CTRCAERGLAC  389
+
+
+>MGG_07458 | Magnaporthe oryzae 70-15 hypothetical protein (3387 nt)
+Length=3387
+
+ Score = 35.4 bits (80),  Expect = 7e-04, Method: Composition-based stats.
+ Identities = 13/28 (46%), Positives = 17/28 (61%), Gaps = 0/28 (0%)
+ Frame = +1
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            C  C  + ++CD  RP C+QC  VG EC
+Sbjct  247  CFACTKRNVKCDRRRPYCSQCLEVGNEC  330
+
+
+>MGG_15023 | Magnaporthe oryzae 70-15 hypothetical protein (3846 nt)
+Length=3846
+
+ Score = 34.7 bits (78),  Expect = 0.001, Method: Composition-based stats.
+ Identities = 16/44 (36%), Positives = 25/44 (57%), Gaps = 1/44 (2%)
+ Frame = +1
+
+Query  1     SQSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSR  44
+             + +R +QAC+ CR  K +CD  RP C  C +   +C  S  +S+
+Sbjct  973   TNARASQACNTCRRLKTKCDMARP-CKTCRDRKGDCIYSGSVSK  1101
+
+
+>MGG_01518 | Magnaporthe oryzae 70-15 nitrogen assimilation transcription 
+factor nit-4 (4406 nt)
+Length=4406
+
+ Score = 34.7 bits (78),  Expect = 0.001, Method: Compositional matrix adjust.
+ Identities = 16/33 (48%), Positives = 22/33 (67%), Gaps = 1/33 (3%)
+ Frame = +1
+
+Query  5     IAQACDRCRSKKIRCDGIRPTCTQCANV-GFEC  36
+             ++ AC  CR +K +CDG  P+C  CA+V G EC
+Sbjct  1144  VSTACIACRKRKSKCDGANPSCAACASVYGTEC  1242
+
+
+>MGG_07845 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(1747 nt)
+Length=1747
+
+ Score = 33.9 bits (76),  Expect = 0.002, Method: Compositional matrix adjust.
+ Identities = 13/36 (36%), Positives = 23/36 (64%), Gaps = 0/36 (0%)
+ Frame = +1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTS  39
+            R  +AC  CR+++ +CD ++P+C+ C   G +C  S
+Sbjct  61   RAVKACQVCRARRTKCDNLKPSCSFCLKTGAKCIQS  168
+
+
+>MGG_08130 | Magnaporthe oryzae 70-15 hypothetical protein (3554 nt)
+Length=3554
+
+ Score = 33.9 bits (76),  Expect = 0.002, Method: Compositional matrix adjust.
+ Identities = 16/35 (46%), Positives = 20/35 (57%), Gaps = 0/35 (0%)
+ Frame = +3
+
+Query  2     QSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+             +SR  ++C  CR  K RC G RP C +C   G EC
+Sbjct  990   RSRTYRSCGACRGSKSRCSGDRPVCERCRQRGMEC  1094
+
+
+ Score = 25.8 bits (55),  Expect = 1.8, Method: Compositional matrix adjust.
+ Identities = 12/40 (30%), Positives = 19/40 (48%), Gaps = 0/40 (0%)
+ Frame = +3
+
+Query  1    SQSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+            ++ R    C  CRS+K++CD     C  C  +   C  S+
+Sbjct  783  AKQRSRTGCKTCRSRKVKCDEYPGGCKNCERLDLICPNSN  902
+
+
+>MGG_05845 | Magnaporthe oryzae 70-15 hypothetical protein (1869 nt)
+Length=1869
+
+ Score = 33.5 bits (75),  Expect = 0.003, Method: Composition-based stats.
+ Identities = 20/55 (36%), Positives = 26/55 (47%), Gaps = 15/55 (27%)
+ Frame = +1
+
+Query  8    ACDRCRSKKIRC--------------DGIRPTCTQCANVGFECKTSDKLSRRAFP  48
+            ACDRCR++K+RC               G  P C +C   G EC  + +  RRA P
+Sbjct  103  ACDRCRARKLRCARLPSIEFFTSCGGSGGLPACERCVKAGAECLYTVR-RRRAPP  264
+
+
+>MGG_07368 | Magnaporthe oryzae 70-15 hypothetical protein (2054 nt)
+Length=2054
+
+ Score = 33.1 bits (74),  Expect = 0.004, Method: Compositional matrix adjust.
+ Identities = 11/28 (39%), Positives = 18/28 (64%), Gaps = 0/28 (0%)
+ Frame = +1
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            C  CR +++RCD + P+C +C   G +C
+Sbjct  85   CWTCRRRRLRCDSLMPSCAKCTKAGIQC  168
+
+
+>MGG_01777 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(4326 nt)
+Length=4326
+
+ Score = 32.7 bits (73),  Expect = 0.005, Method: Composition-based stats.
+ Identities = 13/37 (35%), Positives = 19/37 (51%), Gaps = 1/37 (3%)
+ Frame = +1
+
+Query  6     AQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKL  42
+               +C  C+ +K+RCD  +P C+ C   G EC     L
+Sbjct  1072  GHSCVLCQKRKVRCDKTKP-CSNCVKAGVECHVEPPL  1179
+
+
+>MGG_15914 | Magnaporthe oryzae 70-15 hypothetical protein (817 nt)
+Length=817
+
+ Score = 32.3 bits (72),  Expect = 0.008, Method: Compositional matrix adjust.
+ Identities = 16/53 (30%), Positives = 25/53 (47%), Gaps = 0/53 (0%)
+ Frame = +1
+
+Query  1    SQSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPRGYTE  53
+            S+  +  AC RC+ +KIRCD   P C+ C      C   D ++   + R +  
+Sbjct  190  SKYALLPACQRCKLRKIRCDRQAPKCSGCTKSQAACVVVDPITSERYHRSFIH  348
+
+
+>MGG_06243 | Magnaporthe oryzae 70-15 zinc finger transcription factor 1 
+(4189 nt)
+Length=4189
+
+ Score = 32.3 bits (72),  Expect = 0.009, Method: Compositional matrix adjust.
+ Identities = 14/26 (54%), Positives = 16/26 (62%), Gaps = 0/26 (0%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQC  29
+            R+  AC  CR KKIRC G +P C  C
+Sbjct  719  RLPLACIACRRKKIRCSGEKPACKHC  796
+
+
+>MGG_08784 | Magnaporthe oryzae 70-15 C6 transcription factor RegA (3285 
+nt)
+Length=3285
+
+ Score = 32.0 bits (71),  Expect = 0.009, Method: Composition-based stats.
+ Identities = 12/35 (34%), Positives = 19/35 (54%), Gaps = 1/35 (3%)
+ Frame = +3
+
+Query  2    QSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            + R++QAC  C    +RC   +P C++C     EC
+Sbjct  399  ERRVSQACRNCSQNHLRCSDSKP-CSRCVKDSLEC  500
+
+
+>MGG_10307 | Magnaporthe oryzae 70-15 hypothetical protein (4781 nt)
+Length=4781
+
+ Score = 32.0 bits (71),  Expect = 0.011, Method: Compositional matrix adjust.
+ Identities = 17/42 (40%), Positives = 23/42 (55%), Gaps = 0/42 (0%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRR  45
+            R   AC+ CR +K RC+  RP C  C     EC  +++L RR
+Sbjct  392  RHNTACNFCRHRKARCNNERPRCGFCRANNQECVYAEELERR  517
+
+
+>MGG_14175 | Magnaporthe oryzae 70-15 hypothetical protein (3377 nt)
+Length=3377
+
+ Score = 32.0 bits (71),  Expect = 0.011, Method: Composition-based stats.
+ Identities = 16/33 (48%), Positives = 18/33 (55%), Gaps = 1/33 (3%)
+ Frame = +1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            R +QAC  C   K RC G  P CT+C   G EC
+Sbjct  541  RCSQACLSCAKLKQRCRGGMP-CTRCRETGTEC  636
+
+
+>MGG_05343 | Magnaporthe oryzae 70-15 C6 zinc finger protein (3683 nt)
+Length=3683
+
+ Score = 32.0 bits (71),  Expect = 0.012, Method: Compositional matrix adjust.
+ Identities = 15/44 (34%), Positives = 25/44 (57%), Gaps = 2/44 (5%)
+ Frame = +2
+
+Query  7    QACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPRG  50
+            Q  D C  +K++CDGI P C  C++    C T + + ++  P+G
+Sbjct  551  QPTDACHRRKVKCDGINP-CRNCSSAQLSC-TYNAIPQKKGPKG  676
+
+
+>MGG_08753 | Magnaporthe oryzae 70-15 hypothetical protein (1249 nt)
+Length=1249
+
+ Score = 31.6 bits (70),  Expect = 0.012, Method: Compositional matrix adjust.
+ Identities = 15/40 (38%), Positives = 23/40 (58%), Gaps = 2/40 (5%)
+ Frame = +1
+
+Query  8    ACDRCRSKKIRCDGIRPTCTQCANVGFECK--TSDKLSRR  45
+             C  C+ ++ +CD  RPTC  C    +EC+  T+D  +RR
+Sbjct  112  GCLTCKQRRYKCDEARPTCGGCVKGNWECQYPTADAQARR  231
+
+
+>MGG_03763 | Magnaporthe oryzae 70-15 hypothetical protein (2897 nt)
+Length=2897
+
+ Score = 31.6 bits (70),  Expect = 0.016, Method: Compositional matrix adjust.
+ Identities = 15/31 (48%), Positives = 20/31 (65%), Gaps = 1/31 (3%)
+ Frame = +1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGF  34
+            R+A+AC  C+S K RCDG +P C  C+  G 
+Sbjct  112  RVARACQTCKSSKKRCDGAQP-CGSCSKKGL  201
+
+
+>MGG_01414 | Magnaporthe oryzae 70-15 transcriptional activator xlnR (5435 
+nt)
+Length=5435
+
+ Score = 31.2 bits (69),  Expect = 0.017, Method: Composition-based stats.
+ Identities = 12/28 (43%), Positives = 18/28 (64%), Gaps = 1/28 (4%)
+ Frame = +1
+
+Query  2     QSRIAQACDRCRSKKIRCDGIRPTCTQC  29
+             + RI++ACD+C   + +CDG  P C  C
+Sbjct  2077  RRRISRACDQCNQLRTKCDGNHP-CAHC  2157
+
+
+>MGG_12776 | Magnaporthe oryzae 70-15 hypothetical protein (2190 nt)
+Length=2190
+
+ Score = 31.2 bits (69),  Expect = 0.021, Method: Compositional matrix adjust.
+ Identities = 14/29 (48%), Positives = 18/29 (62%), Gaps = 1/29 (3%)
+ Frame = +1
+
+Query  8    ACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            ACD C+ +KIRC  + P C +C  VG  C
+Sbjct  190  ACDGCKVRKIRCSEL-PPCERCIKVGIAC  273
+
+
+>MGG_01624 | Magnaporthe oryzae 70-15 fungal specific transcription factor 
+domain-containing protein (3722 nt)
+Length=3722
+
+ Score = 31.2 bits (69),  Expect = 0.023, Method: Composition-based stats.
+ Identities = 12/33 (36%), Positives = 18/33 (55%), Gaps = 1/33 (3%)
+ Frame = +1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            R+  +C  CR +K++C+   P CT C     EC
+Sbjct  529  RMITSCLECRRRKLKCNKSNP-CTNCTKFNREC  624
+
+
+>MGG_13994 | Magnaporthe oryzae 70-15 hypothetical protein (3196 nt)
+Length=3196
+
+ Score = 30.8 bits (68),  Expect = 0.024, Method: Compositional matrix adjust.
+ Identities = 12/23 (52%), Positives = 17/23 (74%), Gaps = 0/23 (0%)
+ Frame = +2
+
+Query  7    QACDRCRSKKIRCDGIRPTCTQC  29
+            QAC+ CR +K+ CD   PTC++C
+Sbjct  206  QACEPCRKRKLACDHSLPTCSRC  274
+
+
+>MGG_11724 | Magnaporthe oryzae 70-15 hypothetical protein (2343 nt)
+Length=2343
+
+ Score = 30.8 bits (68),  Expect = 0.026, Method: Composition-based stats.
+ Identities = 16/38 (42%), Positives = 21/38 (55%), Gaps = 2/38 (5%)
+ Frame = +1
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRA  46
+            C R R +K  CD  RP C QC+  G++C   D +S  A
+Sbjct  829  CYRKRHRK--CDESRPGCHQCSVAGWKCDYLDDVSAPA  936
+
+
+>MGG_02377 | Magnaporthe oryzae 70-15 hypothetical protein (3269 nt)
+Length=3269
+
+ Score = 30.8 bits (68),  Expect = 0.027, Method: Compositional matrix adjust.
+ Identities = 15/45 (33%), Positives = 28/45 (62%), Gaps = 1/45 (2%)
+ Frame = +1
+
+Query  2    QSRIAQACDRCRSKKIRCDGIRPT-CTQCANVGFECKTSDKLSRR  45
+            Q R   +CD CR +K++CD    T C++C++   +C+ + + +RR
+Sbjct  643  QRRKDPSCDACRERKVKCDATETTSCSECSSRNVKCQFTKETNRR  777
+
+
+>MGG_16444 | Magnaporthe oryzae 70-15 C6 transcription factor Prf (4202 
+nt)
+Length=4202
+
+ Score = 30.8 bits (68),  Expect = 0.032, Method: Compositional matrix adjust.
+ Identities = 14/37 (38%), Positives = 25/37 (68%), Gaps = 2/37 (5%)
+ Frame = +1
+
+Query  19    CDGIRPTCTQCANVGFECKTSDKLSRRAFP-RGYTES  54
+             CDG +P+C+ C  +G +C   D++ R++ P RGY ++
+Sbjct  955   CDGQKPSCSTCTRLGHDC-AYDEVRRKSGPKRGYVKA  1062
+
+
+>MGG_03413 | Magnaporthe oryzae 70-15 hypothetical protein (2730 nt)
+Length=2730
+
+ Score = 30.4 bits (67),  Expect = 0.038, Method: Compositional matrix adjust.
+ Identities = 18/76 (24%), Positives = 32/76 (42%), Gaps = 23/76 (30%)
+ Frame = +1
+
+Query  2    QSRIAQACDRCRSKKIR-----------------------CDGIRPTCTQCANVGFECKT  38
+            Q+R+ +ACD C ++K++                       CD   P C  C+++  EC  
+Sbjct  628  QTRLRRACDMCSARKVKVSH*IAESGRSAPR*CMLSTLS*CDEAGPPCKPCSSLNVECTY  807
+
+Query  39   SDKLSRRAFPRGYTES  54
+              ++ RR  P  + E+
+Sbjct  808  RREMKRRGPPNKHAEA  855
+
+
+>MGG_03623 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(1225 nt)
+Length=1225
+
+ Score = 30.0 bits (66),  Expect = 0.045, Method: Compositional matrix adjust.
+ Identities = 13/34 (38%), Positives = 19/34 (56%), Gaps = 0/34 (0%)
+ Frame = +1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECK  37
+            R + A   CR + + CDG RP CT C++    C+
+Sbjct  139  RSSVAYTTCRDRHVHCDGTRPCCTHCSSEARVCE  240
+
+
+>MGG_00417 | Magnaporthe oryzae 70-15 zinc finger transcription factor (2507 
+nt)
+Length=2507
+
+ Score = 30.0 bits (66),  Expect = 0.057, Method: Compositional matrix adjust.
+ Identities = 15/48 (31%), Positives = 26/48 (54%), Gaps = 0/48 (0%)
+ Frame = +1
+
+Query  2     QSRIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPR  49
+             Q ++ ++C+ C ++KIRC    PTC +C+     C+ S  +     PR
+Sbjct  964   QRQVRRSCNACSAQKIRCGKQHPTCKRCSVKSLRCEYSMSMRTGERPR  1107
+
+
+>MGG_18016 | Magnaporthe oryzae 70-15 hypothetical protein (1154 nt)
+Length=1154
+
+ Score = 29.6 bits (65),  Expect = 0.062, Method: Compositional matrix adjust.
+ Identities = 11/32 (34%), Positives = 19/32 (59%), Gaps = 0/32 (0%)
+ Frame = +1
+
+Query  5    IAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            ++   +R R++  +CD  RP C QC   G++C
+Sbjct  631  LSALANRIRTRHKKCDEGRPACEQCLTAGWDC  726
+
+
+>MGG_09829 | Magnaporthe oryzae 70-15 hypothetical protein (3690 nt)
+Length=3690
+
+ Score = 29.6 bits (65),  Expect = 0.075, Method: Composition-based stats.
+ Identities = 11/24 (46%), Positives = 14/24 (58%), Gaps = 0/24 (0%)
+ Frame = +3
+
+Query  13   RSKKIRCDGIRPTCTQCANVGFEC  36
+            R ++I+CD  RP CTQC      C
+Sbjct  576  RLRRIKCDEKRPECTQCTRSKKTC  647
+
+
+>MGG_14816 | Magnaporthe oryzae 70-15 hypothetical protein (2525 nt)
+Length=2525
+
+ Score = 28.9 bits (63),  Expect = 0.12, Method: Compositional matrix adjust.
+ Identities = 11/30 (37%), Positives = 18/30 (60%), Gaps = 0/30 (0%)
+ Frame = +2
+
+Query  8    ACDRCRSKKIRCDGIRPTCTQCANVGFECK  37
+             C  CR +K++CD  +P C QC +   +C+
+Sbjct  218  GCWTCRRRKVKCDEHKPVCRQCVSKRLDCE  307
+
+
+>MGG_00329 | Magnaporthe oryzae 70-15 hypothetical protein (3551 nt)
+Length=3551
+
+ Score = 28.9 bits (63),  Expect = 0.12, Method: Compositional matrix adjust.
+ Identities = 12/27 (44%), Positives = 16/27 (59%), Gaps = 0/27 (0%)
+ Frame = +3
+
+Query  10   DRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            + CRS+K +CD  RP C+ C     EC
+Sbjct  657  ENCRSRKQKCDEQRPKCSTCRKFNLEC  737
+
+
+>MGG_07636 | Magnaporthe oryzae 70-15 hypothetical protein (2965 nt)
+Length=2965
+
+ Score = 28.5 bits (62),  Expect = 0.18, Method: Composition-based stats.
+ Identities = 10/27 (37%), Positives = 15/27 (56%), Gaps = 0/27 (0%)
+ Frame = +2
+
+Query  13   RSKKIRCDGIRPTCTQCANVGFECKTS  39
+            +S  ++CD +RP C+ C   G  C  S
+Sbjct  908  QSSLLQCDELRPACSNCVIRGLVCSLS  988
+
+
+>MGG_01870 | Magnaporthe oryzae 70-15 hypothetical protein (1603 nt)
+Length=1603
+
+ Score = 28.5 bits (62),  Expect = 0.19, Method: Compositional matrix adjust.
+ Identities = 16/33 (48%), Positives = 20/33 (61%), Gaps = 4/33 (12%)
+ Frame = +1
+
+Query  8    ACDRCRSKKIRC----DGIRPTCTQCANVGFEC  36
+            AC+RCRS+K+RC    DG   TC +C   G  C
+Sbjct  43   ACERCRSQKLRCEWPKDGKDRTCNRCRQRGLCC  141
+
+
+>MGG_05578 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(2020 nt)
+Length=2020
+
+ Score = 28.5 bits (62),  Expect = 0.20, Method: Composition-based stats.
+ Identities = 10/28 (36%), Positives = 17/28 (61%), Gaps = 0/28 (0%)
+ Frame = +2
+
+Query  13   RSKKIRCDGIRPTCTQCANVGFECKTSD  40
+            R ++I+CD   PTC++C   G  C  ++
+Sbjct  272  RKRRIKCDEALPTCSRCRYSGRNCAYAE  355
+
+
+>MGG_06312 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(3800 nt)
+Length=3800
+
+ Score = 28.1 bits (61),  Expect = 0.22, Method: Composition-based stats.
+ Identities = 9/24 (38%), Positives = 16/24 (67%), Gaps = 0/24 (0%)
+ Frame = +1
+
+Query  13    RSKKIRCDGIRPTCTQCANVGFEC  36
+             R++K++CD  +P+C +C   G  C
+Sbjct  1195  RARKVKCDEGKPSCLRCLKSGRSC  1266
+
+
+>MGG_06279 | Magnaporthe oryzae 70-15 binuclear zinc transcription factor 
+(4443 nt)
+Length=4443
+
+ Score = 28.1 bits (61),  Expect = 0.24, Method: Compositional matrix adjust.
+ Identities = 11/25 (44%), Positives = 16/25 (64%), Gaps = 0/25 (0%)
+ Frame = +2
+
+Query  12   CRSKKIRCDGIRPTCTQCANVGFEC  36
+            CRS+K++C    P C +CA +  EC
+Sbjct  902  CRSRKLKCSRDLPICVRCARLKIEC  976
+
+
+>MGG_05891 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(3480 nt)
+Length=3480
+
+ Score = 27.7 bits (60),  Expect = 0.34, Method: Compositional matrix adjust.
+ Identities = 11/16 (69%), Positives = 13/16 (81%), Gaps = 0/16 (0%)
+ Frame = +2
+
+Query  9    CDRCRSKKIRCDGIRP  24
+            CD CR++KIRCDG  P
+Sbjct  845  CDVCRARKIRCDGNTP  892
+
+
+>MGG_17623 | Magnaporthe oryzae 70-15 hypothetical protein (2771 nt)
+Length=2771
+
+ Score = 27.7 bits (60),  Expect = 0.34, Method: Composition-based stats.
+ Identities = 10/25 (40%), Positives = 14/25 (56%), Gaps = 0/25 (0%)
+ Frame = +2
+
+Query  13   RSKKIRCDGIRPTCTQCANVGFECK  37
+            R +K+RCD  RP C  C  +   C+
+Sbjct  305  RRRKVRCDENRPHCGHCQRLNLACQ  379
+
+
+>MGG_17932 | Magnaporthe oryzae 70-15 hypothetical protein (3899 nt)
+Length=3899
+
+ Score = 27.3 bits (59),  Expect = 0.42, Method: Composition-based stats.
+ Identities = 9/17 (53%), Positives = 13/17 (76%), Gaps = 0/17 (0%)
+ Frame = +1
+
+Query  4     RIAQACDRCRSKKIRCD  20
+             R+ ++C  C+ KKIRCD
+Sbjct  1081  RLLKSCPTCKKKKIRCD  1131
+
+
+>MGG_15000 | Magnaporthe oryzae 70-15 hypothetical protein (5603 nt)
+Length=5603
+
+ Score = 27.3 bits (59),  Expect = 0.42, Method: Composition-based stats.
+ Identities = 9/17 (53%), Positives = 13/17 (76%), Gaps = 0/17 (0%)
+ Frame = -2
+
+Query  4     RIAQACDRCRSKKIRCD  20
+             R+ ++C  C+ KKIRCD
+Sbjct  2842  RLLKSCPTCKKKKIRCD  2792
+
+
+>MGG_07800 | Magnaporthe oryzae 70-15 hypothetical protein (2581 nt)
+Length=2581
+
+ Score = 27.3 bits (59),  Expect = 0.43, Method: Compositional matrix adjust.
+ Identities = 14/29 (48%), Positives = 17/29 (59%), Gaps = 1/29 (3%)
+ Frame = +1
+
+Query  8    ACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            +CD CRS+KI+CD   P C  C   G  C
+Sbjct  172  SCDLCRSRKIKCDRGTP-CGNCRTRGLAC  255
+
+
+>MGG_01887 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(3860 nt)
+Length=3860
+
+ Score = 26.9 bits (58),  Expect = 0.67, Method: Compositional matrix adjust.
+ Identities = 13/40 (33%), Positives = 19/40 (48%), Gaps = 0/40 (0%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLS  43
+            R+   C  CR + ++CD   P C  C     ECK   +L+
+Sbjct  638  RVRTGCLTCRERHLKCDEGTPDCLNCRKSNRECKRGVRLN  757
+
+
+>MGG_05724 | Magnaporthe oryzae 70-15 hypothetical protein (3596 nt)
+Length=3596
+
+ Score = 26.9 bits (58),  Expect = 0.74, Method: Compositional matrix adjust.
+ Identities = 11/23 (48%), Positives = 15/23 (65%), Gaps = 0/23 (0%)
+ Frame = +2
+
+Query  12   CRSKKIRCDGIRPTCTQCANVGF  34
+            C+S+KI+CD  RP C +  N  F
+Sbjct  644  CKSRKIKCDEARPICVK*VNHIF  712
+
+
+>MGG_00032 | Magnaporthe oryzae 70-15 hypothetical protein (2043 nt)
+Length=2043
+
+ Score = 26.6 bits (57),  Expect = 0.79, Method: Compositional matrix adjust.
+ Identities = 11/28 (39%), Positives = 18/28 (64%), Gaps = 0/28 (0%)
+ Frame = +3
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            C   R ++I+CD  RP+C++C + G  C
+Sbjct  417  CATFRIRRIKCDLSRPSCSKCQSTGRTC  500
+
+
+>MGG_01779 | Magnaporthe oryzae 70-15 hypothetical protein (2292 nt)
+Length=2292
+
+ Score = 26.6 bits (57),  Expect = 0.81, Method: Compositional matrix adjust.
+ Identities = 10/30 (33%), Positives = 17/30 (57%), Gaps = 0/30 (0%)
+ Frame = +1
+
+Query  11   RCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+            R R ++++CD  +P C +C + G  C   D
+Sbjct  442  RSRIRRVKCDEGKPACARCTSTGRHCDGYD  531
+
+
+>MGG_01780 | Magnaporthe oryzae 70-15 hypothetical protein (5148 nt)
+Length=5148
+
+ Score = 26.6 bits (57),  Expect = 0.83, Method: Compositional matrix adjust.
+ Identities = 10/30 (33%), Positives = 17/30 (57%), Gaps = 0/30 (0%)
+ Frame = -3
+
+Query  11    RCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+             R R ++++CD  +P C +C + G  C   D
+Sbjct  4771  RSRIRRVKCDEGKPACARCTSTGRHCDGYD  4682
+
+
+>MGG_04665 | Magnaporthe oryzae 70-15 hypothetical protein (3924 nt)
+Length=3924
+
+ Score = 26.6 bits (57),  Expect = 0.86, Method: Composition-based stats.
+ Identities = 8/20 (40%), Positives = 14/20 (70%), Gaps = 0/20 (0%)
+ Frame = +3
+
+Query  17    IRCDGIRPTCTQCANVGFEC  36
+             ++CD ++P C+QC  V  +C
+Sbjct  1617  LQCDKLKPECSQCRRVSKKC  1676
+
+
+>MGG_15021 | Magnaporthe oryzae 70-15 hypothetical protein (1458 nt)
+Length=1458
+
+ Score = 26.6 bits (57),  Expect = 0.96, Method: Compositional matrix adjust.
+ Identities = 9/29 (31%), Positives = 18/29 (62%), Gaps = 0/29 (0%)
+ Frame = +1
+
+Query  5    IAQACDRCRSKKIRCDGIRPTCTQCANVG  33
+            +  +C  C+ ++++CD  +P C +CA  G
+Sbjct  25   VPGSCWPCKKRRVKCDLAKPVCRRCAEDG  111
+
+
+>MGG_03848 | Magnaporthe oryzae 70-15 C6 transcription factor (3427 nt)
+Length=3427
+
+ Score = 26.6 bits (57),  Expect = 0.99, Method: Compositional matrix adjust.
+ Identities = 11/33 (33%), Positives = 17/33 (52%), Gaps = 0/33 (0%)
+ Frame = +2
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            R+   C+ CR ++ +C   RP C +C     EC
+Sbjct  566  RVTSRCNACRQRRSQCSKERPKCKRCREADIEC  664
+
+
+>MGG_08168 | Magnaporthe oryzae 70-15 hypothetical protein (4052 nt)
+Length=4052
+
+ Score = 26.2 bits (56),  Expect = 1.1, Method: Compositional matrix adjust.
+ Identities = 10/17 (59%), Positives = 13/17 (76%), Gaps = 0/17 (0%)
+ Frame = +2
+
+Query  13    RSKKIRCDGIRPTCTQC  29
+             R ++I+CD  RP CTQC
+Sbjct  1676  RLRRIKCDEKRPACTQC  1726
+
+
+>MGG_12962 | Magnaporthe oryzae 70-15 hypothetical protein (2832 nt)
+Length=2832
+
+ Score = 26.2 bits (56),  Expect = 1.2, Method: Composition-based stats.
+ Identities = 8/24 (33%), Positives = 13/24 (54%), Gaps = 0/24 (0%)
+ Frame = -3
+
+Query  13    RSKKIRCDGIRPTCTQCANVGFEC  36
+             R +  +CD  +P+C  C   G+ C
+Sbjct  2614  RKRHRKCDEQKPSCQNCTRAGWTC  2543
+
+
+>MGG_02408 | Magnaporthe oryzae 70-15 hypothetical protein (4070 nt)
+Length=4070
+
+ Score = 26.2 bits (56),  Expect = 1.4, Method: Compositional matrix adjust.
+ Identities = 13/26 (50%), Positives = 18/26 (69%), Gaps = 1/26 (4%)
+ Frame = +1
+
+Query  4     RIAQACDRCRSKKIRCDGIRPTCTQC  29
+             R  ++C  CRSKK++CD   P C+QC
+Sbjct  1081  RPVKSCLACRSKKLKCDRSVP-CSQC  1155
+
+
+>MGG_07131 | Magnaporthe oryzae 70-15 hypothetical protein (4513 nt)
+Length=4513
+
+ Score = 25.8 bits (55),  Expect = 1.5, Method: Compositional matrix adjust.
+ Identities = 9/18 (50%), Positives = 13/18 (72%), Gaps = 0/18 (0%)
+ Frame = +2
+
+Query  12    CRSKKIRCDGIRPTCTQC  29
+             CR ++I+CD  +PTC  C
+Sbjct  1328  CRKRRIKCDEQKPTCNNC  1381
+
+
+>MGG_02289 | Magnaporthe oryzae 70-15 hypothetical protein (1902 nt)
+Length=1902
+
+ Score = 25.8 bits (55),  Expect = 1.5, Method: Composition-based stats.
+ Identities = 12/31 (39%), Positives = 14/31 (45%), Gaps = 1/31 (3%)
+ Frame = +3
+
+Query  19   CDGIRPTCTQCANVGFECK-TSDKLSRRAFP  48
+            CD +RP C  CA     C    D+ S R  P
+Sbjct  333  CDELRPQCANCAITNRACHYEGDRPSLRQLP  425
+
+
+>MGG_05939 | Magnaporthe oryzae 70-15 hypothetical protein (2556 nt)
+Length=2556
+
+ Score = 25.8 bits (55),  Expect = 1.5, Method: Compositional matrix adjust.
+ Identities = 9/12 (75%), Positives = 12/12 (100%), Gaps = 0/12 (0%)
+ Frame = +1
+
+Query  8    ACDRCRSKKIRC  19
+            ACDRCR++K+RC
+Sbjct  106  ACDRCRARKLRC  141
+
+
+>MGG_14728 | Magnaporthe oryzae 70-15 hypothetical protein (2727 nt)
+Length=2727
+
+ Score = 25.8 bits (55),  Expect = 1.5, Method: Composition-based stats.
+ Identities = 7/20 (35%), Positives = 11/20 (55%), Gaps = 0/20 (0%)
+ Frame = +1
+
+Query  17   IRCDGIRPTCTQCANVGFEC  36
+            ++CD + P C  C   G +C
+Sbjct  676  VQCDEVHPRCGNCTKHGVDC  735
+
+
+>MGG_07674 | Magnaporthe oryzae 70-15 hypothetical protein (2402 nt)
+Length=2402
+
+ Score = 25.4 bits (54),  Expect = 2.0, Method: Compositional matrix adjust.
+ Identities = 14/42 (33%), Positives = 22/42 (52%), Gaps = 4/42 (10%)
+ Frame = +3
+
+Query  5    IAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRA  46
+            IA   + C + ++R +G    C QC ++G EC T+  L   A
+Sbjct  543  IALIIEACGNARVRHEG----CQQCFSLGLECITAYGLGPVA  656
+
+
+>MGG_15759 | Magnaporthe oryzae 70-15 hypothetical protein (2238 nt)
+Length=2238
+
+ Score = 25.4 bits (54),  Expect = 2.6, Method: Compositional matrix adjust.
+ Identities = 13/43 (30%), Positives = 17/43 (40%), Gaps = 0/43 (0%)
+ Frame = +1
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPRGY  51
+            CD C      CD  +P C  C   G +C       +R   +GY
+Sbjct  385  CDFCHVNHQPCDNAKPRCGYCEKHGKQCLYLRPQKKRGPAQGY  513
+
+
+>MGG_09263 | Magnaporthe oryzae 70-15 hypothetical protein (5844 nt)
+Length=5844
+
+ Score = 25.4 bits (54),  Expect = 2.7, Method: Compositional matrix adjust.
+ Identities = 13/38 (34%), Positives = 19/38 (50%), Gaps = 1/38 (3%)
+ Frame = +2
+
+Query  8     ACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRR  45
+             ACDRCR  K +CD  +P C  C      C   + + ++
+Sbjct  1898  ACDRCRHLKAKCDEQKP-CKNCKEKNEPCNYKEPIVKQ  2008
+
+
+>MGG_09276 | Magnaporthe oryzae 70-15 hypothetical protein (2998 nt)
+Length=2998
+
+ Score = 25.0 bits (53),  Expect = 2.9, Method: Compositional matrix adjust.
+ Identities = 9/19 (47%), Positives = 15/19 (79%), Gaps = 0/19 (0%)
+ Frame = +1
+
+Query  1    SQSRIAQACDRCRSKKIRC  19
+            ++++  +ACDRCR  K+RC
+Sbjct  271  AEAKKPRACDRCRGLKVRC  327
+
+
+>MGG_08199 | Magnaporthe oryzae 70-15 cutinase transcription factor 1 beta 
+(5287 nt)
+Length=5287
+
+ Score = 25.0 bits (53),  Expect = 2.9, Method: Compositional matrix adjust.
+ Identities = 10/19 (53%), Positives = 15/19 (79%), Gaps = 0/19 (0%)
+ Frame = +1
+
+Query  4     RIAQACDRCRSKKIRCDGI  22
+             R A+AC  CR++K+RCD +
+Sbjct  1195  RAARACVSCRARKVRCDVV  1251
+
+
+>MGG_06626 | Magnaporthe oryzae 70-15 hypothetical protein (2244 nt)
+Length=2244
+
+ Score = 25.0 bits (53),  Expect = 3.0, Method: Compositional matrix adjust.
+ Identities = 16/52 (31%), Positives = 25/52 (48%), Gaps = 2/52 (4%)
+ Frame = +3
+
+Query  4    RIAQACDRCRSKKIRC--DGIRPTCTQCANVGFECKTSDKLSRRAFPRGYTE  53
+            R  +ACD CR++K++C  +  R  C  C  +   C  +    +R  P  Y E
+Sbjct  351  RNNRACDGCRARKVKCLFEPGRQDCHGCTLLQIRCTHNRPRRKRGPPNRYGE  506
+
+
+>MGG_12037 | Magnaporthe oryzae 70-15 hypothetical protein (3051 nt)
+Length=3051
+
+ Score = 25.0 bits (53),  Expect = 3.2, Method: Compositional matrix adjust.
+ Identities = 9/21 (43%), Positives = 13/21 (62%), Gaps = 0/21 (0%)
+ Frame = +2
+
+Query  16  KIRCDGIRPTCTQCANVGFEC  36
+           KI+C+  +PTC  C   G +C
+Sbjct  2   KIKCNNEQPTCANCKTYGKDC  64
+
+
+>MGG_13635 | Magnaporthe oryzae 70-15 hypothetical protein (2183 nt)
+Length=2183
+
+ Score = 25.0 bits (53),  Expect = 3.2, Method: Compositional matrix adjust.
+ Identities = 13/34 (38%), Positives = 18/34 (53%), Gaps = 0/34 (0%)
+ Frame = -1
+
+Query  16   KIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPR  49
+            +I   G  PT + CA  G++   S   SRRA P+
+Sbjct  518  QILLLGALPTDSGCAGRGWQ*MDSPAFSRRAIPQ  417
+
+
+>MGG_05153 | Magnaporthe oryzae 70-15 hypothetical protein (4600 nt)
+Length=4600
+
+ Score = 25.0 bits (53),  Expect = 3.7, Method: Composition-based stats.
+ Identities = 10/28 (36%), Positives = 12/28 (43%), Gaps = 0/28 (0%)
+ Frame = +3
+
+Query  15    KKIRCDGIRPTCTQCANVGFECKTSDKL  42
+             +  +CD   PTC  C     EC   D L
+Sbjct  2037  RGFQCDETHPTCNNCKKSKRECAGYDPL  2120
+
+
+>MGG_00677 | Magnaporthe oryzae 70-15 endoglucanase-1 (1403 nt)
+Length=1403
+
+ Score = 24.6 bits (52),  Expect = 4.0, Method: Compositional matrix adjust.
+ Identities = 21/51 (41%), Positives = 24/51 (47%), Gaps = 6/51 (12%)
+ Frame = -1
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSR----RAFPRG  50
+            R +Q+C RCR   IRC    PTC  C      C TS +  R     A PRG
+Sbjct  446  RGSQSCCRCRCTAIRCQSPCPTC--CC*RSSRCPTSSRTGRTASGSAGPRG  300
+
+
+>MGG_11119 | Magnaporthe oryzae 70-15 fungal specific transcription factor 
+domain-containing protein (3848 nt)
+Length=3848
+
+ Score = 24.6 bits (52),  Expect = 4.9, Method: Compositional matrix adjust.
+ Identities = 10/23 (43%), Positives = 17/23 (74%), Gaps = 1/23 (4%)
+ Frame = +3
+
+Query  7    QACDRCRSKKIRCDGIRPTCTQC  29
+            ++C  CR +K++CD ++P CT C
+Sbjct  633  RSCIICRKRKVKCDHLQP-CTNC  698
+
+
+>MGG_17821 | Magnaporthe oryzae 70-15 hypothetical protein (4847 nt)
+Length=4847
+
+ Score = 24.3 bits (51),  Expect = 5.1, Method: Compositional matrix adjust.
+ Identities = 13/42 (31%), Positives = 23/42 (55%), Gaps = 8/42 (19%)
+ Frame = +2
+
+Query  8     ACDRCRSKKIRCDGIRPTCTQCANVGFECKTSDKLSRRAFPR  49
+             +C+RC ++K++C G +P    C N    C+   K    ++PR
+Sbjct  2264  SCNRCHARKVKCSGGQP----CQN----CQQGGKADECSYPR  2365
+
+
+>MGG_00320 | Magnaporthe oryzae 70-15 hypothetical protein (4240 nt)
+Length=4240
+
+ Score = 24.3 bits (51),  Expect = 5.3, Method: Compositional matrix adjust.
+ Identities = 11/30 (37%), Positives = 15/30 (50%), Gaps = 0/30 (0%)
+ Frame = +2
+
+Query  7     QACDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+             + C  CR + +RCD   P C +C   G  C
+Sbjct  1898  KPCLTCRRRHVRCDKQLPRCHRCVRFGRVC  1987
+
+
+>MGG_12424 | Magnaporthe oryzae 70-15 C6 transcription factor (3718 nt)
+Length=3718
+
+ Score = 24.3 bits (51),  Expect = 5.6, Method: Compositional matrix adjust.
+ Identities = 10/24 (42%), Positives = 13/24 (54%), Gaps = 0/24 (0%)
+ Frame = +1
+
+Query  13   RSKKIRCDGIRPTCTQCANVGFEC  36
+            R KK RC G +P C+ C  +   C
+Sbjct  895  RRKKTRCPGEKPACSSCVRLSQSC  966
+
+
+>MGG_00672 | Magnaporthe oryzae 70-15 C6 zinc finger domain-containing protein 
+(3270 nt)
+Length=3270
+
+ Score = 24.3 bits (51),  Expect = 5.7, Method: Composition-based stats.
+ Identities = 16/75 (21%), Positives = 25/75 (33%), Gaps = 32/75 (43%)
+ Frame = +1
+
+Query  2    QSRIAQACDRCRSKKI-----------------------------RCDGIRPT---CTQC  29
+            Q  + +AC+ CR +K+                             RCD ++     CT+C
+Sbjct  583  QPGVKRACNECRQQKVCNCIMCCTTYDWAIVHDCLS*LFNVSL*LRCDVVQDPFQGCTRC  762
+
+Query  30   ANVGFECKTSDKLSR  44
+              +  ECK      R
+Sbjct  763  GRLKLECKIESNFKR  807
+
+
+>MGG_02866 | Magnaporthe oryzae 70-15 hypothetical protein (4339 nt)
+Length=4339
+
+ Score = 24.3 bits (51),  Expect = 5.9, Method: Compositional matrix adjust.
+ Identities = 10/30 (33%), Positives = 16/30 (53%), Gaps = 0/30 (0%)
+ Frame = +3
+
+Query  11    RCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+              C S  ++C+G RP C  C     +C+ S+
+Sbjct  1749  HCSSL*LQCNGDRPECASCKAAKVDCRYSE  1838
+
+
+>MGG_09701 | Magnaporthe oryzae 70-15 hypothetical protein (4801 nt)
+Length=4801
+
+ Score = 24.3 bits (51),  Expect = 6.0, Method: Composition-based stats.
+ Identities = 14/34 (41%), Positives = 15/34 (44%), Gaps = 1/34 (3%)
+ Frame = -3
+
+Query  17    IRC-DGIRPTCTQCANVGFECKTSDKLSRRAFPR  49
+             +RC DGI   C  C   GFE      L R A  R
+Sbjct  1991  LRCLDGISMVCMSCGFCGFEVGGDKSLGRIAAGR  1890
+
+
+>MGG_08361 | Magnaporthe oryzae 70-15 hypothetical protein (1587 nt)
+Length=1587
+
+ Score = 24.3 bits (51),  Expect = 6.1, Method: Compositional matrix adjust.
+ Identities = 9/13 (69%), Positives = 12/13 (92%), Gaps = 0/13 (0%)
+ Frame = +1
+
+Query  8   ACDRCRSKKIRCD  20
+           ACDRCR +K+RC+
+Sbjct  61  ACDRCRCQKLRCE  99
+
+
+>MGG_16835 | Magnaporthe oryzae 70-15 hypothetical protein (2580 nt)
+Length=2580
+
+ Score = 24.3 bits (51),  Expect = 6.4, Method: Compositional matrix adjust.
+ Identities = 12/31 (39%), Positives = 17/31 (55%), Gaps = 0/31 (0%)
+ Frame = +1
+
+Query  7    QACDRCRSKKIRCDGIRPTCTQCANVGFECK  37
+            ++C  C   K RCD   PTC +C++   EC 
+Sbjct  580  KSCQGCIKAKRRCDLGFPTCLRCSHRQIECH  672
+
+
+>MGG_02954 | Magnaporthe oryzae 70-15 dolichyl-phosphate-mannose-protein 
+mannosyltransferase 1 (4255 nt)
+Length=4255
+
+ Score = 24.3 bits (51),  Expect = 6.8, Method: Composition-based stats.
+ Identities = 11/27 (41%), Positives = 14/27 (52%), Gaps = 0/27 (0%)
+ Frame = -1
+
+Query  23    RPTCTQCANVGFECKTSDKLSRRAFPR  49
+             RP   +C NV F    + + S  AFPR
+Sbjct  3223  RPRTARCTNVSFRFAHNHRASLMAFPR  3143
+
+
+>MGG_11764 | Magnaporthe oryzae 70-15 hypothetical protein (4594 nt)
+Length=4594
+
+ Score = 24.3 bits (51),  Expect = 7.0, Method: Composition-based stats.
+ Identities = 12/34 (35%), Positives = 14/34 (41%), Gaps = 2/34 (6%)
+ Frame = +1
+
+Query  7     QACDRCRSKKIRCDGIRPTCTQCANVGFECKTSD  40
+             Q C + R   IRCD   P C  C      C  +D
+Sbjct  1306  QPCSKRR--HIRCDETFPQCRNCTKHKIRCPYND  1401
+
+
+>MGG_03711 | Magnaporthe oryzae 70-15 hypothetical protein (2153 nt)
+Length=2153
+
+ Score = 23.9 bits (50),  Expect = 7.1, Method: Compositional matrix adjust.
+ Identities = 11/23 (48%), Positives = 16/23 (70%), Gaps = 1/23 (4%)
+ Frame = +3
+
+Query  4    RIAQACDRCRSKKIRCDGIRPTC  26
+            R+ +AC+RCR KK +  G +P C
+Sbjct  558  RVWKACERCRMKKTKV-GRQPNC  623
+
+
+>MGG_03183 | Magnaporthe oryzae 70-15 hypothetical protein (2171 nt)
+Length=2171
+
+ Score = 23.9 bits (50),  Expect = 7.2, Method: Compositional matrix adjust.
+ Identities = 11/28 (39%), Positives = 15/28 (54%), Gaps = 0/28 (0%)
+ Frame = +3
+
+Query  9    CDRCRSKKIRCDGIRPTCTQCANVGFEC  36
+            C  C+++KI+C   RP C  C     EC
+Sbjct  468  CRNCKARKIKCSEDRPQCRTCVLRMEEC  551
+
+
+>MGG_10212 | Magnaporthe oryzae 70-15 hypothetical protein (3100 nt)
+Length=3100
+
+ Score = 23.9 bits (50),  Expect = 9.1, Method: Compositional matrix adjust.
+ Identities = 9/23 (39%), Positives = 14/23 (61%), Gaps = 0/23 (0%)
+ Frame = +1
+
+Query  17   IRCDGIRPTCTQCANVGFECKTS  39
+            ++CD  RP C+ C + G +C  S
+Sbjct  370  VQCDAGRPRCSTCRDYGTDCAYS  438
+
+
+>MGG_00494 | Magnaporthe oryzae 70-15 transcriptional regulatory protein 
+Pro-1 (3425 nt)
+Length=3425
+
+ Score = 23.9 bits (50),  Expect = 9.2, Method: Compositional matrix adjust.
+ Identities = 9/30 (30%), Positives = 17/30 (57%), Gaps = 0/30 (0%)
+ Frame = +1
+
+Query  8     ACDRCRSKKIRCDGIRPTCTQCANVGFECK  37
+              C  CR ++ +CD  +  C+ C ++G  C+
+Sbjct  916   GCYTCRLRRKKCDEGQHVCSACKHLGLVCE  1005
+
+
+>MGG_13894 | Magnaporthe oryzae 70-15 hypothetical protein (1973 nt)
+Length=1973
+
+ Score = 23.5 bits (49),  Expect = 9.6, Method: Composition-based stats.
+ Identities = 8/25 (32%), Positives = 11/25 (44%), Gaps = 0/25 (0%)
+ Frame = +3
+
+Query  12   CRSKKIRCDGIRPTCTQCANVGFEC  36
+            CR +  +CD   P C  C     +C
+Sbjct  252  CRKRHKKCDERLPICGPCTTAARDC  326
+
+
+
+Lambda      K        H        a         alpha
+   0.324    0.132    0.426    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 209870856
+
+
+  Database: m_o_genes.fasta
+    Posted date:  Jun 29, 2018  2:00 PM
+  Number of letters in database: 25,793,590
+  Number of sequences in database:  12,827
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 13
+Window for multiple hits: 40

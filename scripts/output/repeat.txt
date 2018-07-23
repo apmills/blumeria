@@ -1,1 +1,1 @@
-[['../db/a_n_genes.fasta', 'ANID_03933'], ['../db/s_s_genes.fasta', 'SS1G_13366'], ['../db/b_c_genes.fasta', 'BC1G_14991'], ['../db/m_o_genes.fasta', 'MGG_01572'], ['../db/n_c_genes.fasta', 'NCU08616'], ['../db/a_f_genes.fasta', 'Afu6g08300']]
+[['../db/a_n_genes.fasta', 'ANID_00689'], ['../db/s_s_genes.fasta', 'SS1G_10339'], ['../db/b_c_genes.fasta', 'BC1G_13551'], ['../db/m_o_genes.fasta', 'MGG_04108'], ['../db/n_c_genes.fasta', 'NCU06656'], ['../db/a_f_genes.fasta', 'Afu1g13510']]
