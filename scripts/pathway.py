@@ -86,10 +86,27 @@ enzymes = [] # [[Enzyme ID X, Fungus Y genome, Enzyme X gene ID in Y],...]
 for enzymeId in glob.iglob('../test/' + pathway + '/*'):
     hits = blasterMaster(enzymeId)
     for genome, seqid in hits:
-         enzymes.append([enzymeId.split('/')[-1].split('.')[0], genome.split('/')[-1].split('.')[0], seqid])
+         enzymes.append([enzymeId.split('/')[-1].split('.')[0], genome, seqid])
     print (enzymes)
 
-ids = [z for x, y, z in enzymes]
+# ids = [z for x, y, z in enzymes]
+seqFile = open('output/' + pathway + '/upstream.fa', 'w')
+# "~/meme/bin/meme upstreams.fa -dna -mod oops -revcomp"
+for x, genome, ide in enzymes:
+    gnome = open(genome, 'r')
+    seq = fastaFinder(gnome.readlines(), ide)
+    seqFile.write('>' + ide + '\n')
+    seqFile.write(seq + '\n')
+seqFile.close()
+
+print ('Running MEME...')
+call('~/meme/bin/meme -oc output/' + pathway + '/meme output/' + pathway + '/upstream.fa -dna -mod oops -revcomp', shell=True)
+
+print ('Running FIMO...')
+call('~/meme/bin/fimo -oc output/' + pathway + '/fimo -thresh 0.001 output/' + pathway + '/meme/meme.xml output/' + pathway + '/upstream.fa', shell=True)
+
+quit()
+
 motif = Seq('CCTCGG')
 print (ids)
 allMotifs = [] # [[[Gene ID, # Motifs in upstream 1kb], [Another gene, #]], [[Different Organism]], ...]
@@ -100,18 +117,23 @@ for upper in glob.iglob('../db/*upstream.fasta'):
         if record.id[1:-1] not in ids:
             continue
         count = len(re.findall(str(motif), str(record.seq).upper()))
+        # print('>' + record.id[1:-1])
+        # print(str(record.seq))
         count += len(re.findall(str(motif.reverse_complement()), str(record.seq).upper()))
         if count > 0:
             motifs.append([record.id[1:-1], count])
-        if count > 1:
-            print(record.id + " " + str(count))
+        # if count > 1:
+        #     print(record.id + " " + str(count))
     tot = 0
     for ide, count in motifs:
         tot += count
     #print ('Found ' + str(tot) + ' occurences of "' + motif + '" in ' + upper)
     #print (len(motifs))
+
     allMotifs.append(motifs)
 print (allMotifs)
+
+
 
 """
 - List of enzymes on pathway

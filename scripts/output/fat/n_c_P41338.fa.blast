@@ -1,0 +1,8 @@
+# TBLASTN 2.6.0+
+# Query: sp|P41338|THIL_YEAST Acetyl-CoA acetyltransferase OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) OX=559292 GN=ERG10 PE=1 SV=3
+# Database: ../db/n_c_genes.fasta
+# Fields: subject id, evalue
+# 2 hits found
+NCU02571	3.36e-145
+NCU02571	1.0
+# BLAST processed 1 queries
