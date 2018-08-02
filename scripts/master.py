@@ -5,19 +5,16 @@
 
 from subprocess import call
 import sys, glob, requests, time, re
-# import glob
 from Bio.Seq import Seq
 from Bio.Alphabet import generic_dna
-# import requests
-# import time
 from Bio import Phylo, AlignIO, SeqIO
 from Bio.Phylo.Applications import PhymlCommandline
-# from Bio import AlignIO
-# from Bio import SeqIO
-# import re
 
-query = '../test/facb.fa'
+
+query = '../test/zfr1.fa'
+output = 'output/zfr1/'
 bluGenome = '../db/blumeria/latest/Bgt_genome_v2_1.fa'
+bluGenes = '../db/blumeria/latest/bluGenes.fa'
 # '../test/facb.fa'
 
 #############################
@@ -45,19 +42,20 @@ else:
 def blasterMaster(query):
     # This function handles the BLAST search (through the CLI) and the results
     searched_genomes = []
-    for genome in glob.iglob('../db/*.fasta'):
+    global output
+    for genome in glob.iglob('../db/*genes.fasta'):
         searched_genomes.append(genome)
         print (genome.split('/')[-1][0:4] + query.split('/')[-1][:-3])
         # tblastx search for the best hits among the genomes present in /db
-        call('tblastx -db ' + genome + ' -query ' + query + ' -out output/' + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+        call('tblastn -db ' + genome + ' -query ' + query + ' -out '+ output + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
         #-evalue 0.0001 Shouldn't matter because we're only going to look at the best hit anyway
 
     matches = []
     print ('Searched ' + ','.join(searched_genomes[:-1]) + ', and ' + searched_genomes[-1] + ' for ' + query)
 
     # Read through BLAST output and return the seqid of any hits with an e-value less than 1e-4
-    for output in glob.iglob('output/*' + query.split('/')[-1][:-3] + '.blast'):
-        infile = open(output, 'r')
+    for outpot in glob.iglob(output + '*' + query.split('/')[-1][:-3] + '.blast'):
+        infile = open(outpot, 'r')
         i = 0
         for line in infile.readlines():
             i += 1
@@ -95,7 +93,8 @@ def fastaFinder(lines, seqid):
     collect = False
     while i < len(lines):
         if lines[i][0] == '>':
-            if lines[i].find(seqid) >= 0:
+            #if lines[i].find(seqid) >= 0:
+            if re.search(seqid + r'\s', lines[i]):
                 collect = True
                 print('Found ' + seqid + ' in ' + lines[i])
             elif collect:
@@ -119,7 +118,7 @@ def seqRetriever(seqinfo):
 print (hits)
 nucSeqs = seqRetriever(hits)
 
-print (nucSeqs)
+# print (nucSeqs)
 
 #######################
 # Translate sequences #
@@ -127,19 +126,14 @@ print (nucSeqs)
 
 def domainSpotter(seq):
     # Searches the NCBI's online CDD for any conserved domains within a given ORF
-
     r = requests.post('https://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi?', data=(('db','cdd'), ('queries',seq), ('tdata','hits')))
-
     # print (r.text)
-
     searchID = r.text.split('#')[2].split()[1].rstrip()
-
     # print (searchID)
-
     tick = True
     done = False
     print ('Searching for domains...', end='', flush=True)
-
+    patience = 30
     while not done:
         # Ping the website every 2 seconds to see if it's done
         result = requests.post('https://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi?', data={'cdsid':searchID, 'cddefl':'true'})
@@ -157,6 +151,10 @@ def domainSpotter(seq):
         # else:
         #     print ('Tock')
         #     tick = True
+        patience -= 1
+        if patience < 1:
+            print('Giving up')
+            return []
 
     lines = result.text.split('\n')
 
@@ -169,11 +167,9 @@ def domainSpotter(seq):
             tags.append(line.split('\t')[8])
     return tags
 
-
 if '-skipDomain' in sys.argv:
     # Uses data from output/repeat.txt instead of prompting the user to select which ORFs he wants
     print ('Skipping Domain search')
-
     #exec('protSeqs = ' + repeatData[1])
 else:
     protSeqs = []
@@ -181,28 +177,62 @@ else:
         # Using the Seq class from Biopython to perform the translation
         bioSeq = Seq(seq, generic_dna)
         protSeq = str(bioSeq.translate())
-        for orf in protSeq.split('*'):
-            # Splitting on stop codons to iterate through each ORF
-            if len(orf) <= 50:
-                print ('Skipping short ORF (<50 residues)')
-                continue
-
-            tags = domainSpotter(orf)
+        # print (seq)
+        # print (protSeq)
+        sprote = protSeq.split('*')
+        prote = ''.join(sprote)
+        tags = domainSpotter(prote)
+        if len(tags) == 0:
+            print ('No tags found, trying other reading frames')
+            for start in range(1,3):
+                print ('Trying RF ' + str(start))
+                bioSeq = Seq(seq[start:], generic_dna)
+                protSeq = str(bioSeq.translate())
+                sprote = protSeq.split('*')
+                prote = ''.join(sprote)
+                tags = domainSpotter(prote)
+                if len(tags) > 0:
+                    print('\nFound an RF of ' + seqid + ' containing:\n- ' + '\n- '.join(tags))
+                    break
+                else:
+                    print('No domains found')
             if len(tags) == 0:
-                print ('No tags found, skipping ORF')
-                continue
-            # Give the user some information and allow him to decide if this ORF looks acceptable
-            print('\nORF of length ' + str(len(orf)))
-            print('With domain tags:\n-' + '\n-'.join(tags))
-            if input('\nKeep this ORF? (y/n)  ') == 'y':
-                protSeqs.append([genome, seqid, orf])
-                break
-            else:
-                print('#' * 80)
+                revSeq = seq[::-1]
+                for start in range(0,3):
+                    print ('Trying RF -' + str(start))
+                    bioSeq = Seq(revSeq[start:], generic_dna)
+                    protSeq = str(bioSeq.translate())
+                    sprote = protSeq.split('*')
+                    prote = ''.join(sprote)
+                    tags = domainSpotter(prote)
+                    if len(tags) > 0:
+                        break
+                    else:
+                        print('No domains found')
+        print('\nProtein sequence of ' + seqid + ' contains:\n- ' + '\n- '.join(tags))
+        # for orf in protSeq.split('*'):
+        #     print(orf)
+        #     # Splitting on stop codons to iterate through each ORF
+        #     if len(orf) <= 50:
+        #         print ('Skipping short ORF (<50 residues)')
+        #         continue
+        #
+        #     tags = domainSpotter(orf)
+        #     if len(tags) == 0:
+        #         print ('No tags found, skipping ORF')
+        #         continue
+        #     # Give the user some information and allow him to decide if this ORF looks acceptable
+        #     print('\nORF of length ' + str(len(orf)))
+        #     print('With domain tags:\n' + '\n-'.join(tags))
+        #     if input('\nKeep this ORF? (y/n)  ') == 'y':
+        #         protSeqs.append([genome, seqid, orf])
+        #         break
+        #     else:
+        #         print('#' * 80)
         # if genome == '../db/m_o_genes.fasta':
 
 
-        print (protSeqs)
+        #print (protSeqs)
 
     newRepeat.write(str(protSeqs) + '\n')
 #######################################################################
@@ -213,7 +243,7 @@ else:
 # Align sequences #
 ###################
 print ('Aligning sequences...')
-seqFile = open('output/unaligned.fa', 'w')
+seqFile = open(output + 'unaligned.fa', 'w')
 # for genome, seqid, seq in protSeqs:
 #     seqFile.write('>' + seqid + ' ORF | \n')      Protein sequence
 #     seqFile.write(seq + '\n')
@@ -224,7 +254,7 @@ for genome, seqid, seq in nucSeqs:
 seqFile.close()
 
 # Use Clustal Omega to align the sequences
-call('clustalo -i output/unaligned.fa -o output/aligned.aln --force --outfmt=clu', shell=True)
+call('clustalo -i ' + output + 'unaligned.fa -o ' + output + 'aligned.aln --force --outfmt=clu', shell=True)
 
 #######################################
 # Look for query sequence in Blumeria #
@@ -263,15 +293,15 @@ def genomeSlicer(start, end, line, contig):
 
 # First create an HMM profile based on the alignment
 print ('Building HMM profile...')
-call('hmmbuild -o /dev/null output/query.hmm output/aligned.aln', shell=True)
+call('hmmbuild -o /dev/null ' + output + 'query.hmm ' + output + 'aligned.aln', shell=True)
 
 # Now search it (with nhmmer for nucleotides) against the whole Blumeria genome
 # call('hmmsearch --tblout output/hmmertbl.tsv -o output/hmmer.txt output/query.hmm ' + bluGenome, shell=True)
 print ('Running HMMER search...')
-call('nhmmer --tblout output/hmmertbl.tsv -o output/nhmmer.txt output/query.hmm ' + bluGenome, shell=True)
+call('nhmmer --tblout ' + output + 'hmmertbl.tsv -o ' + output + 'nhmmer.txt ' + output + 'query.hmm ' + bluGenes, shell=True)
 
 # The result is saved in this tabular file, we're interested in only the best hit
-result = open('output/hmmertbl.tsv', 'r')
+result = open(output + 'hmmertbl.tsv', 'r')
 lines = result.readlines()
 result.close()
 if lines[2][0] == '#':
@@ -279,36 +309,19 @@ if lines[2][0] == '#':
     print ('No equivalent found in Blumeria graminis')
     quit()
 
-# Extract the location of the hit within the genome FASTA file
-start = int(lines[2].split()[6])
-stop = int(lines[2].split()[7])
-contig = lines[2].split()[0]
-print (start)
-print (stop)
-if start > stop:
-    swap = start
-    start = stop
-    stop = swap
-    reverse = True
-bluFile = open('output/b_g_GOI.fa', 'w')
-genomeFile = open(bluGenome, 'r')
-# bluSeq = seqRetriever([['../db/blumeria/b_g_genes.fasta', bluGene]])
-# print (bluSeq)
-print ('Extracting best match from Blumeria genome at ' + bluGenome + '...')
-output = [genomeSlicer(start, stop, x, contig) for x in genomeFile]
-selection = [x for x in output if x is not None]
-bluSeq = ''.join(selection)
-if reverse:
-    flipped = Seq(bluSeq)
-    flipped = flipped.reverse_complement()
-    bluSeq = str(flipped)
-bluFile.write('>Blumeria graminis candidate gene' + '\n')
+# Extract the matched gene from bluGenes.fa
+
+name = lines[2].split()[0]
+print ('Best hit in Blumeria is ' + name)
+bluFile = open(output + 'b_g_GOI.fa', 'w')
+gener = open('../db/blumeria/latest/bluGenes.fa', 'r')
+bluSeq = fastaFinder(gener.readlines(), name)
+bluFile.write('>Blumeria graminis candidate gene | ' + name + '\n')
 bluFile.write(bluSeq)
-genomeFile.close()
 bluFile.close()
 
 # And counter-search to check if it's really a good match, the top hit should be the query sequence
-call('tblastx -db ../db/a_f_genes.fasta -query output/b_g_GOI.fa -out output/counterBlast.blast -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+call('tblastx -db ../db/a_n_genes.fasta -query ' + output + 'b_g_GOI.fa -out ' + output + 'counterBlast.blast -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
 
 ################################
 # Identify motifs in sequences #
@@ -322,49 +335,24 @@ def ORFanarium(inSeq):
 # Look for transcription factor binding sites upstream of metabolic genes #
 ###########################################################################
 
-motif = 'CCTCGG'
-
-for upper in glob.iglob('../db/*upstream.fasta'):
-    motifs = []
-    infile = open(upper, 'r')
-    for record in SeqIO.parse(infile, 'fasta'):
-        count = len(re.findall(motif, str(record.seq)))
-        motifs.append([record.id, count])
-    tot = 0
-    for ide, count in motifs:
-        tot += count
-    print ('Found ' + str(tot) + ' occurences of "' + motif + '" in ' + upper)
-    #print (motifs)
-
-
-
-"""
-- Retrieve or have target DNA motif already in some format
-- Could then search for this motif on the upstream bits of the Blumeria
-- Get probably lots of results
-- Iterate through results and retreive associated genes (via .gff file)
-- Figure out what these genes are somehow (BLAST against A nidulans or something)
-- Eventually make a list of metabolic genes that have one or more motifs
-
-Alternatively:
-- Map all the genes in .gff file to known genes in other fungi or maybe just metabolic ones
-- Reduce search space for finding motifs
-"""
+# pathway = 'fat'
+# call('python pathway.py ' + pathway, shell=True)
 
 #################################
 # Make a phylogeny of sequences #
 #################################
-unaln = open('output/unaligned.fa', 'a')
-bluFile = open('output/b_g_GOI.fa', 'r')
+unaln = open(output + 'unaligned.fa', 'a')
+bluFile = open(output + 'b_g_GOI.fa', 'r')
 addition = bluFile.read()
 unaln.write(addition)
 unaln.close()
 bluFile.close()
-call('clustalo -i output/unaligned.fa -o output/alignedAll.aln --force --outfmt=clu', shell=True)
-AlignIO.convert('output/alignedAll.aln', 'clustal', 'output/phyAlign.phy', 'phylip-relaxed')
-cmdline = PhymlCommandline(input='output/phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
+print ('Creating phylogenetic tree...')
+call('clustalo -i ' + output + 'unaligned.fa -o ' + output + 'alignedAll.aln --force --outfmt=clu', shell=True)
+AlignIO.convert(output + 'alignedAll.aln', 'clustal', output + 'phyAlign.phy', 'phylip-relaxed')
+cmdline = PhymlCommandline(input=output + 'phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
 call(str(cmdline), shell=True)
-my_tree = Phylo.read("output/phyAlign.phy_phyml_tree.txt", "newick")
+my_tree = Phylo.read(output + "phyAlign.phy_phyml_tree.txt", "newick")
 Phylo.draw(my_tree, show_confidence=False)
 
 # Got to print 'Done' at the end
