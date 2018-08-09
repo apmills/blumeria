@@ -5,16 +5,108 @@
 
 from subprocess import call
 import sys, glob, requests, time, re
-# import glob
 from Bio.Seq import Seq
 from Bio.Alphabet import generic_dna
-# import requests
-# import time
 from Bio import Phylo, AlignIO, SeqIO
 from Bio.Phylo.Applications import PhymlCommandline
-# from Bio import AlignIO
-# from Bio import SeqIO
-# import re
+
+pathway = sys.argv[1]
+
+
+def matrixLine(base):
+    base = base.upper()
+    if base == 'A':
+        return (['12', '0', '0', '0'])
+    elif base == 'C':
+        return (['0', '12', '0', '0'])
+    elif base == 'G':
+        return (['0', '0', '12', '0'])
+    elif base == 'T':
+        return (['0', '0', '0', '12'])
+    elif base == 'R':
+        return (['6', '0', '6', '0'])
+    elif base == 'Y':
+        return (['0', '6', '0', '6'])
+    elif base == 'S':
+        return (['0', '6', '6', '0'])
+    elif base == 'W':
+        return (['6', '0', '0', '6'])
+    elif base == 'K':
+        return (['0', '0', '6', '6'])
+    elif base == 'M':
+        return (['6', '6', '0', '0'])
+    elif base == 'B':
+        return (['0', '4', '4', '4'])
+    elif base == 'D':
+        return (['4', '0', '4', '4'])
+    elif base == 'H':
+        return (['4', '4', '0', '4'])
+    elif base == 'V':
+        return (['4', '4', '4', '0'])
+    elif base == 'N':
+        return (['3', '3', '3', '3'])
+    else:
+        print('Invalid Character: "' + base + '"!')
+        print('Please only use parentheticals thoughtfully')
+        print('You may get erroneous results')
+        quit()
+
+entry = ''
+while entry == '':
+    print('Please enter a consensus sequence in IUPAC nucleotide notation')
+    print('Or enter a single "H" for a description of this notation.')
+    entry = input('Consensus: ')
+    if entry == 'H' or entry == 'h':
+        print('---')
+        print('IUPAC Nucleotide Codes:')
+        print('A,C,G,T - specify an unambiguous nucleotide')
+        print('R - A or G')
+        print('Y - C or T')
+        print('S - G or C')
+        print('W - A or T')
+        print('K - G or T')
+        print('M - A or C')
+        print('B - C, G, or T')
+        print('D - A, G, or T')
+        print('H - A, C, or T')
+        print('V - A, C, or G')
+        print('N - Any base')
+        print('Do not include gap characters (- or .)')
+        print('To indicate an ambiguous region use e.g. N(2,3)')
+        print('This corresponds to NN or NNN, the program will output multiple files if needed')
+        print('Note that only one such variable region is supported')
+        print('---')
+        entry = ''
+    else:
+        entry = entry.strip('-')
+        entry = entry.upper()
+        if entry.strip('ACGTRYSWKMBHVN(,)1234567890') != '':
+            print('---')
+            print('Invalid characters: ' + entry.strip('ACGTRYSWKMBHVN(,)1234567890'))
+            print('Please only use IUPAC notation without gaps (- or .)')
+            print('---')
+            entry = ''
+            continue
+        if '(' in entry and ',' in entry and ')' in entry:
+            match = re.search(r'\w\(.+\)', entry)
+            repeat = match[0]
+            base = repeat[0]
+            start = re.search(r'\((\d+),', match[0])
+            start = start[1]
+            stop = re.search(r',(\d+)\)', match[0])
+            stop = stop[1]
+            # reps = repeat[-2] - repeat[2] + 1
+            for i in range(int(start), int(stop) + 1):
+                newEntry = entry[:match.start()] + base * i + entry[match.end():]
+                outfile = open('output/' + pathway + '/seqMatrix_'+ base + str(i) + '.txt', 'w')
+                for i in range(len(newEntry)):
+                    outfile.write(' '.join(matrixLine(newEntry[i])) + '\n')
+                outfile.close()
+        else:
+            outfile = open('output/' + pathway + '/seqMatrix.txt', 'w')
+            for i in range(len(entry)):
+                outfile.write(' '.join(matrixLine(entry[i])) + '\n')
+            outfile.close()
 
 def blasterMaster(query, blu=False):
     # This function handles the BLAST search (through the CLI) and the results
@@ -83,7 +175,7 @@ def fastaFinder(lines, seqid):
     collect = False
     while i < len(lines):
         if lines[i][0] == '>':
-            if re.search(seqid + r'\s', lines[i]):
+            if seqid in lines[i]:
                 collect = True
                 print('Found ' + seqid + ' in ' + lines[i])
             elif collect:
@@ -104,16 +196,24 @@ def seqRetriever(seqinfo):
         output.append([genome, seqid, seq])
     return output
 
-pathway = sys.argv[1]
 
 #####################################################
 # Identify S. cerevisiae genes in reference genomes #
 #####################################################
-enzymes = [] # [[Enzyme ID X, Fungus Y genome, Enzyme X gene ID in Y],...]
-for enzymeId in glob.iglob('../test/' + pathway + '/*'):
+enzymes = [] # [[Enzyme ID X, Fungus Y genome, Enzyme X gene ID in Y, Enzyme name],...]
+indexfile = open('../test/' + pathway + '/index.csv', 'r')
+accIndex = {}
+enzymeIndex = {}
+for line in indexfile.readlines():
+    sline = line.split(',')
+    accIndex[sline[0]] = sline[1].rstrip()
+for enzymeId in glob.iglob('../test/' + pathway + '/*.fasta'):
+    '../test/fat/A81283.fasta'
+    acc = enzymeId.split('/')[-1].split('.')[0]
     hits = blasterMaster(enzymeId)
     for genome, seqid in hits:
-         enzymes.append([enzymeId.split('/')[-1].split('.')[0], genome, seqid])
+         enzymes.append([enzymeId.split('/')[-1].split('.')[0], genome, seqid, accIndex[acc]])
+         enzymeIndex[seqid] = accIndex[acc]
     # print (enzymes)
 
 #########################################
@@ -123,7 +223,7 @@ for enzymeId in glob.iglob('../test/' + pathway + '/*'):
 # ids = [z for x, y, z in enzymes]
 seqFile = open('output/' + pathway + '/upstream.fa', 'w')
 controlFile = open('output/' + pathway + '/control.fa', 'w')
-for x, genome, ide in enzymes:
+for x, genome, ide, fullName in enzymes:
     upper = genome[:-11] + 'upstream.fasta'
     gnome = open(upper, 'r')
     seq = fastaFinder(gnome.readlines(), ide)
@@ -131,7 +231,7 @@ for x, genome, ide in enzymes:
         controlFile.write('>' + ide + '\n')
         controlFile.write(seq + '\n')
     else:
-        seqFile.write('>' + ide + '\n')
+        seqFile.write('>' + ide + ' | ' + fullName + '\n')
         seqFile.write(seq + '\n')
 seqFile.close()
 controlFile.close()
@@ -141,13 +241,15 @@ controlFile.close()
 #######################################
 
 bluEnzymes = []
-for enzymeId in glob.iglob('../test/' + pathway + '/*'):
+for enzymeId in glob.iglob('../test/' + pathway + '/*.fasta'):
+    acc = enzymeId.split('/')[-1].split('.')[0]
     hit = blasterMaster(enzymeId, blu=True)
-    bluEnzymes.append([enzymeId.split('/')[-1].split('.')[0], hit])
+    enzymeIndex[hit] = accIndex[acc]
+    bluEnzymes.append([enzymeId.split('/')[-1].split('.')[0], hit, accIndex[acc]])
 print (bluEnzymes)
 
 seqFile = open('output/' + pathway + '/bluUpstream.fa', 'w')
-for x, ide in bluEnzymes:
+for x, ide, fullName in bluEnzymes:
     upper = genome[:-11] + 'upstream.fasta'
     gnome = open('../db/blumeria/latest/bluUpstream0.fa', 'r')
     lines = gnome.readlines()
@@ -166,46 +268,131 @@ for x, ide in bluEnzymes:
         i += 1
 
     seq = ''.join(seqs)
-    seqFile.write('>' + ide + '\n')
+    seqFile.write('>' + ide + ' | ' + fullName + '\n')
     seqFile.write(seq + '\n')
     gnome.close()
 seqFile.close()
 
+
+print (enzymeIndex)
 ################################################
 # Identify motifs in those upstreams with MEME #
 ################################################
 
 print ('Running MEME...')
-# Currently looks for 5 motifs to make sure that the relevant one is found
-call('~/meme/bin/meme -oc output/' + pathway + '/meme output/' + pathway + '/upstream.fa -dna -mod oops -revcomp -nmotifs 3 -objfun se', shell=True)
+matrices = [matrix for matrix in glob.glob('output/' + pathway + '/seqMatrix*')]
+locs = ['output/' + pathway + '/fimo/blumeria/fimo.tsv','output/' + pathway + '/fimo/control/fimo.tsv','output/' + pathway + '/fimo/training/fimo.tsv']
+organisms = {'Af':'A. fumigatus','AN':'A. nidulans','SS':'S. sclerotiorum','NC':'N. crassa','MG':'M. oryzae','BC':'B. cinerea','Bg':'B. graminis'}
+results = [] # [[Seq ID, Enzyme name, strand, p-value, matched seq],[Another motif result], ...]
+print (matrices)
+for matrix in matrices:
+    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo/control/ -thresh 0.001 - output/' + pathway + '/control.fa', shell=True)
+    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo/training/ -thresh 0.001 - output/' + pathway + '/upstream.fa', shell=True)
+    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo/blumeria/ -thresh 0.001 - output/' + pathway + '/bluUpstream.fa', shell=True)
+    for loc in locs:
+        fimoFile = open(loc, 'r')
+        for line in fimoFile.readlines():
+            sline = line.split('\t')
+            if sline[0] == 'motif_id':
+                continue # Skip first line
+            if len(line) < 4:
+                break # Stop before the end
+            ide = sline[2]
+            strand = sline[5]
+            pval = sline[7]
+            match = sline[-1].rstrip()
+            results.append([ide, enzymeIndex[ide], strand, pval, match])
+        fimoFile.close()
 
-memeOut = open('output/' + pathway + '/meme/meme.txt', 'r')
-motifs = []
-for line in memeOut.readlines():
-    if len(line) < 6:
-        continue
-    if line[:5] == 'MOTIF':
-        sline = line.split()
-        motifs.append(sline[1])
-print (len(motifs))
-useMotif = ''
-while useMotif == '':
-    for motif in motifs:
-        answer = input('Use this motif: ' + motif + '? (y/n)')
-        if answer == 'y':
-            useMotif = motif
-            break
+resultFile = open('output/' + pathway + '/results.tsv', 'w')
+resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format('Organism','Seq ID','Enzyme','Strand','p-value','Match Seq'))
+for ide, name, strand, pval, match in results:
+    resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format(organisms[ide[:2]],ide,name,strand,pval,match))
+resultFile.close()
+
+# results = [] # [[Seq ID, Enzyme name, strand, p-value, matched seq],[Another motif result], ...]
+# for loc in locs:
+#     fimoFile = open(loc, 'r')
+#     for line in fimoFile.readlines():
+#         sline = line.split('\t')
+#         if sline[0] == 'motif_id':
+#             continue # Skip first line
+#         if len(line) < 4:
+#             break # Stop before the end
+#         ide = sline[2]
+#         strand = sline[5]
+#         pval = sline[7]
+#         match = sline[-1].rstrip()
+#         results.append([ide, enzymeIndex[ide], strand, pval, match])
+#     fimoFile.close()
+#
+# resultFile = open('output/' + pathway + '/results.tsv', 'w')
+# resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format('Organism','Seq ID','Enzyme','Strand','p-value','Match Seq'))
+# for ide, name, strand, pval, match in results:
+#     resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format(organisms[ide[:2]],ide,name,strand,pval,match))
+# resultFile.close()
+
+quit()
+# Currently looks for 5 motifs to make sure that the relevant one is found
+# call('~/meme/bin/meme -oc output/' + pathway + '/meme output/' + pathway + '/upstream.fa -dna -mod oops -revcomp -objfun se -cons TCSNNNNNNNNSGA -cons GCMNNNNNNNNKGC', shell=True)
+
+# memeOut = open('output/' + pathway + '/meme/meme.txt', 'r')
+# motifs = []
+# for line in memeOut.readlines():
+#     if len(line) < 6:
+#         continue
+#     if line[:5] == 'MOTIF':
+#         sline = line.split()
+#         motifs.append(sline[1])
+# print (len(motifs))
+# useMotif = ''
+# while useMotif == '':
+#     for motif in motifs:
+#         answer = input('Use this motif: ' + motif + '? (y/n)')
+#         if answer == 'y':
+#             useMotif = motif
+#             break
 
 #######################################################
 # Look for those motifs in the same genes of Blumeria #
 #######################################################
 
-print ('Running FIMO...')
-call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/control/ -thresh 0.001 -motif ' + motif + ' output/' + pathway + '/meme/meme.xml output/' + pathway + '/control.fa', shell=True)
+# motif='MEME-1'
+# print ('Running FIMO...')
+# # Run on the enzymes of one control species (A. nidulans)
+# call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/control/ -thresh 0.0005 output/' + pathway + '/meme/meme.xml output/' + pathway + '/control.fa', shell=True)
+# # Run on the training data (to get a nice TSV of motif results)
+# call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/training/ -thresh 0.0005 output/' + pathway + '/meme/meme.xml output/' + pathway + '/upstream.fa', shell=True)
+# # Run on Blumeria
+# call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/blumeria/ -thresh 0.0005 output/' + pathway + '/meme/meme.xml output/' + pathway + '/bluUpstream.fa', shell=True)
 
-call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/blumeria/ -thresh 0.001 -motif ' + motif + ' output/' + pathway + '/meme/meme.xml output/' + pathway + '/bluUpstream.fa', shell=True)
+##############################################
+# Produce a list of enzymes and their motifs #
+##############################################
 
-quit()
+locs = ['output/' + pathway + '/fimo/blumeria/fimo.tsv','output/' + pathway + '/fimo/control/fimo.tsv','output/' + pathway + '/fimo/training/fimo.tsv']
+organisms = {'Af':'A. fumigatus','AN':'A. nidulans','SS':'S. sclerotiorum','NC':'N. crassa','MG':'M. oryzae','BC':'B. cinerea','Bg':'B. graminis'}
+results = [] # [[Seq ID, Enzyme name, strand, p-value, matched seq],[Another motif result], ...]
+for loc in locs:
+    fimoFile = open(loc, 'r')
+    for line in fimoFile.readlines():
+        sline = line.split('\t')
+        if sline[0] == 'motif_id':
+            continue # Skip first line
+        if len(line) < 4:
+            break # Stop before the end
+        ide = sline[2]
+        strand = sline[5]
+        pval = sline[7]
+        match = sline[-1].rstrip()
+        results.append([ide, enzymeIndex[ide], strand, pval, match])
+    fimoFile.close()
+
+resultFile = open('output/' + pathway + '/results.tsv', 'w')
+resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format('Organism','Seq ID','Enzyme','Strand','p-value','Match Seq'))
+for ide, name, strand, pval, match in results:
+    resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format(organisms[ide[:2]],ide,name,strand,pval,match))
+resultFile.close()
 
 # motif = Seq('CCTCGG')
 # print (ids)

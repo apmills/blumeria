@@ -1,6 +1,6 @@
 # Python
-# $ master.py <-skipBlast> <-skipDomain> <-modules>
-# skipBlast - skips the BLAST step, skipDomain - skips the domain checking step, modules - loads all required modules
+# $ master.py <-skipBlast> <-skipDomain>
+# skipBlast - skips the BLAST step, skipDomain - skips the domain checking step
 # Master control script for the Blumeria comparative genomics pipeline
 
 from subprocess import call
@@ -10,21 +10,23 @@ from Bio.Alphabet import generic_dna
 from Bio import Phylo, AlignIO, SeqIO
 from Bio.Phylo.Applications import PhymlCommandline
 
+############
+# Settings #
+############
+"""
+        These variables should be set by the user
+"""
+query = '../test/facb.fa' # A FASTA file of the DNA or protein sequence of the transcription factor
+output = 'output/facb/' # This directory is where all the results will be output to
+pathway = 'acetate' # This should be the name of the directory under ../test/ where FASTA files of pathway enzymes are stored
+bluGenome = '../db/blumeria/latest/Bgt_genome_v2_1.fa' # Not really necessary
+bluGenes = '../db/blumeria/latest/bluGenes.fa' # The source of Blumeria genes
 
-query = '../test/zfr1.fa'
-output = 'output/zfr1/'
-bluGenome = '../db/blumeria/latest/Bgt_genome_v2_1.fa'
-bluGenes = '../db/blumeria/latest/bluGenes.fa'
-# '../test/facb.fa'
-
-#############################
-# Check for some parameters #
-#############################
 # Loading modules on the msc server
-if '-modules' in sys.argv:
-    call('module load clustal', shell=True)
-    call('module load hmmer', shell=True)
-    call('module load phyml/3.1', shell=True)
+# if '-modules' in sys.argv:
+#     call('module load clustal', shell=True)       Doesn't work
+#     call('module load hmmer', shell=True)
+#     call('module load phyml/3.1', shell=True)
 
 # Allow user to repeat the same search (mostly for testing)
 if '-skipBlast' in sys.argv: #or '-skipDomain' in sys.argv:
@@ -42,12 +44,22 @@ else:
 def blasterMaster(query):
     # This function handles the BLAST search (through the CLI) and the results
     searched_genomes = []
+    with open(query,'r') as filey:
+        for seq in SeqIO.parse(filey, 'fasta'):
+            testing = str(seq.seq)
+    if testing.strip('ACGTRYSWKMBHVN.-') == '':
+        protein = False
+    else:
+        protein = True
+    print(testing)
+    print(protein)
+    return
     global output
     for genome in glob.iglob('../db/*genes.fasta'):
         searched_genomes.append(genome)
         print (genome.split('/')[-1][0:4] + query.split('/')[-1][:-3])
         # tblastx search for the best hits among the genomes present in /db
-        call('tblastn -db ' + genome + ' -query ' + query + ' -out '+ output + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+        call('tblastx -db ' + genome + ' -query ' + query + ' -out '+ output + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
         #-evalue 0.0001 Shouldn't matter because we're only going to look at the best hit anyway
 
     matches = []
@@ -304,56 +316,149 @@ call('nhmmer --tblout ' + output + 'hmmertbl.tsv -o ' + output + 'nhmmer.txt ' +
 result = open(output + 'hmmertbl.tsv', 'r')
 lines = result.readlines()
 result.close()
+
 if lines[2][0] == '#':
     # If there are no hits, then let the user know and don't run the follow up analysis
     print ('No equivalent found in Blumeria graminis')
-    quit()
-
+    foundBlu = False
+else:
+    foundBlu = True
+    
 # Extract the matched gene from bluGenes.fa
+if foundBlu:
+    name = lines[2].split()[0]
+    print ('Best hit in Blumeria is ' + name)
+    bluFile = open(output + 'b_g_GOI.fa', 'w')
+    gener = open('../db/blumeria/latest/bluGenes.fa', 'r')
+    bluSeq = fastaFinder(gener.readlines(), name)
+    bluFile.write('>Blumeria graminis candidate gene | ' + name + '\n')
+    bluFile.write(bluSeq)
+    bluFile.close()
 
-name = lines[2].split()[0]
-print ('Best hit in Blumeria is ' + name)
-bluFile = open(output + 'b_g_GOI.fa', 'w')
-gener = open('../db/blumeria/latest/bluGenes.fa', 'r')
-bluSeq = fastaFinder(gener.readlines(), name)
-bluFile.write('>Blumeria graminis candidate gene | ' + name + '\n')
-bluFile.write(bluSeq)
-bluFile.close()
-
-# And counter-search to check if it's really a good match, the top hit should be the query sequence
-call('tblastx -db ../db/a_n_genes.fasta -query ' + output + 'b_g_GOI.fa -out ' + output + 'counterBlast.blast -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+    # And counter-search to check if it's really a good match, the top hit should be the query sequence
+    call('tblastx -db ../db/a_n_genes.fasta -query ' + output + 'b_g_GOI.fa -out ' + output + 'counterBlast.blast -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
 
 ################################
 # Identify motifs in sequences #
 ################################
 
-def ORFanarium(inSeq):
-    # Uses advanced AI (if statements) to select the best ORF in a given sequence
-    readingFrames = [Seq.translate(inSeq.seq[i:], table='Standard', stop_symbol='*', to_stop=False, cds=False) for i in range(3)]
+# Do we need to do this?
 
 ###########################################################################
 # Look for transcription factor binding sites upstream of metabolic genes #
 ###########################################################################
 
-# pathway = 'fat'
-# call('python pathway.py ' + pathway, shell=True)
+print ('Running TF motif analysis...')
+def matrixLine(base):
+    base = base.upper()
+    if base == 'A':
+        return (['12', '0', '0', '0'])
+    elif base == 'C':
+        return (['0', '12', '0', '0'])
+    elif base == 'G':
+        return (['0', '0', '12', '0'])
+    elif base == 'T':
+        return (['0', '0', '0', '12'])
+    elif base == 'R':
+        return (['6', '0', '6', '0'])
+    elif base == 'Y':
+        return (['0', '6', '0', '6'])
+    elif base == 'S':
+        return (['0', '6', '6', '0'])
+    elif base == 'W':
+        return (['6', '0', '0', '6'])
+    elif base == 'K':
+        return (['0', '0', '6', '6'])
+    elif base == 'M':
+        return (['6', '6', '0', '0'])
+    elif base == 'B':
+        return (['0', '4', '4', '4'])
+    elif base == 'D':
+        return (['4', '0', '4', '4'])
+    elif base == 'H':
+        return (['4', '4', '0', '4'])
+    elif base == 'V':
+        return (['4', '4', '4', '0'])
+    elif base == 'N':
+        return (['3', '3', '3', '3'])
+    else:
+        print('Invalid Character: "' + base + '"!')
+        print('Please only use parentheticals thoughtfully')
+        print('You may get erroneous results')
+        quit()
+
+entry = ''
+while entry == '':
+    print('Please enter a consensus sequence in IUPAC nucleotide notation')
+    print('Or enter a single "H" for a description of this notation.')
+    entry = input('Consensus: ')
+    if entry == 'H' or entry == 'h':
+        print('---')
+        print('IUPAC Nucleotide Codes:')
+        print('A,C,G,T - specify an unambiguous nucleotide')
+        print('R - A or G')
+        print('Y - C or T')
+        print('S - G or C')
+        print('W - A or T')
+        print('K - G or T')
+        print('M - A or C')
+        print('B - C, G, or T')
+        print('D - A, G, or T')
+        print('H - A, C, or T')
+        print('V - A, C, or G')
+        print('N - Any base')
+        print('Do not include gap characters (- or .)')
+        print('To indicate an ambiguous region use e.g. N(2,3)')
+        print('This corresponds to NN or NNN, the program will output multiple files if needed')
+        print('Note that only one such variable region is supported')
+        print('---')
+        entry = ''
+    else:
+        entry = entry.strip('-')
+        entry = entry.upper()
+        if entry.strip('ACGTRYSWKMBHVN(,)') != '':
+            print('---')
+            print('Invalid characters: ' + entry.strip('ACGTRYSWKMBHVN'))
+            print('Please only use IUPAC notation without gaps (- or .)')
+            print('---')
+            entry = ''
+            continue
+        if '(' in entry and ',' in entry and ')' in entry:
+            match = re.search(r'\w\(.+\)', entry)
+            repeat = match[0]
+            base = repeat[0]
+            # reps = repeat[-2] - repeat[2] + 1
+            for i in range(int(repeat[2]), int(repeat[-2]) + 1):
+                newEntry = entry[:match.start()] + base * i + entry[match.end():]
+                outfile = open('output/' + pathway + '/seqMatrix_'+ base + str(i) + '.txt', 'w')
+                for i in range(len(newEntry)):
+                    outfile.write(' '.join(matrixLine(newEntry[i])) + '\n')
+                outfile.close()
+        else:
+            outfile = open('output/' + pathway + '/seqMatrix.txt', 'w')
+            for i in range(len(entry)):
+                outfile.write(' '.join(matrixLine(entry[i])) + '\n')
+            outfile.close()
+
+call('python pathway.py ' + pathway, shell=True)
 
 #################################
 # Make a phylogeny of sequences #
 #################################
-unaln = open(output + 'unaligned.fa', 'a')
-bluFile = open(output + 'b_g_GOI.fa', 'r')
-addition = bluFile.read()
-unaln.write(addition)
-unaln.close()
-bluFile.close()
-print ('Creating phylogenetic tree...')
-call('clustalo -i ' + output + 'unaligned.fa -o ' + output + 'alignedAll.aln --force --outfmt=clu', shell=True)
-AlignIO.convert(output + 'alignedAll.aln', 'clustal', output + 'phyAlign.phy', 'phylip-relaxed')
-cmdline = PhymlCommandline(input=output + 'phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
-call(str(cmdline), shell=True)
-my_tree = Phylo.read(output + "phyAlign.phy_phyml_tree.txt", "newick")
-Phylo.draw(my_tree, show_confidence=False)
+if foundBlu:
+    unaln = open(output + 'unaligned.fa', 'a')
+    bluFile = open(output + 'b_g_GOI.fa', 'r')
+    addition = bluFile.read()
+    unaln.write(addition)
+    unaln.close()
+    bluFile.close()
+    print ('Creating phylogenetic tree...')
+    call('clustalo -i ' + output + 'unaligned.fa -o ' + output + 'alignedAll.aln --force --outfmt=clu', shell=True)
+    AlignIO.convert(output + 'alignedAll.aln', 'clustal', output + 'phyAlign.phy', 'phylip-relaxed')
+    cmdline = PhymlCommandline(input=output + 'phyAlign.phy', alpha='e', bootstrap=1, sequential=False)
+    call(str(cmdline), shell=True)
+    my_tree = Phylo.read(output + "phyAlign.phy_phyml_tree.txt", "newick")
+    Phylo.draw(my_tree, show_confidence=False)
 
 # Got to print 'Done' at the end
 print ('Done')
