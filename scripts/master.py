@@ -4,7 +4,7 @@
 # Master control script for the Blumeria comparative genomics pipeline
 
 from subprocess import call
-import sys, glob, requests, time, re
+import sys, glob, requests, time, re, os
 from Bio.Seq import Seq
 from Bio.Alphabet import generic_dna
 from Bio import Phylo, AlignIO, SeqIO
@@ -16,8 +16,8 @@ from Bio.Phylo.Applications import PhymlCommandline
 """
         These variables should be set by the user
 """
-query = '../test/facb.fa' # A FASTA file of the DNA or protein sequence of the transcription factor
-output = 'output/facb/' # This directory is where all the results will be output to
+query = '../test/rnap.fa' # A FASTA file of the DNA or protein sequence of the transcription factor
+output = 'output/rnap2/' # This directory is where all the results will be output to
 pathway = 'acetate' # This should be the name of the directory under ../test/ where FASTA files of pathway enzymes are stored
 bluGenome = '../db/blumeria/latest/Bgt_genome_v2_1.fa' # Not really necessary
 bluGenes = '../db/blumeria/latest/bluGenes.fa' # The source of Blumeria genes
@@ -38,6 +38,9 @@ else:
 
 # newRepeat = open('output/repeat.txt', 'w')
 
+if not os.path.exists(output):
+    os.makedirs(output)
+
 #############################################
 # BLAST query sequences (genes of interest) #
 #############################################
@@ -51,15 +54,15 @@ def blasterMaster(query):
         protein = False
     else:
         protein = True
-    print(testing)
-    print(protein)
-    return
     global output
     for genome in glob.iglob('../db/*genes.fasta'):
         searched_genomes.append(genome)
         print (genome.split('/')[-1][0:4] + query.split('/')[-1][:-3])
         # tblastx search for the best hits among the genomes present in /db
-        call('tblastx -db ' + genome + ' -query ' + query + ' -out '+ output + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+        if protein:
+            call('tblastn -db ' + genome + ' -query ' + query + ' -out '+ output + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
+        else:
+            call('tblastx -db ' + genome + ' -query ' + query + ' -out '+ output + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
         #-evalue 0.0001 Shouldn't matter because we're only going to look at the best hit anyway
 
     matches = []
@@ -157,12 +160,6 @@ def domainSpotter(seq):
             done = True
         time.sleep(2)
         print ('.', end = '', flush=True)
-        # if tick:
-        #     print ('Tick')
-        #     tick = False
-        # else:
-        #     print ('Tock')
-        #     tick = True
         patience -= 1
         if patience < 1:
             print('Giving up')
@@ -247,10 +244,6 @@ else:
         #print (protSeqs)
 
     newRepeat.write(str(protSeqs) + '\n')
-#######################################################################
-# At this point it should really try to find domains in different RFs #
-#######################################################################
-
 ###################
 # Align sequences #
 ###################
@@ -323,7 +316,7 @@ if lines[2][0] == '#':
     foundBlu = False
 else:
     foundBlu = True
-    
+
 # Extract the matched gene from bluGenes.fa
 if foundBlu:
     name = lines[2].split()[0]
@@ -348,99 +341,99 @@ if foundBlu:
 # Look for transcription factor binding sites upstream of metabolic genes #
 ###########################################################################
 
-print ('Running TF motif analysis...')
-def matrixLine(base):
-    base = base.upper()
-    if base == 'A':
-        return (['12', '0', '0', '0'])
-    elif base == 'C':
-        return (['0', '12', '0', '0'])
-    elif base == 'G':
-        return (['0', '0', '12', '0'])
-    elif base == 'T':
-        return (['0', '0', '0', '12'])
-    elif base == 'R':
-        return (['6', '0', '6', '0'])
-    elif base == 'Y':
-        return (['0', '6', '0', '6'])
-    elif base == 'S':
-        return (['0', '6', '6', '0'])
-    elif base == 'W':
-        return (['6', '0', '0', '6'])
-    elif base == 'K':
-        return (['0', '0', '6', '6'])
-    elif base == 'M':
-        return (['6', '6', '0', '0'])
-    elif base == 'B':
-        return (['0', '4', '4', '4'])
-    elif base == 'D':
-        return (['4', '0', '4', '4'])
-    elif base == 'H':
-        return (['4', '4', '0', '4'])
-    elif base == 'V':
-        return (['4', '4', '4', '0'])
-    elif base == 'N':
-        return (['3', '3', '3', '3'])
-    else:
-        print('Invalid Character: "' + base + '"!')
-        print('Please only use parentheticals thoughtfully')
-        print('You may get erroneous results')
-        quit()
+# print ('Running TF motif analysis...')
+# def matrixLine(base):
+#     base = base.upper()
+#     if base == 'A':
+#         return (['12', '0', '0', '0'])
+#     elif base == 'C':
+#         return (['0', '12', '0', '0'])
+#     elif base == 'G':
+#         return (['0', '0', '12', '0'])
+#     elif base == 'T':
+#         return (['0', '0', '0', '12'])
+#     elif base == 'R':
+#         return (['6', '0', '6', '0'])
+#     elif base == 'Y':
+#         return (['0', '6', '0', '6'])
+#     elif base == 'S':
+#         return (['0', '6', '6', '0'])
+#     elif base == 'W':
+#         return (['6', '0', '0', '6'])
+#     elif base == 'K':
+#         return (['0', '0', '6', '6'])
+#     elif base == 'M':
+#         return (['6', '6', '0', '0'])
+#     elif base == 'B':
+#         return (['0', '4', '4', '4'])
+#     elif base == 'D':
+#         return (['4', '0', '4', '4'])
+#     elif base == 'H':
+#         return (['4', '4', '0', '4'])
+#     elif base == 'V':
+#         return (['4', '4', '4', '0'])
+#     elif base == 'N':
+#         return (['3', '3', '3', '3'])
+#     else:
+#         print('Invalid Character: "' + base + '"!')
+#         print('Please only use parentheticals thoughtfully')
+#         print('You may get erroneous results')
+#         quit()
 
-entry = ''
-while entry == '':
-    print('Please enter a consensus sequence in IUPAC nucleotide notation')
-    print('Or enter a single "H" for a description of this notation.')
-    entry = input('Consensus: ')
-    if entry == 'H' or entry == 'h':
-        print('---')
-        print('IUPAC Nucleotide Codes:')
-        print('A,C,G,T - specify an unambiguous nucleotide')
-        print('R - A or G')
-        print('Y - C or T')
-        print('S - G or C')
-        print('W - A or T')
-        print('K - G or T')
-        print('M - A or C')
-        print('B - C, G, or T')
-        print('D - A, G, or T')
-        print('H - A, C, or T')
-        print('V - A, C, or G')
-        print('N - Any base')
-        print('Do not include gap characters (- or .)')
-        print('To indicate an ambiguous region use e.g. N(2,3)')
-        print('This corresponds to NN or NNN, the program will output multiple files if needed')
-        print('Note that only one such variable region is supported')
-        print('---')
-        entry = ''
-    else:
-        entry = entry.strip('-')
-        entry = entry.upper()
-        if entry.strip('ACGTRYSWKMBHVN(,)') != '':
-            print('---')
-            print('Invalid characters: ' + entry.strip('ACGTRYSWKMBHVN'))
-            print('Please only use IUPAC notation without gaps (- or .)')
-            print('---')
-            entry = ''
-            continue
-        if '(' in entry and ',' in entry and ')' in entry:
-            match = re.search(r'\w\(.+\)', entry)
-            repeat = match[0]
-            base = repeat[0]
-            # reps = repeat[-2] - repeat[2] + 1
-            for i in range(int(repeat[2]), int(repeat[-2]) + 1):
-                newEntry = entry[:match.start()] + base * i + entry[match.end():]
-                outfile = open('output/' + pathway + '/seqMatrix_'+ base + str(i) + '.txt', 'w')
-                for i in range(len(newEntry)):
-                    outfile.write(' '.join(matrixLine(newEntry[i])) + '\n')
-                outfile.close()
-        else:
-            outfile = open('output/' + pathway + '/seqMatrix.txt', 'w')
-            for i in range(len(entry)):
-                outfile.write(' '.join(matrixLine(entry[i])) + '\n')
-            outfile.close()
+# entry = ''
+# while entry == '':
+#     print('Please enter a consensus sequence in IUPAC nucleotide notation')
+#     print('Or enter a single "H" for a description of this notation.')
+#     entry = input('Consensus: ')
+#     if entry == 'H' or entry == 'h':
+#         print('---')
+#         print('IUPAC Nucleotide Codes:')
+#         print('A,C,G,T - specify an unambiguous nucleotide')
+#         print('R - A or G')
+#         print('Y - C or T')
+#         print('S - G or C')
+#         print('W - A or T')
+#         print('K - G or T')
+#         print('M - A or C')
+#         print('B - C, G, or T')
+#         print('D - A, G, or T')
+#         print('H - A, C, or T')
+#         print('V - A, C, or G')
+#         print('N - Any base')
+#         print('Do not include gap characters (- or .)')
+#         print('To indicate an ambiguous region use e.g. N(2,3)')
+#         print('This corresponds to NN or NNN, the program will output multiple files if needed')
+#         print('Note that only one such variable region is supported')
+#         print('---')
+#         entry = ''
+#     else:
+#         entry = entry.strip('-')
+#         entry = entry.upper()
+#         if entry.strip('ACGTRYSWKMBHVN(,)') != '':
+#             print('---')
+#             print('Invalid characters: ' + entry.strip('ACGTRYSWKMBHVN'))
+#             print('Please only use IUPAC notation without gaps (- or .)')
+#             print('---')
+#             entry = ''
+#             continue
+#         if '(' in entry and ',' in entry and ')' in entry:
+#             match = re.search(r'\w\(.+\)', entry)
+#             repeat = match[0]
+#             base = repeat[0]
+#             # reps = repeat[-2] - repeat[2] + 1
+#             for i in range(int(repeat[2]), int(repeat[-2]) + 1):
+#                 newEntry = entry[:match.start()] + base * i + entry[match.end():]
+#                 outfile = open('output/' + pathway + '/seqMatrix_'+ base + str(i) + '.txt', 'w')
+#                 for i in range(len(newEntry)):
+#                     outfile.write(' '.join(matrixLine(newEntry[i])) + '\n')
+#                 outfile.close()
+#         else:
+#             outfile = open('output/' + pathway + '/seqMatrix.txt', 'w')
+#             for i in range(len(entry)):
+#                 outfile.write(' '.join(matrixLine(entry[i])) + '\n')
+#             outfile.close()
 
-call('python pathway.py ' + pathway, shell=True)
+# call('python pathway.py ' + pathway, shell=True)
 
 #################################
 # Make a phylogeny of sequences #

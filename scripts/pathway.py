@@ -1,17 +1,205 @@
 # Python
-# $ pathway.py <Pathway Name>
-# Pathway Name arg should be a folder in ../test containing fasta files of AA sequences for relevant proteins
+# $ pathway.py <Pathway Name> <Verbose>
+# Pathway Name arg should be a folder containing fasta files of AA sequences for relevant proteins or 'KEGG' for a KEGG pathway search
 # Finds the best matches for a collection of S. cerevisiae genes in the various databases
 
 from subprocess import call
-import sys, glob, requests, time, re
+import sys, glob, requests, time, re, os, textwrap, pandas
 from Bio.Seq import Seq
 from Bio.Alphabet import generic_dna
 from Bio import Phylo, AlignIO, SeqIO
 from Bio.Phylo.Applications import PhymlCommandline
 
 pathway = sys.argv[1]
+if pathway.upper() == 'KEGG':
+    fetch = True
+elif pathway.upper().strip('-') == 'HELP':
+    print (textwrap.dedent("""\
+        ---
+        Help:
 
+        This is pathway.py.
+        A tool for rapidly searching for transcription factor binding site motifs
+        within promoter sequences of a set of genes. By default, it is searching within
+        a Blumeria graminis f. sp. tritici genome and a set of related fungi.
+
+        To begin, first identify the KEGG pathway or module that you are studying.
+        This will have an identifier such as ko12345 or M12345. Then simply run this
+        program as '$ python pathway.py KEGG' and enter this identifier when prompted.
+
+        It is also possible to supply your own set of enzymes to query. Simply create
+        a directory named e.g. testPathway and run the program as
+        '$ python pathway.py testPathway' instead.
+
+        The program will next ask for a binding site motif in IUPAC format. This should
+        correspond to the nucleotide motif that your TF of interest binds to.
+
+        Finally, the program will run automatically from this point and produce some
+        output. The key output is in output/<Pathway>/results.tsv.
+        ---
+    """))
+    quit()
+else:
+    fetch = False
+
+if 'verbose' in sys.argv:
+    verbose = True
+else:
+    verbose = False
+###########################################
+# Collect enzyme data for a given pathway #
+###########################################
+def getKegg(pathCode):
+    # Returns a dictionary of {Enzyme Name : EC number} for a whole KEGG pathway
+    try:
+        result = requests.get('http://rest.kegg.jp/get/' + pathCode)
+    except requests.exceptions.ConnectionError:
+        print ('Could not connect to KEGG!')
+        print ('Or you used an invalid KEGG pathway ID!')
+        return
+    lines = result.text.split('\n')
+    enzymes = {} # {Enzyme Name: EC #}
+    collect = False
+    for line in lines:
+        if 'NAME' in line:
+            pathName = re.search(r'NAME\s+(.+)', line)[1]
+            continue
+        if 'ORTHOLOGY' in line:
+            collect = True
+        elif 'COMPOUND' in line:
+            collect = False
+        elif 'CLASS' in line:
+            collect = False
+        if collect:
+            keggMatch = re.search(r'(K\d+)\s+', line)
+            keggNo = keggMatch[1]
+            # if not inYeast(keggNo):
+            #     print (keggNo + " ain't in yeast")
+            #     continue
+            nameMatch = re.search(r'K\d+\s\s(.+)\s\[E', line)
+            if not nameMatch:
+                continue
+            ecMatch = re.search(r'\[EC:((\d+\.\d+\.\d+\.\d+)[\s\]])+', line)
+            if not ecMatch:
+                continue
+            name = nameMatch[1]
+            multi = False
+            if len(name.split(' / ')) > 1:
+                name = name.split(' / ')
+                multi = True
+            else:
+                name = [name]
+            ec = ecMatch[0].strip('EC:[]')
+            if multi:
+                ec = ec.split()
+            elif len(ec.split()) > 1:
+                ec = [ec.split()[0]]
+            else:
+                ec = [ec]
+            for n, e in zip(name, ec):
+                if e.strip('0123456789.') == '':
+                    # Only include valid EC numbers (no ambiguous ones like 1.3.99.-)
+                    enzymes[e] = n
+    return enzymes, pathName
+
+def getUniprot(ec):
+    # Returns a fungal protein sequence (with FASTA header) for a given EC number
+    try:
+        url = 'https://www.uniprot.org/uniprot/?query=ec%3A' + ec + '&fil=organism%3A559292&sort=score&format=fasta'
+    except requests.exceptions.ConnectionError:
+        print('Could not connect to UniProt!')
+        return
+    result = requests.get(url)
+    if len(result.text) < 10:
+        # If there are no results for yeast, look more broadly at all Leotiomyceta for info
+        url = 'https://www.uniprot.org/uniprot/?query=ec%3A' + ec + '+AND+taxonomy%3A"leotiomyceta+%5B716546%5D"&sort=score&format=fasta'
+        result = requests.get(url)
+        if len(result.text) < 10:
+            return None
+    lines = result.text.split('\n')
+    active = False
+    seqs = []
+    for line in lines:
+        if '>' in line:
+            active = True
+            header = line + '\n'
+            continue
+        if active:
+            if '>' in line:
+                break
+            seqs.append(line)
+
+    seq = ''.join(seqs)
+    if len(seq) > 3500:
+        # Don't include ludicrously long polypeptides
+        return None
+    return header + seq
+
+if fetch:
+    while pathway[:2].lower() != 'ko' and pathway[0].upper() != 'M':
+        pathway = input('Enter a KEGG pathway (ko######) or module (M#####):\n')
+        if (pathway[:2].lower() != 'ko' and pathway[0].upper() != 'M') or len(pathway) < 6 or len(pathway) > 7:
+            print ('You must enter a vaild KEGG pathway or module ID')
+            print ('---')
+    if pathway[0] == 'm':
+        pathway = pathway.upper()
+    elif pathway[0] == 'K':
+        pathway = pathway.lower()
+    print('Accessing KEGG...')
+    enzymeDict, pathName = getKegg(pathway)
+    nickName = ''
+    sname = pathName.split()
+    if len(sname) == 1:
+        nickName = sname[0][:6]
+    elif len(sname) == 2:
+        nickName = sname[0][:4].capitalize()
+        nickName += sname[1][:2].capitalize()
+    else:
+        for w in sname:
+            nickName += w[0].upper()
+    if verbose:
+        print (enzymeDict)
+    print ('Found pathway "' + pathName + '"')
+    print ('Abbreviated to ' + nickName)
+    print ('Collected the following enzymes from the pathway')
+    print ('EC Number\tEnzyme Name')
+    for key in enzymeDict.keys():
+        print ('{} \t{}'.format(key, enzymeDict[key]))
+    # garbage = []
+    print('\nEnzymes with no suitable hits on UniProt will be removed')
+    print('Accessing UniProt...')
+    totalPathway = [] # [[Enzyme Name, EC #, FASTA entry, UniProt acc], ...]
+    seen = []
+    accCount = {}
+    for key in enzymeDict.keys():
+        test = getUniprot(key)
+        if test:
+            if verbose:
+                print (enzymeDict[key] + ':')
+                print (test)
+            acc = re.search(r'\|(.+)\|', test)[1]
+            if acc not in seen:
+                totalPathway.append([enzymeDict[key], key, test, acc])
+                seen.append(acc)
+                accCount[acc] = 1
+            else:
+                accCount[acc] = accCount[acc] + 1
+
+    if not os.path.exists('./' + nickName):
+        os.makedirs('./' + nickName)
+    call('rm -f .' + nickName + '/*.fasta', shell=True)
+    indexFile = open('./' + nickName + '/index.csv', 'w')
+    indexFile.close()
+    for name, ec, fasta, acc in totalPathway:
+        outfile = open('./' + nickName + '/' + acc + '.fasta', 'w')  # Here
+        outfile.write(fasta)
+        outfile.close()
+        indexFile = open('./' + nickName + '/index.csv', 'a')
+        if accCount[acc] == 1:
+            indexFile.write(acc + ',' + name + '\n')
+        else:
+            indexFile.write(acc + ',' + name + ' (+' + str(accCount[acc] - 1) + ')\n')
+    indexFile.close()
 
 def matrixLine(base):
     base = base.upper()
@@ -51,6 +239,8 @@ def matrixLine(base):
         print('You may get erroneous results')
         quit()
 
+pathway = nickName
+
 entry = ''
 while entry == '':
     print('Please enter a consensus sequence in IUPAC nucleotide notation')
@@ -80,6 +270,8 @@ while entry == '':
     else:
         entry = entry.strip('-')
         entry = entry.upper()
+        if not os.path.exists('output/' + pathway):
+            os.makedirs('output/' + pathway)
         if entry.strip('ACGTRYSWKMBHVN(,)1234567890') != '':
             print('---')
             print('Invalid characters: ' + entry.strip('ACGTRYSWKMBHVN(,)1234567890'))
@@ -111,7 +303,10 @@ while entry == '':
 def blasterMaster(query, blu=False):
     # This function handles the BLAST search (through the CLI) and the results
     searched_genomes = []
+    global verbose
     if blu:
+        if not os.path.exists('output/' + pathway + '/blu'):
+            os.makedirs('output/' + pathway + '/blu')
         call('tblastn -db ../db/blumeria/latest/bluGenes.fa -query ' + query + ' -out output/' + pathway + '/blu/' + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
         match = '' # Only one match for Blumeria
         infile = open('output/' + pathway + '/blu/' + query.split('/')[-1][:-3] + '.blast', 'r')
@@ -136,7 +331,8 @@ def blasterMaster(query, blu=False):
     else:
         for genome in glob.iglob('../db/*genes.fasta'):
             searched_genomes.append(genome)
-            print (genome.split('/')[-1][0:4] + query.split('/')[-1][:-3])
+            if verbose:
+                print (genome.split('/')[-1][0:4] + query.split('/')[-1][:-3])
             # tblastx search for the best hits among the genomes present in /db
             call('tblastn -db ' + genome + ' -query ' + query + ' -out output/' + pathway + '/' + genome.split('/')[-1][0:4] + query.split('/')[-1][:-3] + '.blast' + ' -num_threads 4 -max_target_seqs 1 -outfmt "7 sseqid evalue"', shell=True)
             #-evalue 0.0001 Shouldn't matter because we're only going to look at the best hit anyway
@@ -170,6 +366,7 @@ def blasterMaster(query, blu=False):
 
 def fastaFinder(lines, seqid):
     # Collects all of the sequence after a desired FASTA header
+    global verbose
     i = 0
     seqs = []
     collect = False
@@ -177,7 +374,8 @@ def fastaFinder(lines, seqid):
         if lines[i][0] == '>':
             if seqid in lines[i]:
                 collect = True
-                print('Found ' + seqid + ' in ' + lines[i])
+                if verbose:
+                    print('Found ' + seqid + ' in ' + lines[i])
             elif collect:
                 break
         elif collect:
@@ -200,15 +398,15 @@ def seqRetriever(seqinfo):
 #####################################################
 # Identify S. cerevisiae genes in reference genomes #
 #####################################################
+print ('Finding matching sequences...')
 enzymes = [] # [[Enzyme ID X, Fungus Y genome, Enzyme X gene ID in Y, Enzyme name],...]
-indexfile = open('../test/' + pathway + '/index.csv', 'r')
+indexfile = open(pathway + '/index.csv', 'r')
 accIndex = {}
 enzymeIndex = {}
 for line in indexfile.readlines():
     sline = line.split(',')
     accIndex[sline[0]] = sline[1].rstrip()
-for enzymeId in glob.iglob('../test/' + pathway + '/*.fasta'):
-    '../test/fat/A81283.fasta'
+for enzymeId in glob.iglob(pathway + '/*.fasta'):
     acc = enzymeId.split('/')[-1].split('.')[0]
     hits = blasterMaster(enzymeId)
     for genome, seqid in hits:
@@ -239,14 +437,15 @@ controlFile.close()
 #######################################
 # Do the above two steps for Blumeria #
 #######################################
-
+print ('Finding matches in Blumeria...')
 bluEnzymes = []
-for enzymeId in glob.iglob('../test/' + pathway + '/*.fasta'):
+for enzymeId in glob.iglob(pathway + '/*.fasta'):
     acc = enzymeId.split('/')[-1].split('.')[0]
     hit = blasterMaster(enzymeId, blu=True)
     enzymeIndex[hit] = accIndex[acc]
     bluEnzymes.append([enzymeId.split('/')[-1].split('.')[0], hit, accIndex[acc]])
-print (bluEnzymes)
+if verbose:
+    print (bluEnzymes)
 
 seqFile = open('output/' + pathway + '/bluUpstream.fa', 'w')
 for x, ide, fullName in bluEnzymes:
@@ -260,7 +459,8 @@ for x, ide, fullName in bluEnzymes:
         if lines[i][0] == '>':
             if lines[i].rstrip() == '>' + ide:
                 collect = True
-                print('Found ' + ide + ' in ' + lines[i])
+                if verbose:
+                    print('Found ' + ide + ' in ' + lines[i])
             elif collect:
                 break
         elif collect:
@@ -273,65 +473,45 @@ for x, ide, fullName in bluEnzymes:
     gnome.close()
 seqFile.close()
 
-
-print (enzymeIndex)
+if verbose:
+    print (enzymeIndex)
 ################################################
 # Identify motifs in those upstreams with MEME #
 ################################################
 
-print ('Running MEME...')
+print ('Running FIMO...')
 matrices = [matrix for matrix in glob.glob('output/' + pathway + '/seqMatrix*')]
-locs = ['output/' + pathway + '/fimo/blumeria/fimo.tsv','output/' + pathway + '/fimo/control/fimo.tsv','output/' + pathway + '/fimo/training/fimo.tsv']
+locs = ['output/' + pathway + '/fimo/blumeria','output/' + pathway + '/fimo/control','output/' + pathway + '/fimo/training']
 organisms = {'Af':'A. fumigatus','AN':'A. nidulans','SS':'S. sclerotiorum','NC':'N. crassa','MG':'M. oryzae','BC':'B. cinerea','Bg':'B. graminis'}
 results = [] # [[Seq ID, Enzyme name, strand, p-value, matched seq],[Another motif result], ...]
-print (matrices)
+call('cat output/'+pathway+'/*.fa > output/'+pathway+'/allUpstream.fasta', shell=True)
+if not os.path.exists('output/' + pathway + '/fimo'):
+    os.makedirs('output/' + pathway + '/fimo')
 for matrix in matrices:
-    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo/control/ -thresh 0.001 - output/' + pathway + '/control.fa', shell=True)
-    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo/training/ -thresh 0.001 - output/' + pathway + '/upstream.fa', shell=True)
-    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo/blumeria/ -thresh 0.001 - output/' + pathway + '/bluUpstream.fa', shell=True)
-    for loc in locs:
-        fimoFile = open(loc, 'r')
-        for line in fimoFile.readlines():
-            sline = line.split('\t')
-            if sline[0] == 'motif_id':
-                continue # Skip first line
-            if len(line) < 4:
-                break # Stop before the end
-            ide = sline[2]
-            strand = sline[5]
-            pval = sline[7]
-            match = sline[-1].rstrip()
-            results.append([ide, enzymeIndex[ide], strand, pval, match])
-        fimoFile.close()
+    call('cat ' + matrix + ' | ~/meme/libexec/meme-5.0.1/matrix2meme | ~/meme/bin/fimo -oc output/' + pathway + '/fimo -thresh 0.001 - output/' + pathway + '/allUpstream.fasta', shell=True)
+    fimoFile = open('output/' + pathway + '/fimo/fimo.tsv', 'r')
+    for line in fimoFile.readlines():
+        sline = line.split('\t')
+        if sline[0] == 'motif_id':
+            continue # Skip first line
+        if len(line) < 4:
+            break # Stop before the end
+        ide = sline[2]
+        strand = sline[5]
+        pval = sline[7]
+        match = sline[-1].rstrip()
+        results.append([ide, enzymeIndex[ide], strand, pval, match])
+    fimoFile.close()
 
 resultFile = open('output/' + pathway + '/results.tsv', 'w')
 resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format('Organism','Seq ID','Enzyme','Strand','p-value','Match Seq'))
 for ide, name, strand, pval, match in results:
     resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format(organisms[ide[:2]],ide,name,strand,pval,match))
 resultFile.close()
-
-# results = [] # [[Seq ID, Enzyme name, strand, p-value, matched seq],[Another motif result], ...]
-# for loc in locs:
-#     fimoFile = open(loc, 'r')
-#     for line in fimoFile.readlines():
-#         sline = line.split('\t')
-#         if sline[0] == 'motif_id':
-#             continue # Skip first line
-#         if len(line) < 4:
-#             break # Stop before the end
-#         ide = sline[2]
-#         strand = sline[5]
-#         pval = sline[7]
-#         match = sline[-1].rstrip()
-#         results.append([ide, enzymeIndex[ide], strand, pval, match])
-#     fimoFile.close()
-#
-# resultFile = open('output/' + pathway + '/results.tsv', 'w')
-# resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format('Organism','Seq ID','Enzyme','Strand','p-value','Match Seq'))
-# for ide, name, strand, pval, match in results:
-#     resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format(organisms[ide[:2]],ide,name,strand,pval,match))
-# resultFile.close()
-
+df = pandas.read_table('output/' + pathway + '/results.tsv')
+# print (df)
+print ('Motif Occurences per Enzyme Promoter Sequence per Organism')
+print (df.groupby(['Organism', 'Enzyme']).size().reset_index(name='Motif Count'))
 quit()
 # Currently looks for 5 motifs to make sure that the relevant one is found
 # call('~/meme/bin/meme -oc output/' + pathway + '/meme output/' + pathway + '/upstream.fa -dna -mod oops -revcomp -objfun se -cons TCSNNNNNNNNSGA -cons GCMNNNNNNNNKGC', shell=True)
@@ -365,67 +545,3 @@ quit()
 # call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/training/ -thresh 0.0005 output/' + pathway + '/meme/meme.xml output/' + pathway + '/upstream.fa', shell=True)
 # # Run on Blumeria
 # call('~/meme/bin/fimo -oc output/' + pathway + '/fimo/blumeria/ -thresh 0.0005 output/' + pathway + '/meme/meme.xml output/' + pathway + '/bluUpstream.fa', shell=True)
-
-##############################################
-# Produce a list of enzymes and their motifs #
-##############################################
-
-locs = ['output/' + pathway + '/fimo/blumeria/fimo.tsv','output/' + pathway + '/fimo/control/fimo.tsv','output/' + pathway + '/fimo/training/fimo.tsv']
-organisms = {'Af':'A. fumigatus','AN':'A. nidulans','SS':'S. sclerotiorum','NC':'N. crassa','MG':'M. oryzae','BC':'B. cinerea','Bg':'B. graminis'}
-results = [] # [[Seq ID, Enzyme name, strand, p-value, matched seq],[Another motif result], ...]
-for loc in locs:
-    fimoFile = open(loc, 'r')
-    for line in fimoFile.readlines():
-        sline = line.split('\t')
-        if sline[0] == 'motif_id':
-            continue # Skip first line
-        if len(line) < 4:
-            break # Stop before the end
-        ide = sline[2]
-        strand = sline[5]
-        pval = sline[7]
-        match = sline[-1].rstrip()
-        results.append([ide, enzymeIndex[ide], strand, pval, match])
-    fimoFile.close()
-
-resultFile = open('output/' + pathway + '/results.tsv', 'w')
-resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format('Organism','Seq ID','Enzyme','Strand','p-value','Match Seq'))
-for ide, name, strand, pval, match in results:
-    resultFile.write('{}\t{}\t{}\t{}\t{}\t{}\n'.format(organisms[ide[:2]],ide,name,strand,pval,match))
-resultFile.close()
-
-# motif = Seq('CCTCGG')
-# print (ids)
-# allMotifs = [] # [[[Gene ID, # Motifs in upstream 1kb], [Another gene, #]], [[Different Organism]], ...]
-# for upper in glob.iglob('../db/*upstream.fasta'):
-#     motifs = []
-#     infile = open(upper, 'r')
-#     for record in SeqIO.parse(infile, 'fasta'):
-#         if record.id[1:-1] not in ids:
-#             continue
-#         count = len(re.findall(str(motif), str(record.seq).upper()))
-#         # print('>' + record.id[1:-1])
-#         # print(str(record.seq))
-#         count += len(re.findall(str(motif.reverse_complement()), str(record.seq).upper()))
-#         if count > 0:
-#             motifs.append([record.id[1:-1], count])
-#         # if count > 1:
-#         #     print(record.id + " " + str(count))
-#     tot = 0
-#     for ide, count in motifs:
-#         tot += count
-#     #print ('Found ' + str(tot) + ' occurences of "' + motif + '" in ' + upper)
-#     #print (len(motifs))
-#
-#     allMotifs.append(motifs)
-# print (allMotifs)
-
-
-
-"""
-- List of enzymes on pathway
-- For each enzyme, list of 6 equivalents in other fungi
-- For each equivalent, the upstream sequence
-- For each upstream seq, how many motifs are in it
-- Return # Motifs and enzyme name
-"""
