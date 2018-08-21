@@ -1,5 +1,7 @@
 import time
-tic = time.clock()
+import datetime
+from Bio.Seq import Seq
+
 def genomeSlicer(start, end, line, contig):
     # Call this on iterating lines of a genome file and it will return all of the sequence that falls between start and end in the relevant contig/sequence/FASTA header
     # Global variables to persist through multiple calls to the function
@@ -30,34 +32,46 @@ def genomeSlicer(start, end, line, contig):
     else:
         return
 
-annotation = open('../db/blumeria/latest/Bgt_CDS_2014_20_clean.gff', 'r')
+annotation = open('../db/blumeria/latest/Bgh.EF2.40.gff3', 'r')
 upstreamGirl = [] # Looking for downstream man [name, sequence]
-extract = [] # [[start, stop, contig, name]]
+extract = [] # [[start, stop, contig, name, strand]]
 
 for line in annotation:
     sline = line.split()
     if sline[0] == '###':
         continue
-    if sline[2] == 'gene' and sline[6] == '+':
-        extract.append([int(sline[3])-1001, int(sline[3]) -1, sline[0], sline[-1].split('=')[-1]])
+    if sline[2] != 'gene':
+        continue
+    if sline[6] == '+':
+        extract.append([int(sline[3])-1001, int(sline[3]) -1, sline[0], sline[-1].split(';')[0].split(':')[1], '+'])
+    elif sline[6] == '-':
+        extract.append([int(sline[4])+1, int(sline[4]) + 1001, sline[0], sline[-1].split(';')[0].split(':')[1], '-'])
 
+tic = time.clock()
 total = len(extract)
 current = 0
-genomeFile = open('../db/blumeria/latest/Bgt_genome_v2_1.fa', 'r')
+genomeFile = open('../db/blumeria/latest/Bgh_genome.fa', 'r')
 genomeLines = genomeFile.readlines()
 genomeFile.close()
-for start, stop, contig, name in extract:
+for start, stop, contig, name, strand in extract:
     print(str(round(((current/total) * 100), 4)) + '% Done', end='\r')
     place = 1
     thisContig = False
     output = [genomeSlicer(start, stop, x, contig) for x in genomeLines]
     selection = [x for x in output if x is not None]
     bluSeq = ''.join(selection)
-    upstreamGirl.append([name, bluSeq])
+    if strand == '-':
+        bluSeqC = Seq(bluSeq)
+        bluSeqC = bluSeqC.reverse_complement()
+        upstreamGirl.append([name, str(bluSeqC)])
+    else:
+        upstreamGirl.append([name, bluSeq])
     current += 1
+    toc = time.clock()
+    print('Elapsed time: ' + str(datetime.timedelta(seconds=(toc-tic))) + '| Remaining: ' + str(datetime.timedelta(seconds=(float(total)/current)*(toc-tic)-(toc-tic))))
 
 print (upstreamGirl)
-outfile = open('bluUpstream.fa', 'w')
+outfile = open('bghUpstream.fa', 'w')
 for name, seq in upstreamGirl:
     outfile.write('>' + name + '\n')
     outfile.write(seq + '\n')

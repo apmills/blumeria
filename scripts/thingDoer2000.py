@@ -57,7 +57,9 @@ for start, stop, contig, name, strand in extract:
     if strand == '-':
         bluSeqC = Seq(bluSeq)
         bluSeqC = bluSeqC.reverse_complement()
-    geneGenie.append([name, str(bluSeq)])
+        geneGenie.append([name, str(bluSeqC)])
+    else:
+        geneGenie.append([name, str(bluSeq)])
     current += 1
 
 # print (upstreamGirl)
